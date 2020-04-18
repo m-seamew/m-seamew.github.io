@@ -1,0 +1,28 @@
+.symbol__box_black--16{
+width:16px;
+height:16px;
+margin-right: 10px;
+fill: currentColor;
+}
+
+.symbol__box_white--16{
+  width:16px;
+  height:16px;
+  margin-right: 10px;
+  display: none;
+  }
+
+.symbol {
+ display:flex;
+ align-items: center;
+ justify-content: start;
+}   
+
+.symbol__box_black--hover:hover{
+  .symbol__box_white--16{
+    display: block;
+  }
+  .symbol__box_black--16{
+    display: none;
+  }
+} 

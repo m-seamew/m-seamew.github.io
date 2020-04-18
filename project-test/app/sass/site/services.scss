@@ -1,0 +1,50 @@
+$mediaTablet-max-width: 991px;
+
+.services__img{
+flex: 0 0 164px;
+}
+.services__image{
+  object-fit: contain;
+}
+
+ 
+.services__description{
+  font-size: 1.25rem;
+  font-weight: bold;
+  color: #000000;
+}
+
+.services__text{
+  max-width: 245px;
+}
+
+.services__item{
+  margin-top: 50px;
+  margin-bottom: 20px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.services__subtitle--position{
+ margin-top: 24px;
+}
+
+.services__description--position{
+margin-top: 6px;
+}
+
+
+@media(max-width:$mediaTablet-max-width){
+  .services__item{
+    justify-content: center;
+  }
+  .services__subtitle--position{
+    margin-top: 24px;
+    margin-left: 30px;
+   }
+   
+   .services__description--position{
+   margin-top: 6px;
+   margin-left: 30px;
+   }
+}

@@ -1,0 +1,81 @@
+// grid.scss
+//Grid-template
+$gridColumn-number: 12;
+$containerMax-width:960px;
+$getter: 15px;
+
+$mediaMobile-max-width: 479px;
+$mediaTablet-min-width: 480px;
+$mediaTablet-max-width: 991px;
+$mediaLarge-min-width:1401px;
+
+.container{
+  max-width: $containerMax-width;
+  margin: 0 auto;
+  padding-left: $getter;
+  padding-right: $getter;
+}
+
+
+.row{
+  display: flex;
+  margin: 0px 0-$getter;
+}
+
+ 
+//default-grid
+@for $i from 1 to $gridColumn-number+1{
+  .row__col-#{$i}{
+    flex: 0 1 100%/$gridColumn-number*$i;
+    padding: 0px $getter;
+  }
+}
+//default before
+@for $i from 1 to $gridColumn-number{
+  .row_before-col-#{$i}{
+    margin-left: 100%/$gridColumn-number*$i;
+  }
+}
+
+//Mobile grid
+@media(max-width:$mediaMobile-max-width){
+  .row--mob-wrap{
+   flex-wrap: wrap;
+  }
+ @for $i from 1 to $gridColumn-number+1{
+   .row__mob-col-#{$i}{
+     flex: 0 1 100%/$gridColumn-number*$i;
+     padding: 0px $getter;
+   }
+ }
+}
+
+
+
+//Tablet grid
+@media(min-width:$mediaTablet-min-width) and(max-width:$mediaTablet-max-width){
+  .row--tab-wrap{
+    flex-wrap: wrap;
+   }
+  @for $i from 1 to $gridColumn-number+1{
+    .row__tab-col-#{$i}{
+      flex: 0 1 100%/$gridColumn-number*$i;
+      padding: 0px $getter;
+    }
+  }
+ }
+
+//Large grid
+@media (min-width:$mediaLarge-min-width){
+  @for $i from 1 to $gridColumn-number+1 {
+    .row__large-col-#{$i}{
+      flex: 0 1 100%/$gridColumn-number*$i;
+      padding: 0px $getter;
+    }
+  }
+}
+
+.row--services-wrap{
+  flex-wrap: wrap;
+  justify-content: center;
+}

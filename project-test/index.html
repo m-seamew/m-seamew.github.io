@@ -1,0 +1,363 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="build/css/main.css">
+  <link href="https://fonts.googleapis.com/css?family=PT+Sans:400,700&display=swap&subset=cyrillic" rel="stylesheet">
+  <title>Document</title>
+  <svg style="display: none">
+    <symbol id="box_black" viewBox="0 0 16 16">
+      <path fill-rule="evenodd"
+        d="M2 0a2 2 0 00-2 2v12a2 2 0 002 2h12a2 2 0 002-2V2a2 2 0 00-2-2H2zm9.854 4.854a.5.5 0 00-.708-.708l-7 7a.5.5 0 00.708.708l7-7z"
+        clip-rule="evenodd" />
+    </symbol>
+    <symbol id="box_white" viewBox="0 0 16 16">
+      <path fill-rule="evenodd"
+        d="M14 1H2a1 1 0 00-1 1v12a1 1 0 001 1h12a1 1 0 001-1V2a1 1 0 00-1-1zM2 0a2 2 0 00-2 2v12a2 2 0 002 2h12a2 2 0 002-2V2a2 2 0 00-2-2H2z"
+        clip-rule="evenodd" />
+      <path fill-rule="evenodd" d="M11.854 4.146a.5.5 0 010 .708l-7 7a.5.5 0 01-.708-.708l7-7a.5.5 0 01.708 0z"
+        clip-rule="evenodd" />
+    </symbol>
+    <symbol id="brash" viewBox="0 0 16 16">
+      <path
+        d="M15.213 1.018a.572.572 0 01.756.05.57.57 0 01.057.746C15.085 3.082 12.044 7.107 9.6 9.55c-.71.71-1.42 1.243-1.952 1.596-.508.339-1.167.234-1.599-.197-.416-.416-.53-1.047-.212-1.543.346-.542.887-1.273 1.642-1.977 2.521-2.35 6.476-5.44 7.734-6.411z" />
+      <path d="M7 12a2 2 0 01-2 2c-1 0-2 0-3.5-.5s.5-1 1-1.5 1.395-2 2.5-2a2 2 0 012 2z" />
+    </symbol>
+    <symbol id="close" viewBox="0 0 16 16">
+      <path fill-rule="evenodd"
+        d="M2 0a2 2 0 00-2 2v12a2 2 0 002 2h12a2 2 0 002-2V2a2 2 0 00-2-2H2zm9.854 4.854a.5.5 0 00-.708-.708L8 7.293 4.854 4.146a.5.5 0 10-.708.708L7.293 8l-3.147 3.146a.5.5 0 00.708.708L8 8.707l3.146 3.147a.5.5 0 00.708-.708L8.707 8l3.147-3.146z"
+        clip-rule="evenodd" />
+    </symbol>
+    <symbol id="send" viewBox="0 0 16 16">
+      <path fill-rule="evenodd"
+        d="M14.082 2.182a.5.5 0 01.103.557L8.528 15.467a.5.5 0 01-.917-.007L5.57 10.694.803 8.652a.5.5 0 01-.006-.916l12.728-5.657a.5.5 0 01.556.103z"
+        clip-rule="evenodd" />
+    </symbol>
+  </svg>
+</head>
+
+<body>
+  <div class="container-background-full-screen container-background-full-screen--heder_yellow">
+    <div class="container">
+      <header>
+        <div class="header row row--mob-wrap">
+          <div class="header__logo  row__col-7 row__mob-col-12">
+            <div class="logo header__logo--properties">
+              <a href="#" class="logo__link"><img class="logo__img" src="img/logo.png" alt="logo"></a>
+            </div>
+            <h4 class="header__logo_description header__logo_description--position">УСЛУГИ СТРОИТЕЛЬНОЙ ТЕХНИКИ</h4>
+          </div>
+          <div class="header__contacts row__col-5 row__mob-col-12">
+            <p class="header__contacts_adress">
+              г.Екатеринбург, ул.Маяковского,25</p>
+            <a href="#" class="header__contacts_phone">+7 (343) 222-20-17</a>
+          </div>
+      </header>
+    </div>
+  </div>
+  <main>
+    <div class="container">
+      <div class="menu row row--mob-wrap row--tab-wrap">
+        <div class="menu__logo-min row__col-1 row__tab-col-12 row__mob-col-12">
+          <img src="img/menu_logo.png" alt="logo-min">
+        </div>
+        <div class="menu__list menu__list--position row__col-11 row__tab-col-12 row__mob-col-12 ">
+          <a class="menu__item menu__item--margin" href="#">КАТАЛОГ ТЕХНИКИ</a>
+          <a class="menu__item menu__item--margin" href="#">УСЛУГИ</a>
+          <a class="menu__item menu__item--margin" href="#">ВЫПОЛНЕННЫЕ РАБОТЫ</a>
+          <a class="menu__item menu__item--margin" href="#">О КОМПАНИИ</a>
+          <a class="menu__item menu__item--margin" href="#">КОНТАКТЫ</a>
+        </div>
+      </div>
+    </div>
+    <div class="container-background-full-screen container--background-slider--background">
+      <div class="container">
+        <div class="slider">
+          <input type="radio" class="slider__label--btn1" name="slider__pagination" id="btn1" checked>
+          <input type="radio" class="slider__label--btn2" name="slider__pagination" id="btn2">
+          <input type="radio" class="slider__label--btn3" name="slider__pagination" id="btn3">
+
+
+
+          <div class="slider_slides-group">
+
+            <div class="slider_item-group">
+              <div class="slider__description">
+                <div class="slider__text">
+                  <div class="slider__price">
+                    <h2 class="slider__amount">15000</h2>
+                    <h3 class="slider__currency">руб/cутки</h3>
+                  </div>
+                  <h4 class="slider__main-text">ПРОФЕССИОНАЛЬНАЯ ТЕХНИКА В АРЕНДУ ОТ</h4>
+                </div>
+                <div class="slider__pagination">
+                  <label class="slider__label slider__label--btn1" for="btn1"></label>
+                  <label class="slider__label slider__label--btn2" for="btn2"></label>
+                  <label class="slider__label slider__label--btn3" for="btn3"></label>
+                </div>
+              </div>
+              <div class="slides__items">
+                <a href="#"><img class="slider__img" src="img/slide1.png"></a>
+              </div>
+              <div class="slides__items">
+                <a href="#"><img class="slider__img" src="img/slide1.png"></a>
+              </div>
+              <div class="slides__items">
+                <a href="#"><img class="slider__img" src="img/slide1.png"></a>
+              </div>
+
+
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+    <!--
+         <div class="slider__bottom row">
+             <div class="slider__pagination slider_pagination--arrow   row__col-12">-->
+
+    </div>
+    </div>
+
+
+    <div class="container">
+      <div class="catalog">
+        <div class="submenu">
+          <a class="submenu__link" href="#">Главная</a> /
+          <a class="submenu__link" href="#"> Каталог </a> /
+          <a class="submenu__link submeny__link--active" href="#"> Название товара</a></div>
+        <div class="catalog__item row row--mob-wrap">
+          <div class="catalog__picture row__col-4 row__mob-col-12">
+            <img class="catalog__img" src="img/item1.png" alt="catalog item">
+          </div>
+          <div class="catalog__description row__col-8 row__mob-col-12">
+            <h4 class="catalog__header">JCB 4CX Super</h4>
+            <div class="tabs catalog__tabs--position">
+              <div class="tabs__tab">
+                <input class="tabs__input tabs__input--hiden" type="checkbox" id="char2">
+                <label class="tabs__label" for="char2">
+                  <h4 class="tabs__title ">Информация</h4>
+                </label>
+                <div class="tabs__content">
+                  <ul class="catalog__list">
+                    <li class="catalog__li catalog__li--margin">
+                      <div class="symbol symbol__box_black--hover">
+                        <svg class="symbol__box_black symbol__box_black--16">
+                          <use xlink:href="#box_black">
+                          </use>
+                        </svg>
+                        <svg class="symbol__box_black symbol__box_white--16">
+                          <use xlink:href="#box_white">
+                          </use>
+                        </svg>
+                        Характеристика 1</div>
+
+                    </li>
+                    <li class="catalog__li catalog__li--margin">
+                      <div class="symbol symbol__box_black--hover">
+                        <svg class="symbol__box_black symbol__box_black--16">
+                          <use xlink:href="#box_black">
+                          </use>
+                        </svg>
+                        <svg class="symbol__box_black symbol__box_white--16">
+                          <use xlink:href="#box_white">
+                          </use>
+                        </svg>
+                        Характеристика 1</div>
+
+                    </li>
+                    <li class="catalog__li catalog__li--margin">
+                      <div class="symbol symbol__box_black--hover">
+                        <svg class="symbol__box_black symbol__box_black--16">
+                          <use xlink:href="#box_black">
+                          </use>
+                        </svg>
+                        <svg class="symbol__box_black symbol__box_white--16">
+                          <use xlink:href="#box_white">
+                          </use>
+                        </svg>
+                        Характеристика 1</div>
+
+                    </li>
+
+                  </ul>
+
+
+                </div>
+
+
+
+              </div>
+              <div class="tabs__tab  tabs--margin-top">
+                <input class="tabs__input tabs__input--hiden" type="checkbox" id="char1">
+                <label class="tabs__label" for="char1">
+                  <h4 class="tabs__title">Характеристики</h4>
+                </label>
+                <div class="tabs__content">
+                  <ul class="catalog__list">
+                    <li class="catalog__li catalog__li--margin">
+                      <div class="symbol symbol__box_black--hover">
+                        <svg class="symbol__box_black symbol__box_black--16">
+                          <use xlink:href="#box_black">
+                          </use>
+                        </svg>
+                        <svg class="symbol__box_black symbol__box_white--16">
+                          <use xlink:href="#box_white">
+                          </use>
+                        </svg>
+                        Характеристика 1</div>
+
+                    </li>
+                    <li class="catalog__li catalog__li--margin">
+                      <div class="symbol symbol__box_black--hover">
+                        <svg class="symbol__box_black symbol__box_black--16">
+                          <use xlink:href="#box_black">
+                          </use>
+                        </svg>
+                        <svg class="symbol__box_black symbol__box_white--16">
+                          <use xlink:href="#box_white">
+                          </use>
+                        </svg>
+                        Характеристика 1</div>
+
+                    </li>
+                    <li class="catalog__li catalog__li--margin">
+                      <div class="symbol symbol__box_black--hover">
+                        <svg class="symbol__box_black symbol__box_black--16">
+                          <use xlink:href="#box_black">
+                          </use>
+                        </svg>
+                        <svg class="symbol__box_black symbol__box_white--16">
+                          <use xlink:href="#box_white">
+                          </use>
+                        </svg>
+                        Характеристика 1</div>
+
+                    </li>
+
+                  </ul>
+
+
+                </div>
+
+
+
+              </div>
+              <div class="catalog__buy tabs--margin-top">
+                <div class="catalog__price catalog__header catalog__header--margin">125.000 Р.</div>
+                <a class="button-link" href="#">
+                  <div class="button catalog__button--size-m">Заказать
+                </a>
+
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <h3 class="block-title block-title--center">Услуги</h3>
+    </div>
+    </div>
+    <div class="container-background-full-screen container--background-slider--background">
+      <div class="container">
+        <div class="services row row--services-wrap">
+          <div class="services__item row__col-6 row__mob-col-12 row__tab-col-12">
+            <div class="services__img"><img src="img/services__icon.png" alt="services"></div>
+            <div class="services__text">
+              <div class="services__description services__description--position">ЗАСЫПКА ТРАНШЕЙ</div>
+              <div class="services__subtitle services__subtitle--position">Нашей компанией осуществляется засыпка
+                траншей в Екатеринбурге, востребованная предприятиями и частными лицами.</div>
+            </div>
+          </div>
+          <div class="services__item row__col-6 row__mob-col-12 row__tab-col-12">
+            <div class="services__img"><img class="services__image" src="img/services__icon.png" alt="services"></div>
+            <div class="services__text">
+              <div class="services__description services__description--position">ВЫВОЗ МУСОРА</div>
+              <div class="services__subtitle services__subtitle--position">Вывоз мусора — составляющая деятельности
+                производств и бытовых предприятий</div>
+            </div>
+          </div>
+          <div class="services__item row__col-6 row__mob-col-12 row__tab-col-12">
+            <div class="services__img"><img class="services__image" src="img/services__icon.png" alt="services"></div>
+            <div class="services__text">
+              <div class="services__description services__description--position">ДОСТАВКА</div>
+              <div class="services__subtitle services__subtitle--position">Отсев образуется после разработки твердых
+                горных пород и является востребованным материалом в строительстве.</div>
+            </div>
+          </div>
+          <div class="services__item row__col-6 row__mob-col-12 row__tab-col-12">
+            <div class="services__img"><img class="services__image" src="img/services__icon.png" alt="services"></div>
+            <div class="services__text">
+              <div class="services__description services__description--position">ПОДЬЕМ ГРУЗОВ</div>
+              <div class="services__subtitle services__subtitle--position">Выполнение широкого спектра высотных операций
+                сложно представить без специализированной техники.</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="container">
+      <h3 class="block-title block-title--side">Залоговок</h3>
+      <div class="form-services row">
+        <div class="form-services__tasks-form row__col-7">
+          <div class="form-services__task form-services__task--position">
+            <h4 class="form-services__header">Задача 1</h4>
+            <div class="symbol">
+              <svg class="symbol__box_black symbol__box_black--16 form-services__icon form-servies__icon--margin">
+                <use xlink:href="#brash">
+                </use>
+              </svg>
+              <svg class="symbol__box_black symbol__box_black--16 form-services__icon ">
+                <use xlink:href="#send">
+                </use>
+              </svg>
+            </div>
+          </div>
+          <div class="form-services__task form-services__task--position">
+            <h4 class="form-services__header">Задача 1</h4>
+          </div>
+          <div class="form-services__task form-services__task--position">
+            <input type="text" class="form-services__field">
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="container-background-full-screen">
+      <div class="map row">
+        <div class="row__col-12">
+          <iframe
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2180.9797572810626!2d60.61847211597394!3d56.8634422808649!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x43c16dd95738db15%3A0x900866a0d0ab83f!2z0YPQuy4g0JzQsNGP0LrQvtCy0YHQutC-0LPQviwgMjUsINCV0LrQsNGC0LXRgNC40L3QsdGD0YDQsywg0KHQstC10YDQtNC70L7QstGB0LrQsNGPINC-0LHQuy4sINCg0L7RgdGW0Y8sIDYyMDA0MQ!5e0!3m2!1suk!2sua!4v1587011509695!5m2!1suk!2sua"
+            width="100%" height="440" frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false"
+            tabindex="0"></iframe>
+        </div>
+      </div>
+    </div>
+
+  </main>
+  <div class="container-background-full-screen container-background-full-screen--footer">
+    <div class="container">
+      <footer class="row footer__row row--mob-wrap row--tab-wrap">
+        <div class="logo footer__logo row__col-3">
+          <a class="logo__link" href="#"><img class="logo__img" src="img/logo_footer.png" alt="logo"></a>
+        </div>
+        <div class="footer__menu row__col-7 row__mob-col-9 row__tab-col-8">
+          <a class="menu__item footer__menu--margin footer__menu--active" href="#">Главная</a>
+          <a class="menu__item footer__menu--margin" href="#">Каталог&nbsp;техники</a>
+          <a class="menu__item footer__menu--margin" href="#">Услуги</a>
+          <a class="menu__item footer__menu--margin" href="#">Выполненные&nbsp;работы</a>
+          <a class="menu__item footer__menu--margin" href="#">О&nbsp;компании</a>
+          <a class="menu__item footer__menu--margin" href="#">Контакты</a>
+        </div>
+        <div class="footer__about-developer row__col-2 row__mob-col-11 row__tab-col-12">
+          <div class="footer__copy"><a class="footer__copy-link" href="#">© Aйтекс start 2016</a></div>
+          <div class="footer__adv footer__copy-adv--position"><img class="footer__img-about-developer"
+              src="img/logo_adv.png" alt="about developer"><a class="footer__adv-link" href="#">texstart.ru</a></div>
+        </div>
+      </footer>
+    </div>
+  </div>
+</body>
+
+</html>

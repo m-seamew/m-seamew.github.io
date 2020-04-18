@@ -1,0 +1,15 @@
+.button{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 5px;
+  box-shadow: 1px 1.7px 5px 0 #00000059;
+  border: solid 2px #fdce03;
+  background-image: linear-gradient(to top, #fdcf03, #fab500);
+}
+
+.button-link{
+  font-size: 0.75rem;
+  color: #000000;
+  text-transform: uppercase;
+}

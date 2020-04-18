@@ -1,0 +1,26 @@
+*{
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+body{
+  font-family: 'PT Sans', sans-serif;
+  font-size: 16px;
+  line-height: 24px;
+}       
+
+@import 'grid';
+@import 'container-background-full-screen';
+@import 'header';
+@import 'menu';
+@import 'slider';  
+@import 'submenu';                             
+@import 'catalog';  
+@import 'block-title';                      
+@import 'services';            
+@import'footer';                                        
+@import 'form-services';
+@import 'tabs'; 
+@import 'symbol';   
+@import 'button';  
