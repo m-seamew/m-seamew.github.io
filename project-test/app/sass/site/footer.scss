@@ -11,6 +11,9 @@ line-height:2rem ;
   color:white;
   }
 
+.footer__menu--active{
+  color:white;
+}  
 .footer__menu--active::before{
   content: '>  ';
   color: #ffbb02;
