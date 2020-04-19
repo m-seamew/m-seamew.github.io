@@ -79,3 +79,9 @@ $mediaLarge-min-width:1401px;
   flex-wrap: wrap;
   justify-content: center;
 }
+
+
+@media(max-width:500px){
+.row--catalog-wrap{
+  flex-wrap: wrap;
+}}

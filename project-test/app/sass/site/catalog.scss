@@ -2,6 +2,7 @@
   margin-top: 45px;
 }
 
+
 .catalog__item{
   display: flex;
   margin-top: 45px;
@@ -40,18 +41,16 @@
   margin-right: 50px;
 }
 
-.catalog__hr{
-  background-color: #ffffff;
-  height: 2px;
+.catalog__img{
+  width: 100%;
+    height: 100%;
+    max-height: 295px;
+    object-fit: cover;
 }
 
-@media(max-width:479px){
-  .catalog{
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-  }
+@media(max-width:500px){
   .catalog__img{
-    width: 100%;
+    max-height: 100%;
+    padding-bottom: 30px;
   }
 }

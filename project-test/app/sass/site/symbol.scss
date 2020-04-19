@@ -1,8 +1,8 @@
 .symbol__box_black--16{
 width:16px;
-height:16px;
+height:40px;
+object-fit: contain;
 margin-right: 10px;
-fill: currentColor;
 }
 
 .symbol__box_white--16{
@@ -16,13 +16,47 @@ fill: currentColor;
  display:flex;
  align-items: center;
  justify-content: start;
+ fill:currentColor;
 }   
 
 .symbol__box_black--hover:hover{
   .symbol__box_white--16{
     display: block;
   }
-  .symbol__box_black--16{
-    display: none;
+}
+ 
+  .slider__bottom-navigation{
+    padding-left: 50%;
+    margin-left: -32px;
   }
-} 
+  .symbol-icon--24{
+    @include block(24px, 24px);
+  }
+ 
+  
+  .symbol-icon--yellow{
+    color: #fdce03;
+  }
+  .slider__arrow--left{
+    margin-left: 31px;
+    transform: rotate(180deg);
+  }
+  .slider__arrow:hover{
+    background-color:white;
+    & .symbol{
+      color: black;
+    }
+  }
+
+  .symbol-icon--21{
+    @include block(18px, 18px);
+  }
+
+  @media(max-width:479px){
+    .symbol__box_black--16{
+      width:35px;
+      height:40px;
+      margin-right: 20px;
+      }
+  }
+  

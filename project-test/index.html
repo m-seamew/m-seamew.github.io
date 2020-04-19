@@ -35,10 +35,15 @@
         d="M14.082 2.182a.5.5 0 01.103.557L8.528 15.467a.5.5 0 01-.917-.007L5.57 10.694.803 8.652a.5.5 0 01-.006-.916l12.728-5.657a.5.5 0 01.556.103z"
         clip-rule="evenodd" />
     </symbol>
+    <symbol id="bold-arrow" viewBox="0 0 16 16">
+      <path
+        d="M3.86 8.753l5.482 4.796c.646.566 1.658.106 1.658-.753V3.204a1 1 0 00-1.659-.753l-5.48 4.796a1 1 0 000 1.506z" />
+    </symbol>
   </svg>
 </head>
 
 <body>
+  <div class="hr hr--full-black"></div>
   <div class="container-background-full-screen container-background-full-screen--heder_yellow">
     <div class="container">
       <header>
@@ -51,9 +56,10 @@
           </div>
           <div class="header__contacts row__col-5 row__mob-col-12">
             <p class="header__contacts_adress">
-              г.Екатеринбург, ул.Маяковского,25</p>
+              г.Eкатеринбург, ул.Маяковского,25</p>
             <a href="#" class="header__contacts_phone">+7 (343) 222-20-17</a>
           </div>
+        </div>
       </header>
     </div>
   </div>
@@ -64,64 +70,79 @@
           <img src="img/menu_logo.png" alt="logo-min">
         </div>
         <div class="menu__list menu__list--position row__col-11 row__tab-col-12 row__mob-col-12 ">
-          <a class="menu__item menu__item--margin" href="#">КАТАЛОГ ТЕХНИКИ</a>
+          <a class="menu__item menu__item--margin _active" href="#">КАТАЛОГ ТЕХНИКИ</a>
           <a class="menu__item menu__item--margin" href="#">УСЛУГИ</a>
           <a class="menu__item menu__item--margin" href="#">ВЫПОЛНЕННЫЕ РАБОТЫ</a>
           <a class="menu__item menu__item--margin" href="#">О КОМПАНИИ</a>
-          <a class="menu__item menu__item--margin" href="#">КОНТАКТЫ</a>
+          <a class="menu__item" href="#">КОНТАКТЫ</a>
         </div>
       </div>
     </div>
     <div class="container-background-full-screen container--background-slider--background">
       <div class="container">
         <div class="slider">
-          <input type="radio" class="slider__label--btn1" name="slider__pagination" id="btn1" checked>
-          <input type="radio" class="slider__label--btn2" name="slider__pagination" id="btn2">
-          <input type="radio" class="slider__label--btn3" name="slider__pagination" id="btn3">
-
-
-
-          <div class="slider_slides-group">
-
-            <div class="slider_item-group">
+          <div class="slider__slides-group">
+            <div class="slider__pagination">
+              <div class="slider__pagination-item _active"></div>
+              <div class="slider__pagination-item"></div>
+              <div class="slider__pagination-item"></div>
+            </div>
+            <div class="slider__item _active">
               <div class="slider__description">
-                <div class="slider__text">
-                  <div class="slider__price">
-                    <h2 class="slider__amount">15000</h2>
-                    <h3 class="slider__currency">руб/cутки</h3>
-                  </div>
-                  <h4 class="slider__main-text">ПРОФЕССИОНАЛЬНАЯ ТЕХНИКА В АРЕНДУ ОТ</h4>
+                <div class="slider__price">
+                  <h2 class="slider__amount">15000</h2>
+                  <h3 class="slider__currency">руб/cутки</h3>
                 </div>
-                <div class="slider__pagination">
-                  <label class="slider__label slider__label--btn1" for="btn1"></label>
-                  <label class="slider__label slider__label--btn2" for="btn2"></label>
-                  <label class="slider__label slider__label--btn3" for="btn3"></label>
+                <h4 class="slider__main-text">ПРОФЕССИОНАЛЬНАЯ ТЕХНИКА В АРЕНДУ ОТ</h4>
+              </div>
+              <div class="slides__items">
+                <a href="#"><img class="slider__img" src="img/slide1.png" alt="slides1"></a>
+              </div>
+            </div>
+            <div class="slider__item">
+              <div class="slider__description">
+                <div class="slider__price">
+                  <h2 class="slider__amount">15000</h2>
+                  <h3 class="slider__currency">руб/cутки</h3>
                 </div>
+                <h4 class="slider__main-text">ПРОФЕССИОНАЛЬНАЯ ТЕХНИКА В АРЕНДУ ОТ</h4>
               </div>
               <div class="slides__items">
-                <a href="#"><img class="slider__img" src="img/slide1.png"></a>
+                <a href="#"><img class="slider__img" src="img/slide1.png" alt="slides1"></a>
+              </div>
+            </div>
+            <div class="slider__item">
+              <div class="slider__description">
+                <div class="slider__price">
+                  <h2 class="slider__amount">15000</h2>
+                  <h3 class="slider__currency">руб/cутки</h3>
+                </div>
+                <h4 class="slider__main-text">ПРОФЕССИОНАЛЬНАЯ ТЕХНИКА В АРЕНДУ ОТ</h4>
               </div>
               <div class="slides__items">
-                <a href="#"><img class="slider__img" src="img/slide1.png"></a>
+                <a href="#"><img class="slider__img" src="img/slide1.png" alt="slides1"></a>
               </div>
-              <div class="slides__items">
-                <a href="#"><img class="slider__img" src="img/slide1.png"></a>
-              </div>
+            </div>
 
-
+          </div>
+          <div class="slider__bottom-navigation">
+            <div class="slider__arrow">
+              <svg class="symbol symbol-icon--24 symbol-icon--yellow">
+                <use xlink:href="#bold-arrow">
+                </use>
+              </svg>
+            </div>
+            <div class="slider__arrow slider__arrow--left">
+              <svg class="symbol symbol-icon--24 symbol-icon--yellow">
+                <use xlink:href="#bold-arrow">
+                </use>
+              </svg>
             </div>
           </div>
+
         </div>
       </div>
-
     </div>
-    <!--
-         <div class="slider__bottom row">
-             <div class="slider__pagination slider_pagination--arrow   row__col-12">-->
-
-    </div>
-    </div>
-
 
     <div class="container">
       <div class="catalog">
@@ -129,142 +150,94 @@
           <a class="submenu__link" href="#">Главная</a> /
           <a class="submenu__link" href="#"> Каталог </a> /
           <a class="submenu__link submeny__link--active" href="#"> Название товара</a></div>
-        <div class="catalog__item row row--mob-wrap">
+        <div class="catalog__item row row--catalog-wrap">
           <div class="catalog__picture row__col-4 row__mob-col-12">
             <img class="catalog__img" src="img/item1.png" alt="catalog item">
           </div>
           <div class="catalog__description row__col-8 row__mob-col-12">
             <h4 class="catalog__header">JCB 4CX Super</h4>
             <div class="tabs catalog__tabs--position">
+              <div class="tabs__tab _active">
+                <div class="tabs__label">
+                  <h4 class="tabs__title">Характеристика</h4>
+                  <div class="tabs__arrow">
+                    <svg class="symbol symbol-icon--21 tabs__arrow--top">
+                      <use xlink:href="#bold-arrow"></use>
+                    </svg>
+                  </div>
+                </div>
+                <div class="tabs__content">
+                  <input class="tabs__checkbox" type="checkbox" id="tabs1">
+                  <label for="tabs1" class="tabs__checkbox-label">
+                    <div class="tabs__label-text">Характеристика 1</div>
+                  </label>
+                </div>
+                <div class="tabs__content">
+                  <input class="tabs__checkbox" type="checkbox" id="tabs2">
+                  <label for="tabs2" class="tabs__checkbox-label">
+                    <div class="tabs__label-text">Характеристика 2</div>
+                  </label>
+                </div>
+                <div class="tabs__content">
+                  <input class="tabs__checkbox" type="checkbox" id="tabs3">
+                  <label for="tabs3" class="tabs__checkbox-label">
+                    <div class="tabs__label-text">Характеристика 3</div>
+                  </label>
+                </div>
+
+              </div>
               <div class="tabs__tab">
-                <input class="tabs__input tabs__input--hiden" type="checkbox" id="char2">
-                <label class="tabs__label" for="char2">
-                  <h4 class="tabs__title ">Информация</h4>
-                </label>
-                <div class="tabs__content">
-                  <ul class="catalog__list">
-                    <li class="catalog__li catalog__li--margin">
-                      <div class="symbol symbol__box_black--hover">
-                        <svg class="symbol__box_black symbol__box_black--16">
-                          <use xlink:href="#box_black">
-                          </use>
-                        </svg>
-                        <svg class="symbol__box_black symbol__box_white--16">
-                          <use xlink:href="#box_white">
-                          </use>
-                        </svg>
-                        Характеристика 1</div>
-
-                    </li>
-                    <li class="catalog__li catalog__li--margin">
-                      <div class="symbol symbol__box_black--hover">
-                        <svg class="symbol__box_black symbol__box_black--16">
-                          <use xlink:href="#box_black">
-                          </use>
-                        </svg>
-                        <svg class="symbol__box_black symbol__box_white--16">
-                          <use xlink:href="#box_white">
-                          </use>
-                        </svg>
-                        Характеристика 1</div>
-
-                    </li>
-                    <li class="catalog__li catalog__li--margin">
-                      <div class="symbol symbol__box_black--hover">
-                        <svg class="symbol__box_black symbol__box_black--16">
-                          <use xlink:href="#box_black">
-                          </use>
-                        </svg>
-                        <svg class="symbol__box_black symbol__box_white--16">
-                          <use xlink:href="#box_white">
-                          </use>
-                        </svg>
-                        Характеристика 1</div>
-
-                    </li>
-
-                  </ul>
-
-
+                <div class="tabs__label">
+                  <h4 class="tabs__title">Информация</h4>
+                  <div class="tabs__arrow">
+                    <svg class="symbol symbol-icon--21 tabs__arrow--bottom">
+                      <use xlink:href="#bold-arrow"></use>
+                    </svg>
+                  </div>
                 </div>
-
-
-
-              </div>
-              <div class="tabs__tab  tabs--margin-top">
-                <input class="tabs__input tabs__input--hiden" type="checkbox" id="char1">
-                <label class="tabs__label" for="char1">
-                  <h4 class="tabs__title">Характеристики</h4>
-                </label>
                 <div class="tabs__content">
-                  <ul class="catalog__list">
-                    <li class="catalog__li catalog__li--margin">
-                      <div class="symbol symbol__box_black--hover">
-                        <svg class="symbol__box_black symbol__box_black--16">
-                          <use xlink:href="#box_black">
-                          </use>
-                        </svg>
-                        <svg class="symbol__box_black symbol__box_white--16">
-                          <use xlink:href="#box_white">
-                          </use>
-                        </svg>
-                        Характеристика 1</div>
-
-                    </li>
-                    <li class="catalog__li catalog__li--margin">
-                      <div class="symbol symbol__box_black--hover">
-                        <svg class="symbol__box_black symbol__box_black--16">
-                          <use xlink:href="#box_black">
-                          </use>
-                        </svg>
-                        <svg class="symbol__box_black symbol__box_white--16">
-                          <use xlink:href="#box_white">
-                          </use>
-                        </svg>
-                        Характеристика 1</div>
-
-                    </li>
-                    <li class="catalog__li catalog__li--margin">
-                      <div class="symbol symbol__box_black--hover">
-                        <svg class="symbol__box_black symbol__box_black--16">
-                          <use xlink:href="#box_black">
-                          </use>
-                        </svg>
-                        <svg class="symbol__box_black symbol__box_white--16">
-                          <use xlink:href="#box_white">
-                          </use>
-                        </svg>
-                        Характеристика 1</div>
-
-                    </li>
-
-                  </ul>
-
-
+                  <input class="tabs__checkbox" type="checkbox" id="tabs6">
+                  <label for="tabs6" class="tabs__checkbox-label">
+                    <div class="tabs__label-text">Характеристика 1</div>
+                  </label>
                 </div>
-
-
-
-              </div>
-              <div class="catalog__buy tabs--margin-top">
-                <div class="catalog__price catalog__header catalog__header--margin">125.000 Р.</div>
-                <a class="button-link" href="#">
-                  <div class="button catalog__button--size-m">Заказать
-                </a>
-
+                <div class="tabs__content">
+                  <input class="tabs__checkbox" type="checkbox" id="tabs5">
+                  <label for="tabs5" class="tabs__checkbox-label">
+                    <div class="tabs__label-text">Характеристика 2</div>
+                  </label>
+                </div>
+                <div class="tabs__content">
+                  <input class="tabs__checkbox" type="checkbox" id="tabs4">
+                  <label for="tabs4" class="tabs__checkbox-label">
+                    <div class="tabs__label-text">Характеристика 3</div>
+                  </label>
+                </div>
               </div>
             </div>
+            <div class="catalog__buy tabs--margin-top">
+              <div class="catalog__price catalog__header catalog__header--margin">125.000 Р.</div>
+              <a class="button-link" href="#">
+                <div class="button catalog__button--size-m">Заказать
+                </div>
+              </a>
+
+
+
+            </div>
+
           </div>
         </div>
+        <div class="hr hr--fullwidth hr--thin hr--catalog-margin"></div>
       </div>
-      <h3 class="block-title block-title--center">Услуги</h3>
     </div>
-    </div>
+
+    <h3 class="block-title block-title--center">Услуги</h3>
     <div class="container-background-full-screen container--background-slider--background">
       <div class="container">
         <div class="services row row--services-wrap">
           <div class="services__item row__col-6 row__mob-col-12 row__tab-col-12">
-            <div class="services__img"><img src="img/services__icon.png" alt="services"></div>
+            <div class="services__img"><img class="services__image" src="img/services__icon.png" alt="services"></div>
             <div class="services__text">
               <div class="services__description services__description--position">ЗАСЫПКА ТРАНШЕЙ</div>
               <div class="services__subtitle services__subtitle--position">Нашей компанией осуществляется засыпка
@@ -300,28 +273,58 @@
     </div>
     <div class="container">
       <h3 class="block-title block-title--side">Залоговок</h3>
-      <div class="form-services row">
-        <div class="form-services__tasks-form row__col-7">
-          <div class="form-services__task form-services__task--position">
-            <h4 class="form-services__header">Задача 1</h4>
-            <div class="symbol">
-              <svg class="symbol__box_black symbol__box_black--16 form-services__icon form-servies__icon--margin">
+      <div class="form-services">
+        <div class="form-services__task-form row">
+          <div class="form-services__task form-services__task--position row__col-7 row__mob-col-12">
+            <h4 class="form-services__header">1. Задача 1</h4>
+            <div class="form-services__button">
+              <svg
+                class="symbol symbol__box_black symbol__box_black--16 form-services__icon form-servies__icon--margin">
                 <use xlink:href="#brash">
                 </use>
               </svg>
-              <svg class="symbol__box_black symbol__box_black--16 form-services__icon ">
+              <svg class="symbol symbol__box_black symbol__box_black--16 form-services__icon ">
                 <use xlink:href="#send">
                 </use>
               </svg>
             </div>
           </div>
-          <div class="form-services__task form-services__task--position">
-            <h4 class="form-services__header">Задача 1</h4>
-          </div>
-          <div class="form-services__task form-services__task--position">
-            <input type="text" class="form-services__field">
+        </div>
+        <div class="form-services__task-form row">
+          <div class="form-services__task form-services__task--position row__col-7 row__mob-col-12">
+            <h4 class="form-services__header">1. Задача 1</h4>
+            <div class="form-services__button">
+              <svg
+                class="symbol symbol__box_black symbol__box_black--16 form-services__icon form-servies__icon--margin">
+                <use xlink:href="#brash">
+                </use>
+              </svg>
+              <svg class="symbol symbol__box_black symbol__box_black--16 form-services__icon ">
+                <use xlink:href="#send">
+                </use>
+              </svg>
+            </div>
           </div>
         </div>
+        <div class="form-services__task-form _active form-services__task--position  row">
+          <div class="form-services__task row__col-7">
+            <input type="text" class="form-services__field">
+          </div>
+          <div class="form-services__task row__col-1 row__mob-col-5">
+            <div class="form-services__button _active">
+              <svg
+                class="symbol symbol__box_black symbol__box_black--16 form-services__icon">
+                <use xlink:href="#brash">
+                </use>
+              </svg>
+              <svg class="symbol symbol__box_black symbol__box_black--16 form-services__icon ">
+                <use xlink:href="#send">
+                </use>
+              </svg>
+            </div>
+          </div>
+        </div>
+
       </div>
     </div>
     <div class="container-background-full-screen">
@@ -340,9 +343,9 @@
     <div class="container">
       <footer class="row footer__row row--mob-wrap row--tab-wrap">
         <div class="logo footer__logo row__col-3">
-          <a class="logo__link" href="#"><img class="logo__img" src="img/logo_footer.png" alt="logo"></a>
+          <a class="logo__link" href="#"><img class="logo__img  footer__logo-size-s" src="img/logo_footer.png" alt="logo"></a>
         </div>
-        <div class="footer__menu row__col-7 row__mob-col-9 row__tab-col-8">
+        <div class="footer__menu row__col-7 row__mob-col-9 row__tab-col-9">
           <a class="menu__item footer__menu--margin footer__menu--active" href="#">Главная</a>
           <a class="menu__item footer__menu--margin" href="#">Каталог&nbsp;техники</a>
           <a class="menu__item footer__menu--margin" href="#">Услуги</a>

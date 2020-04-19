@@ -16,6 +16,7 @@ $mediaLarge-min-width:1401px;
 .menu__list{
   display: flex;
   align-items:center;
+  line-height: 40px;
 }
 
 .menu__list--position{
@@ -25,6 +26,9 @@ $mediaLarge-min-width:1401px;
 .menu__item{
   text-decoration: none;
   color: #818180;
+  &._active{
+    color: #000;
+  }
 }
 
 .menu__item--margin{
@@ -41,13 +45,18 @@ $mediaLarge-min-width:1401px;
     margin-top: 20px;
   }
   .menu__list{
+    margin-top: 20px;
     flex-direction: column;
+    &:last-child{
+      margin-bottom: 20px;
+    }
   }
   .menu__list--position{
   margin-right: 0px;
 }
   .menu__item--margin{
-    margin-top: 20px;
+    
+    margin-bottom: 20px;
     margin-right: 0px;
   }
 }

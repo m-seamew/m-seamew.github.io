@@ -1,0 +1,18 @@
+.hr--full-black{
+  @include block(100%, 9px);
+  background-color: #000;
+}
+
+.hr--full-width{
+  width: 100%;
+}
+
+.hr--thin{
+  height: 2px;
+  background-color: #000;
+}
+
+.hr--catalog-margin{
+  margin-top: 45px;
+}
+

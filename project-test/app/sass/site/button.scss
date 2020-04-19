@@ -3,9 +3,17 @@
   align-items: center;
   justify-content: center;
   border-radius: 5px;
-  box-shadow: 1px 1.7px 5px 0 #00000059;
+  box-shadow: 1px 2px 5px 0 #00000059;
   border: solid 2px #fdce03;
   background-image: linear-gradient(to top, #fdcf03, #fab500);
+}
+
+.button:hover{
+  background-image: linear-gradient(to top, #fab500, #fdcf03);
+}
+
+.button:active{
+  box-shadow: none;
 }
 
 .button-link{

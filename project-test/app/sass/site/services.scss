@@ -36,7 +36,10 @@ margin-top: 6px;
 
 @media(max-width:$mediaTablet-max-width){
   .services__item{
-    justify-content: center;
+    justify-content: start;
+  }
+  .services__text{
+    max-width: 65%;
   }
   .services__subtitle--position{
     margin-top: 24px;
@@ -47,4 +50,16 @@ margin-top: 6px;
    margin-top: 6px;
    margin-left: 30px;
    }
+}
+
+@media(max-width:$mediaMobile-max-width){
+  .services__img{
+    flex-shrink: 1;
+  }
+  .services__image{
+    width: 100%;
+  }
+  .services__text{
+    max-width:75%;
+  }
 }
