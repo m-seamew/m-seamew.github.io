@@ -79,15 +79,11 @@
       </div>
     </div>
     <div class="container-background-full-screen">
-      <div class="slider">
+      <div class="slider js-slider">
         <div class="slider__slides-group">
-          <div class="container container__slider">
-            <div class="slider__pagination">
-              <div class="slider__pagination-item _active"></div>
-              <div class="slider__pagination-item"></div>
-              <div class="slider__pagination-item"></div>
-            </div>
-            <div class="slider__item _active">
+          <a href="#" class="slider__link">
+            <img class="slider__img" src="img/slider-full.jpg" alt="">
+            <!-- <div class="container slider__container-description">
               <div class="slider__description">
                 <div class="slider__price">
                   <h2 class="slider__amount">15000</h2>
@@ -95,26 +91,42 @@
                 </div>
                 <h4 class="slider__main-text">ПРОФЕССИОНАЛЬНАЯ ТЕХНИКА В АРЕНДУ ОТ</h4>
               </div>
+            </div> -->
+          </a>
+
+          <a href="#" class="slider__link">
+            <img class="slider__img" src="img/slider-full.jpg" alt="">
+          </a>
+
+        </div>
+
+        <div class="container slider__container-navigation">
+
+          <div class="slider__pagination js-slider__pagination">
+            <div class="slider__pagination-item _active"></div>
+            <div class="slider__pagination-item"></div>
+            <div class="slider__pagination-item"></div>
+          </div>
+
+          <div class="slider__bottom-navigation">
+            <div class="slider__arrow js-slider__right">
+              <svg class="symbol symbol-icon--24 symbol-icon--yellow">
+                <use xlink:href="#bold-arrow">
+                </use>
+              </svg>
+            </div>
+            <div class="slider__arrow slider__arrow--left js-slider__left">
+              <svg class="symbol symbol-icon--24 symbol-icon--yellow">
+                <use xlink:href="#bold-arrow">
+                </use>
+              </svg>
             </div>
           </div>
-          <div class="slides__image"></div>
-
 
         </div>
-        <div class="slider__bottom-navigation">
-          <div class="slider__arrow">
-            <svg class="symbol symbol-icon--24 symbol-icon--yellow">
-              <use xlink:href="#bold-arrow">
-              </use>
-            </svg>
-          </div>
-          <div class="slider__arrow slider__arrow--left">
-            <svg class="symbol symbol-icon--24 symbol-icon--yellow">
-              <use xlink:href="#bold-arrow">
-              </use>
-            </svg>
-          </div>
-        </div>
+        <!-- <div class="slides__image"></div> -->
+
+
       </div>
     </div>
 
@@ -335,6 +347,28 @@
       </footer>
     </div>
   </div>
+  <script src="https://unpkg.com/swiper/js/swiper.min.js"></script>
+
+  <script>
+    var mySwiper = new Swiper('.js-slider', {
+      slideClass: 'slider__link',
+      wrapperClass: 'slider__slides-group',
+      navigation: {
+        nextEl: '.js-slider__right',
+        prevEl: '.js-slider__left',
+      },
+      pagination: {
+        el: '.js-slider__pagination',
+        type: 'bullets',
+        bulletClass: 'slider__pagination-item',
+        bulletActiveClass: '_active',
+        bulletElement: 'div',
+        clickable: true
+      },
+    });
+  </script>
 </body>
 
 </html>
+
+<!-- slider__pagination-item -->
