@@ -16,6 +16,10 @@ $mediaLarge-min-width:1401px;
   padding-right: $getter;
 }
 
+.container__slider{
+ position: relative;
+}
+
 
 .row{
   display: flex;
