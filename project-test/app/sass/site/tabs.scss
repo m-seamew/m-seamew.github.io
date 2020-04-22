@@ -43,6 +43,14 @@
   transform: rotate(90deg);
 }
 
+.tabs__tab:not(._active) .tabs__arrow--top{
+  transform: rotate(270deg);
+}
+
+.tabs__tab._active .tabs__arrow--top{
+  transform: rotate(90deg);
+}
+
 .tabs__arrow--bottom {
   color: white;
   transform: rotate(270deg);
@@ -100,8 +108,8 @@
 }
 
 
-.tabs__tab:not(._active) .tabs__content-container{
-  display: none;
+.tabs__content-container:not(.show){
+display: none;
 }
 
 

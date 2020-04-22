@@ -160,7 +160,7 @@
             <h4 class="catalog__header">JCB 4CX Super</h4>
             <div class="tabs catalog__tabs--position">
               <div class="tabs__tab">
-                <div class="tabs__label">
+                <div class="tabs__label js-tabs__label--characteristics" data-parent="tabs">
                   <h4 class="tabs__title">Характеристика</h4>
                   <div class="tabs__arrow">
                     <svg class="symbol symbol-icon--21 tabs__arrow--top">
@@ -168,13 +168,13 @@
                     </svg>
                   </div>
                 </div>
-                <div class="tabs__content-container">
+                <div class="tabs__content-container js-tabs__content--characteristics">
                   <div class="tabs__content">
                     <input class="tabs__checkbox" type="checkbox" id="tabs1">
                     <label for="tabs1" class="tabs__checkbox-label">
                       <div class="tabs__label-text">Характеристика 1</div>
                     </label></div>
-                 
+
                   <div class="tabs__content">
                     <input class="tabs__checkbox" type="checkbox" id="tabs2">
                     <label for="tabs2" class="tabs__checkbox-label">
@@ -190,46 +190,43 @@
                 </div>
               </div>
               <div class="tabs__tab">
-                <div class="tabs__label">
+                <div class="tabs__label js-tabs__label--info" data-parent="tabs">
                   <h4 class="tabs__title">Информация</h4>
                   <div class="tabs__arrow">
-                    <svg class="symbol symbol-icon--21 tabs__arrow--bottom">
+                    <svg class="symbol symbol-icon--21 tabs__arrow--top">
                       <use xlink:href="#bold-arrow"></use>
                     </svg>
                   </div>
                 </div>
-                <div class="tabs__content-container collapse" data-toggle="collapse" data-target="#collapseTwo"">
-                <div class="tabs__content">
-                  <input class="tabs__checkbox" type="checkbox" id="tabs6">
-                  <label for="tabs6" class="tabs__checkbox-label">
-                    <div class="tabs__label-text">Характеристика 1</div>
-                  </label>
-                </div>
-            
-              <div class="tabs__content">
-                <div class="tabs__content">
-                  <input class="tabs__checkbox" type="checkbox" id="tabs5">
-                  <label for="tabs5" class="tabs__checkbox-label">
-                    <div class="tabs__label-text">Характеристика 2</div>
-                  </label>
-                </div>
-                <div class="tabs__content">
-                  <input class="tabs__checkbox" type="checkbox" id="tabs4">
-                  <label for="tabs4" class="tabs__checkbox-label">
-                    <div class="tabs__label-text">Характеристика 3</div>
-                  </label>
+                <div class="tabs__content-container js-tabs__content--info">
+                  <div class="tabs__content">
+                    <input class="tabs__checkbox" type="checkbox" id="tabs4">
+                    <label for="tabs4" class="tabs__checkbox-label">
+                      <div class="tabs__label-text">Характеристика 1</div>
+                    </label></div>
+
+                  <div class="tabs__content">
+                    <input class="tabs__checkbox" type="checkbox" id="tabs5">
+                    <label for="tabs5" class="tabs__checkbox-label">
+                      <div class="tabs__label-text">Характеристика 2</div>
+                    </label>
+                  </div>
+                  <div class="tabs__content">
+                    <input class="tabs__checkbox" type="checkbox" id="tabs6">
+                    <label for="tabs6" class="tabs__checkbox-label">
+                      <div class="tabs__label-text">Характеристика 3</div>
+                    </label>
+                  </div>
                 </div>
               </div>
+              <div class="catalog__buy tabs--margin-top">
+                <div class="catalog__price catalog__header catalog__header--margin">125.000 Р.</div>
+                <a class="button-link" href="#">
+                  <div class="button catalog__button--size-m">Заказать
+                  </div>
+                </a>
               </div>
             </div>
-            <div class="catalog__buy tabs--margin-top">
-              <div class="catalog__price catalog__header catalog__header--margin">125.000 Р.</div>
-              <a class="button-link" href="#">
-                <div class="button catalog__button--size-m">Заказать
-                </div>
-              </a>
-            </div>
-          </div>
           </div>
         </div>
         <div class="hr hr--fullwidth hr--thin hr--catalog-margin"></div>
@@ -367,10 +364,12 @@
   </div>
   <script src="https://unpkg.com/swiper/js/swiper.min.js"></script>
 
-  <script src="http://thecodeplayer.com/uploads/js/prefixfree-1.0.7.js" type="text/javascript" type="text/javascript"></script>
-
-<!-- jQuery -->
-<script src="http://thecodeplayer.com/uploads/js/jquery-1.7.1.min.js" type="text/javascript"></script>
+  <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
+    integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n"
+    crossorigin="anonymous"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"
+    integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6"
+    crossorigin="anonymous"></script>
 
   <script>
     var mySwiper = new Swiper('.js-slider', {
@@ -391,9 +390,18 @@
       },
     });
   </script>
-  <script>
-   $('.tabs__tab').collapse();
-  </script>
+  <script type="text/javascript">
+$(document).ready(function(){
+    $(".js-tabs__label--info").click(function(){
+        $(".js-tabs__content--info").collapse('toggle');
+        $(this).parent().toggleClass('_active');
+    });
+    $(".js-tabs__label--characteristics").click(function(){
+        $(".js-tabs__content--characteristics").collapse('toggle');
+        $(this).parent().toggleClass('_active');
+    });
+});
+</script>
 </body>
 
 </html>
