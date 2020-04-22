@@ -99,10 +99,9 @@
   visibility: visible;
 }
 
-.tabs__content{
- display: none;
+
+.tabs__tab:not(._active) .tabs__content-container{
+  display: none;
 }
 
-.tabs__tab._active .tabs__content{
-  display: block;
-}
+

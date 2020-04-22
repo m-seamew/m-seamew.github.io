@@ -83,19 +83,38 @@
         <div class="slider__slides-group">
           <a href="#" class="slider__link">
             <img class="slider__img" src="img/slider-full.jpg" alt="">
-            <!-- <div class="container slider__container-description">
+            <div class="container slider__container-description">
               <div class="slider__description">
-                <div class="slider__price">
-                  <h2 class="slider__amount">15000</h2>
-                  <h3 class="slider__currency">руб/cутки</h3>
+                <div class="slider__main-text slider__main-text--first-line">ПРОФЕССИОНАЛЬНАЯ ТЕХНИКА</div>
+                <div class="slider__second-line">
+                  <div class="slider__main-text slider__main-text--second-line">
+                    В АРЕНДУ ОТ
+                  </div>
+                  <div class="slider__price">
+                    <div class="slider__amount">15000</div>
+                    <div class="slider__currency">руб/cутки</div>
+                  </div>
                 </div>
-                <h4 class="slider__main-text">ПРОФЕССИОНАЛЬНАЯ ТЕХНИКА В АРЕНДУ ОТ</h4>
               </div>
-            </div> -->
+            </div>
           </a>
 
           <a href="#" class="slider__link">
             <img class="slider__img" src="img/slider-full.jpg" alt="">
+            <div class="container slider__container-description">
+              <div class="slider__description">
+                <div class="slider__main-text slider__main-text--first-line">ПРОФЕССИОНАЛЬНАЯ ТЕХНИКА</div>
+                <div class="slider__second-line">
+                  <div class="slider__main-text slider__main-text--second-line">
+                    В АРЕНДУ ОТ
+                  </div>
+                  <div class="slider__price">
+                    <div class="slider__amount">15000</div>
+                    <div class="slider__currency">руб/cутки</div>
+                  </div>
+                </div>
+              </div>
+            </div>
           </a>
 
         </div>
@@ -124,9 +143,6 @@
           </div>
 
         </div>
-        <!-- <div class="slides__image"></div> -->
-
-
       </div>
     </div>
 
@@ -143,7 +159,7 @@
           <div class="catalog__description row__col-8 row__mob-col-12">
             <h4 class="catalog__header">JCB 4CX Super</h4>
             <div class="tabs catalog__tabs--position">
-              <div class="tabs__tab _active">
+              <div class="tabs__tab">
                 <div class="tabs__label">
                   <h4 class="tabs__title">Характеристика</h4>
                   <div class="tabs__arrow">
@@ -152,25 +168,26 @@
                     </svg>
                   </div>
                 </div>
-                <div class="tabs__content">
-                  <input class="tabs__checkbox" type="checkbox" id="tabs1">
-                  <label for="tabs1" class="tabs__checkbox-label">
-                    <div class="tabs__label-text">Характеристика 1</div>
-                  </label>
+                <div class="tabs__content-container">
+                  <div class="tabs__content">
+                    <input class="tabs__checkbox" type="checkbox" id="tabs1">
+                    <label for="tabs1" class="tabs__checkbox-label">
+                      <div class="tabs__label-text">Характеристика 1</div>
+                    </label></div>
+                 
+                  <div class="tabs__content">
+                    <input class="tabs__checkbox" type="checkbox" id="tabs2">
+                    <label for="tabs2" class="tabs__checkbox-label">
+                      <div class="tabs__label-text">Характеристика 2</div>
+                    </label>
+                  </div>
+                  <div class="tabs__content">
+                    <input class="tabs__checkbox" type="checkbox" id="tabs3">
+                    <label for="tabs3" class="tabs__checkbox-label">
+                      <div class="tabs__label-text">Характеристика 3</div>
+                    </label>
+                  </div>
                 </div>
-                <div class="tabs__content">
-                  <input class="tabs__checkbox" type="checkbox" id="tabs2">
-                  <label for="tabs2" class="tabs__checkbox-label">
-                    <div class="tabs__label-text">Характеристика 2</div>
-                  </label>
-                </div>
-                <div class="tabs__content">
-                  <input class="tabs__checkbox" type="checkbox" id="tabs3">
-                  <label for="tabs3" class="tabs__checkbox-label">
-                    <div class="tabs__label-text">Характеристика 3</div>
-                  </label>
-                </div>
-
               </div>
               <div class="tabs__tab">
                 <div class="tabs__label">
@@ -181,12 +198,15 @@
                     </svg>
                   </div>
                 </div>
+                <div class="tabs__content-container collapse" data-toggle="collapse" data-target="#collapseTwo"">
                 <div class="tabs__content">
                   <input class="tabs__checkbox" type="checkbox" id="tabs6">
                   <label for="tabs6" class="tabs__checkbox-label">
                     <div class="tabs__label-text">Характеристика 1</div>
                   </label>
                 </div>
+            
+              <div class="tabs__content">
                 <div class="tabs__content">
                   <input class="tabs__checkbox" type="checkbox" id="tabs5">
                   <label for="tabs5" class="tabs__checkbox-label">
@@ -200,6 +220,7 @@
                   </label>
                 </div>
               </div>
+              </div>
             </div>
             <div class="catalog__buy tabs--margin-top">
               <div class="catalog__price catalog__header catalog__header--margin">125.000 Р.</div>
@@ -207,11 +228,8 @@
                 <div class="button catalog__button--size-m">Заказать
                 </div>
               </a>
-
-
-
             </div>
-
+          </div>
           </div>
         </div>
         <div class="hr hr--fullwidth hr--thin hr--catalog-margin"></div>
@@ -278,7 +296,7 @@
         </div>
         <div class="form-services__task-form row">
           <div class="form-services__task form-services__task--position row__col-7 row__mob-col-12">
-            <h4 class="form-services__header">1. Задача 1</h4>
+            <h4 class="form-services__header">1. Задача 1 </h4>
             <div class="form-services__button">
               <svg
                 class="symbol symbol__box_black symbol__box_black--16 form-services__icon form-servies__icon--margin">
@@ -349,6 +367,11 @@
   </div>
   <script src="https://unpkg.com/swiper/js/swiper.min.js"></script>
 
+  <script src="http://thecodeplayer.com/uploads/js/prefixfree-1.0.7.js" type="text/javascript" type="text/javascript"></script>
+
+<!-- jQuery -->
+<script src="http://thecodeplayer.com/uploads/js/jquery-1.7.1.min.js" type="text/javascript"></script>
+
   <script>
     var mySwiper = new Swiper('.js-slider', {
       slideClass: 'slider__link',
@@ -357,6 +380,7 @@
         nextEl: '.js-slider__right',
         prevEl: '.js-slider__left',
       },
+      loop: true,
       pagination: {
         el: '.js-slider__pagination',
         type: 'bullets',
@@ -367,8 +391,9 @@
       },
     });
   </script>
+  <script>
+   $('.tabs__tab').collapse();
+  </script>
 </body>
 
 </html>
-
-<!-- slider__pagination-item -->
