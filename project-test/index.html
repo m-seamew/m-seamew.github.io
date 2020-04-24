@@ -393,10 +393,14 @@
   <script type="text/javascript">
 $(document).ready(function(){
     $(".js-tabs__label--info").click(function(){
+        $(".js-tabs__content--characteristics").collapse('hide');
+        $(".js-tabs__content--characteristics").parent().removeClass('_active');
         $(".js-tabs__content--info").collapse('toggle');
         $(this).parent().toggleClass('_active');
     });
     $(".js-tabs__label--characteristics").click(function(){
+        $(".js-tabs__content--info").collapse('hide');
+        $(".js-tabs__content--info").parent().removeClass('_active');
         $(".js-tabs__content--characteristics").collapse('toggle');
         $(this).parent().toggleClass('_active');
     });
