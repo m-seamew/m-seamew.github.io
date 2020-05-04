@@ -1,0 +1,48 @@
+*{
+  margin: 0;
+  padding: 0;
+  text-decoration: none;
+  box-sizing: border-box;
+}
+
+ul li{
+  list-style-type: none;
+}
+
+@import url('https://fonts.googleapis.com/css?family=Montserrat:400,500,700|Source+Sans+Pro:300,400,700&display=swap');
+
+body{
+  font-family: 'Source Sans Pro', sans-serif;
+  font-size: 11px;
+  line-height: 16px;
+  color: #4b4b4b;
+}  
+
+
+
+@import 'grid';
+@import 'menu';
+@import 'fs-content.scss';
+@import 'second-screen';
+@import 'social';
+@import 'symbol';
+@import 'text-area';
+@import 'title';
+@import 'mask';
+@import 'player';
+@import 'anchor-arrow';
+@import 'anchor-link';
+@import 'third-screen';
+@import 'button';
+@import 'four-screen';
+@import 'feedback';
+@import 'five-screen';
+@import 'tabs';
+@import 'six-screen';
+@import 'slider';
+@import 'seven-screen';
+@import 'eight-screen';
+@import 'footer';
+@import 'email-lettering';
+@import 'form-material';
+@import 'contact';

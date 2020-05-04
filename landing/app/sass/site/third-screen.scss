@@ -1,0 +1,25 @@
+.third-screen{
+  margin-top: 37px;
+  height: 312px;
+  background-image: url(bg/thirs-screen-bg.jpg);
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.third-screen__text--position{
+  padding-top: 45px;
+}
+
+.third-screen__text{
+  text-align: center;
+}
+
+.third-screen__text-area{
+  max-width: 245px;
+  margin: 7px auto 0px auto;
+}
+
+.third-screen__button-download--position{
+ margin: 20px auto 0px auto;
+}

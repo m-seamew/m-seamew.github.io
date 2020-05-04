@@ -1,0 +1,39 @@
+.social {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.social__list-item--white {
+  color: white;
+}
+
+.social__list-item--gold {
+ color:#ebcb80;
+}
+
+.social__list-item--gray
+{
+  color: #7d7d7d;
+ }
+
+ 
+ .social__list-item--gray:hover{
+  color: #ebcb80;
+}
+
+.social__list-item--gray:visited{
+  color: #7d7d7d;
+}
+
+
+
+
+.social__link {
+  display: inline-block;
+  padding: 10px 10px;
+}
+
+.social__list {
+  display: flex;
+}

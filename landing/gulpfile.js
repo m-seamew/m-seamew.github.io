@@ -11,8 +11,8 @@ const scssPath = './app/sass/main.scss';
 const scssAllFilesPath = './app/sass/**/*';
 const cssPath = './build/css';
 
-const bgrInputPath = './build/css/bgr/*';
-const bgrOutputPath = './build/css/bgr/';
+const bgrInputPath = './build/css/bg/*';
+const bgrOutputPath = './build/css/bg/';
 
 const jsInput = './app/js/**/*.js';
 

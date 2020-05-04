@@ -1,0 +1,38 @@
+.contact__list-item--gray{
+  color: #7d7d7d;
+}
+
+ 
+.contact__list-item--gray:hover{
+  color: #ebcb80;
+}
+
+.contact__list-item--gray:visited{
+  color: #7d7d7d;
+}
+
+.contact__icon{
+  height: 17px;
+  width: 17px;
+}
+
+.contact__list-content{
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+
+}
+
+.contact__text--margin{
+  margin-left: 6px;
+}
+
+.contact__list-item--margin:not(:last-child){
+  margin-bottom: 15px;
+}
+
+
+.contact__list {
+  display: flex;
+  flex-direction: column;
+}

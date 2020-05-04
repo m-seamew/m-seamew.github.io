@@ -1,0 +1,114 @@
+//grid template
+$maxWidthforMobile: 768px;
+$maxWidthforTablet: 992px;
+$maxWidthforLaptop: 1200px;
+
+$gridNumber: 12;
+$gatterMobile: 15px;
+$gatterTablet: 24px;
+$gatterDesktop: 30px;
+
+$contentMaxwidth: 1200px;
+
+.full-screen{
+  width: 100%;
+  height: 100vh;
+ // overflow: hidden;
+}
+
+.full-width-screen{
+  width: 100%;
+  overflow: hidden;
+}
+
+.full-screen--first-background{
+  background: url(bg/first-screen-bg.jpg);
+  background-repeat: none;
+  background-position: center center;
+  background-size: cover; 
+}
+
+.container{
+ margin: 0 auto;
+ max-width: $contentMaxwidth;
+ padding-left: $gatterMobile;
+ padding-right: $gatterMobile;
+}
+
+.container--full-screen{
+  position: relative;
+  z-index: 3;
+  height: 100%;
+}
+.row{
+  display: flex;
+  flex-wrap: wrap;
+  margin: 0 (-$gatterMobile);
+}
+
+@for $i from 1 to $gridNumber +1 {
+  .row__col-#{$i}{
+  padding: 0 $gatterMobile;
+  flex: 0 0 100%/$gridNumber*$i;
+  };
+  .row__before-col-#{$i}{
+    margin-left: 100%/$gridNumber*$i;
+  } 
+}
+
+.row__col--form{
+  padding: 0 5px;
+}
+
+.row--footer-menu{
+  margin: 0 -5px;
+}
+.row__col--footer-menu{
+  padding: 0 5px;
+}
+
+@include tablet{
+  .container{
+   max-width: $contentMaxwidth;
+   padding-left: $gatterTablet;
+   padding-right: $gatterTablet;
+  }
+  .row{
+    display: flex;
+    flex-wrap: wrap;
+    margin: 0 (-$gatterTablet);
+  }
+  
+  @for $i from 1 to $gridNumber +1 {
+    .row__tab-col-#{$i}{
+    padding: 0 $gatterTablet;
+    flex: 0 0 100%/$gridNumber*$i;
+    } 
+    .row__tab-before-col-#{$i}{
+      margin-left: 100%/$gridNumber*$i;
+    } 
+  }
+  }
+
+  @include desktop{
+    .container{
+     max-width: $contentMaxwidth;
+     padding-left: $gatterDesktop;
+     padding-right: $gatterDesktop;
+    }
+    .row{
+      display: flex;
+      flex-wrap: wrap;
+      margin: 0 (-$gatterDesktop);
+    }
+    
+    @for $i from 1 to $gridNumber +1 {
+      .row__pc-col-#{$i}{
+      padding: 0 $gatterDesktop;
+      flex: 0 0 100%/$gridNumber*$i;
+      } 
+      .row__pc-before-col#{$i}{
+        margin-left: 100%/$gridNumber*$i;
+      } 
+    }
+    }

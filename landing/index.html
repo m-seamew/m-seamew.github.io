@@ -1,0 +1,896 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Landing</title>
+  <link rel="stylesheet" href="build/css/main.css">
+  <link href='https://api.mapbox.com/mapbox-gl-js/v1.8.1/mapbox-gl.css' rel='stylesheet' />
+  <svg style="display: none">
+    <symbol id="insta" viewBox="0 0 24 24">
+      <path fill-rule="evenodd" clip-rule="evenodd"
+        d="M21.3333 6.66667C21.3333 7.03483 21.0348 7.33333 20.6667 7.33333H17.3333C16.9652 7.33333 16.6667 7.03483 16.6667 6.66667V3.33333C16.6667 2.96517 16.9652 2.66667 17.3333 2.66667H20.6667C21.0348 2.66667 21.3333 2.96517 21.3333 3.33333V6.66667ZM21.3333 20.6667C21.3333 21.0348 21.0348 21.3333 20.6667 21.3333H3.33333C2.96517 21.3333 2.66667 21.0348 2.66667 20.6667V10H4.94283C4.763 10.6357 4.66667 11.3067 4.66667 12C4.66667 16.0501 7.94992 19.3333 12 19.3333C16.0501 19.3333 19.3333 16.0501 19.3333 12C19.3333 11.3067 19.237 10.6357 19.0572 10H21.3333V20.6667ZM12 7.33333C14.5773 7.33333 16.6667 9.42267 16.6667 12C16.6667 14.5773 14.5773 16.6667 12 16.6667C9.42267 16.6667 7.33333 14.5773 7.33333 12C7.33333 9.42267 9.42267 7.33333 12 7.33333ZM20.6667 0H3.33333C1.49242 0 0 1.49242 0 3.33333V20.6667C0 22.5076 1.49242 24 3.33333 24H20.6667C22.5076 24 24 22.5076 24 20.6667V3.33333C24 1.49242 22.5076 0 20.6667 0Z" />
+    </symbol>
+    <symbol id="fb" viewBox="0 0 25 24">
+      <path fill-rule="evenodd" clip-rule="evenodd"
+        d="M23.2049 0H1.8625C1.13117 0 0.538452 0.592719 0.538452 1.32404V22.6664C0.538452 23.3977 1.13117 23.9906 1.8625 23.9906H13.3526V14.7001H10.2261V11.0795H13.3526V8.40935C13.3526 5.31074 15.2451 3.62346 18.0093 3.62346C19.3334 3.62346 20.4714 3.72198 20.803 3.76602V7.00431L18.8859 7.00521C17.3826 7.00521 17.0914 7.71955 17.0914 8.76782V11.0795H20.6768L20.21 14.7001H17.0914V23.9906H23.2049C23.9361 23.9906 24.5289 23.3977 24.5289 22.6664V1.32404C24.5289 0.592719 23.9361 0 23.2049 0Z" />
+    </symbol>
+    <symbol id="twitter" viewBox="0 0 30 24">
+      <path fill-rule="evenodd" clip-rule="evenodd"
+        d="M29.4231 2.91898C28.3406 3.39909 27.1771 3.72357 25.9561 3.86951C27.2024 3.12239 28.1595 1.93939 28.6103 0.52985C27.4439 1.22154 26.152 1.72393 24.777 1.99471C23.6758 0.821509 22.107 0.0883789 20.3708 0.0883789C17.037 0.0883789 14.3341 2.79112 14.3341 6.12476C14.3341 6.59787 14.3876 7.0586 14.4905 7.5004C9.47354 7.24867 5.02558 4.84544 2.04829 1.19335C1.52868 2.0849 1.231 3.12185 1.231 4.22811C1.231 6.32235 2.29679 8.17003 3.91652 9.2525C2.92692 9.22119 1.9962 8.94965 1.18224 8.49753C1.18181 8.52271 1.18181 8.548 1.18181 8.5734C1.18181 11.4982 3.2626 13.938 6.02411 14.4925C5.51752 14.6304 4.98425 14.7042 4.43365 14.7042C4.0447 14.7042 3.66651 14.6664 3.29801 14.5959C4.06612 16.9942 6.29543 18.7394 8.93693 18.7881C6.871 20.4071 4.26813 21.3722 1.44 21.3722C0.952789 21.3722 0.472251 21.3437 0 21.2879C2.67143 23.0006 5.84448 23.9999 9.25345 23.9999C20.3567 23.9999 26.4284 14.8017 26.4284 6.82474C26.4284 6.563 26.4226 6.30266 26.411 6.04382C27.5903 5.19274 28.6138 4.12953 29.4231 2.91898Z" />
+    </symbol>
+    <symbol id="play" viewBox="0 0 18 24">
+      <path fill-rule="evenodd" clip-rule="evenodd" d="M0 0V24L18 12L0 0Z" />
+    </symbol>
+    <symbol id="kav" viewBox="0 0 63 50">
+      <path
+        d="M20.6327 23.7207C23.0327 24.7767 24.9047 26.3607 26.2487 28.4727C27.5927 30.5847 28.2647 33.0807 28.2647 35.9607C28.2647 40.0887 26.9687 43.4487 24.3767 46.0407C21.7847 48.5367 18.4727 49.7847 14.4407 49.7847C10.4087 49.7847 7.04866 48.4887 4.36066 45.8967C1.76866 43.3047 0.47266 39.9927 0.47266 35.9607C0.47266 34.0407 0.71266 32.1207 1.19266 30.2007C1.67266 28.2807 2.72866 25.4007 4.36066 21.5607L12.7127 0.824723H26.9687L20.6327 23.7207ZM54.6167 23.7207C57.0167 24.7767 58.8887 26.3607 60.2327 28.4727C61.5767 30.5847 62.2487 33.0807 62.2487 35.9607C62.2487 40.0887 60.9527 43.4487 58.3607 46.0407C55.7687 48.5367 52.4567 49.7847 48.4247 49.7847C44.3927 49.7847 41.0327 48.4887 38.3447 45.8967C35.7527 43.3047 34.4567 39.9927 34.4567 35.9607C34.4567 34.0407 34.6967 32.1207 35.1767 30.2007C35.6567 28.2807 36.7127 25.4007 38.3447 21.5607L46.6967 0.824723H60.9527L54.6167 23.7207Z" />
+    </symbol>
+    <symbol id="pinterest" viewBox="0 0 25 25">
+      <path fill-rule="evenodd" clip-rule="evenodd"
+        d="M0.297363 12.3141C0.297363 17.3979 3.46023 21.7402 7.9246 23.4882C7.81939 22.5392 7.72448 21.0824 7.9658 20.0465C8.18431 19.11 9.37323 14.0813 9.37323 14.0813C9.37323 14.0813 9.0142 13.3625 9.0142 12.3001C9.0142 10.6315 9.98094 9.38591 11.1853 9.38591C12.2094 9.38591 12.7038 10.154 12.7038 11.0759C12.7038 12.1059 12.0483 13.645 11.7099 15.0716C11.4274 16.2656 12.3088 17.2397 13.4867 17.2397C15.6195 17.2397 17.2594 14.9906 17.2594 11.7446C17.2594 8.87164 15.195 6.86238 12.247 6.86238C8.83248 6.86238 6.82837 9.42343 6.82837 12.0706C6.82837 13.1013 7.22566 14.2078 7.72154 14.8089C7.81939 14.9274 7.8341 15.0318 7.80467 15.1532C7.71345 15.5321 7.51112 16.3473 7.47139 16.5136C7.41916 16.7336 7.29703 16.7799 7.06969 16.6747C5.57102 15.9765 4.63445 13.7855 4.63445 12.0257C4.63445 8.24039 7.38458 4.7641 12.5633 4.7641C16.7253 4.7641 19.961 7.73053 19.961 11.6946C19.961 15.8301 17.3529 19.1585 13.7339 19.1585C12.5177 19.1585 11.3751 18.5265 10.9837 17.7805C10.9837 17.7805 10.3819 20.0715 10.2362 20.6329C9.96476 21.6754 9.23345 22.9821 8.74419 23.7788C9.8669 24.1261 11.0602 24.3137 12.2977 24.3137C18.9244 24.3137 24.2974 18.9415 24.2974 12.3141C24.2974 5.6867 18.9244 0.314453 12.2977 0.314453C5.67034 0.314453 0.297363 5.6867 0.297363 12.3141Z" />
+    </symbol>
+    <symbol id="linkin" viewBox="0 0 25 24">
+
+      <path fill-rule="evenodd" clip-rule="evenodd"
+        d="M21.088 20.4507H17.4266V14.8807C17.4266 13.5527 17.4025 11.844 15.5231 11.844C13.6176 11.844 13.3268 13.2913 13.3268 14.786V20.4507H9.66877V8.99733H13.1793V10.5633H13.2294C13.7178 9.66267 14.9133 8.71333 16.6954 8.71333C20.4028 8.71333 21.088 11.0847 21.088 14.1693V20.4507ZM5.53883 7.43267C4.36247 7.43267 3.41453 6.508 3.41453 5.368C3.41453 4.22867 4.36247 3.304 5.53883 3.304C6.71039 3.304 7.66176 4.22867 7.66176 5.368C7.66176 6.508 6.71039 7.43267 5.53883 7.43267ZM3.70536 20.4507H7.37093V8.99733H3.70536V20.4507ZM22.9119 0H1.86777C0.862893 0 0.0459595 0.774667 0.0459595 1.73067V22.268C0.0459595 23.224 0.862893 24 1.86777 24H22.9119C23.9195 24 24.7385 23.224 24.7385 22.268V1.73067C24.7385 0.774667 23.9195 0 22.9119 0Z" />
+    </symbol>
+    <symbol id="google" viewBox="0 0 36 23">
+      <path fill-rule="evenodd" clip-rule="evenodd"
+        d="M11.2203 9.80571V13.728H17.5837C17.3273 15.4113 15.6603 18.6635 11.2203 18.6635C7.38934 18.6635 4.2637 15.4277 4.2637 11.44C4.2637 7.45234 7.38934 4.21646 11.2203 4.21646C13.4002 4.21646 14.8588 5.16434 15.6923 5.98149L18.7378 2.99074C16.7823 1.12766 14.2497 0 11.2203 0C5.01706 0 0 5.11531 0 11.44C0 17.7647 5.01706 22.88 11.2203 22.88C17.6959 22.88 21.9917 18.2386 21.9917 11.7015C21.9917 10.9497 21.9116 10.3777 21.8154 9.80571H11.2203Z" />
+      <path fill-rule="evenodd" clip-rule="evenodd"
+        d="M35.2637 9.80568H32.0579V6.53711H28.8521V9.80568H25.6463V13.0743H28.8521V16.3428H32.0579V13.0743H35.2637" />
+    </symbol>
+    <symbol id="location" viewBox="0 0 11 17">
+      <path fill-rule="evenodd" clip-rule="evenodd"
+        d="M4.7664 16.3727C4.89755 16.5907 5.12879 16.7234 5.37774 16.7235C5.62673 16.7235 5.85801 16.5909 5.98915 16.3729C7.39825 14.0841 10.7554 8.33863 10.7554 5.54067C10.7554 2.48067 8.3477 0 5.37771 0C2.40767 0 0 2.48067 0 5.54067C0 8.33863 3.35712 14.0841 4.7664 16.3727Z"
+        fill="#4B4B4B" />
+      <path fill-rule="evenodd" clip-rule="evenodd"
+        d="M5.31672 7.17777C6.43049 7.17777 7.33338 6.24752 7.33338 5.09999C7.33338 3.95247 6.43049 3.02222 5.31672 3.02222C4.20294 3.02222 3.30005 3.95247 3.30005 5.09999C3.30005 6.24752 4.20294 7.17777 5.31672 7.17777Z"
+        fill="white" />
+    </symbol>
+    <symbol id="phone" viewBox="0 0 12 18">
+      <path fill-rule="evenodd" clip-rule="evenodd"
+        d="M11.9061 14.9807C12.0059 15.1684 12.0272 15.3882 11.965 15.5916C11.9028 15.795 11.7624 15.9653 11.5746 16.0652C11.2463 16.2398 10.8518 16.4496 10.4999 16.6367C9.89665 16.9576 9.20559 17.0741 8.53045 16.9688C8.28947 16.9312 8.02776 16.8904 7.76962 16.8501C6.78041 16.6958 5.92151 16.0848 5.45142 15.2009C4.18574 12.821 1.63394 8.02272 0.370667 5.64738C-0.0971752 4.76763 -0.123558 3.71895 0.299537 2.81683C0.411485 2.57809 0.525158 2.33571 0.629729 2.11278C0.919825 1.49413 1.40278 0.986274 2.00607 0.665464C2.35792 0.478335 2.75246 0.268511 3.08073 0.0938922C3.26854 -0.00594737 3.48831 -0.0271583 3.69168 0.035031C3.89508 0.0971801 4.06545 0.237597 4.16533 0.425368C4.48626 1.0289 4.95206 1.90472 5.31597 2.589C5.46349 2.86639 5.49476 3.191 5.40294 3.49144C5.31112 3.79189 5.1037 4.04353 4.82636 4.19104C4.65278 4.28335 4.47018 4.38046 4.28907 4.47681C3.90972 4.67853 3.62604 5.02272 3.50046 5.43359C3.37488 5.84449 3.41766 6.28844 3.61938 6.66779C4.41385 8.16161 5.65194 10.4896 6.44055 11.9725C6.85214 12.7464 7.81317 13.0402 8.58706 12.6286C8.78145 12.5252 8.9782 12.4206 9.16429 12.3216C9.73586 12.0176 10.4456 12.2345 10.7497 12.8061C11.1144 13.492 11.5834 14.3739 11.9061 14.9807Z"
+        fill="#4B4B4B" />
+    </symbol>
+    <symbol id="view" viewBox="0 0 17 10">
+      <path
+        d="M16.3636,5c0,0 -3.4372,5 -8.18178,5c-4.74463,0 -8.18182,-5 -8.18182,-5c0,0 3.43719,-5 8.18182,-5c4.74458,0 8.18178,5 8.18178,5zM8.18182,2.72727c-1.12968,0 -2.04546,1.01754 -2.04546,2.27273c0,1.25519 0.91578,2.27273 2.04546,2.27273c1.12967,0 2.04548,-1.01754 2.04548,-2.27273c0,-1.25519 -0.91581,-2.27273 -2.04548,-2.27273z"
+        fill="#ffffff" fill-opacity="1"></path>
+    </symbol>
+    <symbol id="like" viewBox="0 0 15 12">
+      <path fill-rule="evenodd" clip-rule="evenodd"
+        d="M7.10954 12C10.6643 9.63015 14.2191 7.26031 14.2191 3.70554C14.2191 1.25028 10.6643 -2.21908 7.10954 1.92815C3.55477 -2.21908 0 1.25028 0 3.70554C0 7.26031 3.55477 9.63015 7.10954 12Z"
+        fill="white" />
+    </symbol>
+
+    <symbol id="comment" viewBox="0 0 14 12">
+      <path fill-rule="evenodd" clip-rule="evenodd"
+        d="M2 0C0.895431 0 0 0.89543 0 2V7C0 8.10457 0.89543 9 2 9H3V12L7 9H12C13.1046 9 14 8.10457 14 7V2C14 0.895431 13.1046 0 12 0H2Z"
+        fill="white" />
+    </symbol>
+  </svg>
+</head>
+
+<body>
+  <header>
+    <div class="full-screen full-screen--first-background">
+      <div class="mask mask--first-screen-bg"></div>
+      <div class="container container--full-screen">
+        <div class="menu menu--position row">
+          <div class="logo menu__logo--position row__col-2">
+            <a href="#" class="logo__link"><img class="logo__img menu__logo" src="img/logo.svg" alt="logo"></a>
+          </div>
+          <div class="social menu__social row__col-8 row__tab-col-2">
+            <ul class="social__list menu__social-list">
+              <li class="social__list-item social__list-item--white "> <a class="social__link menu__social__link"
+                  href="#">
+                  <svg class="symbol menu__social-item">
+                    <use xlink:href="#twitter">
+                    </use>
+                  </svg>
+                </a></li>
+              <li class="social__list-item social__list-item--white "> <a class="social__link menu__social__link"
+                  href="#">
+                  <svg class="symbol menu__social-item">
+                    <use xlink:href="#fb">
+                    </use>
+                  </svg>
+                </a></li>
+              <li class="social__list-item social__list-item--white "> <a class="social__link menu__social__link"
+                  href="#">
+                  <svg class="symbol menu__social-item">
+                    <use xlink:href="#insta">
+                    </use>
+                  </svg>
+                </a></li>
+            </ul>
+          </div>
+          <div class="menu__positions row__col-2 row__tab-col-8">
+            <div class="menu__burger">
+              <img class="menu__burger-img" src="img/Hamburger.svg" alt="menu">
+            </div>
+            <ul class="menu__list menu__list--main">
+              <li class="menu__burger--active">X</li>
+              <li class="menu__list-item"><a href="#" class="menu__link">HOTELS</a></li>
+              <li class="menu__list-item"><a href="#" class="menu__link">airlines</a></li>
+              <li class="menu__list-item"><a href="#" class="menu__link">vacations</a></li>
+              <li class="menu__list-item"><a href="#" class="menu__link">find more</a></li>
+            </ul>
+          </div>
+        </div>
+        <h1 class="title title--h1 title--h1-white title--first-screen">See The Unmatched Beauty Of The
+          Great Lakes
+        </h1>
+        <div class="fs-content fs-content--position-center row">
+          <div class="fs-content__video-content row__col-10">
+            <div class="fs-content__video-box">
+
+              <div class="player">
+
+                <video id="player" class="player__video-box" width="100%" height="100%" preload="none">
+                  <source src="video/Apple - 37160.mp4" type="video/mp4">
+                  <p>Your user agent does not support the HTML5 Video element.</p>
+                </video>
+                <div class="player__button player__button-play player__button--possition">
+                  <svg class="symbol player__icon-play">
+                    <use xlink:href="#play">
+                    </use>
+                  </svg>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="anchor-arrow anchor-arrow--fs-position">
+          <a href="#" class="anchor-link"><img class="anchor-arrow__icon" src="img/scroll-down.png" alt="arrow"></a>
+        </div>
+      </div>
+    </div>
+
+
+
+  </header>
+  <main>
+    <div class="container">
+      <div class="second-screen second-screen--position">
+        <div class="second-screen__header">
+          <a class="anchor-link__title" name="features">
+            <h1 class="title title--h1">Features</h1>
+          </a>
+          <h3 class="title title--subtitle-h3 title--center tittle--margin-top3px">WE’RE TAKING IT TO THE NEXT LEVEL
+          </h3>
+        </div>
+        <div class="second-screen__content">
+          <div class="second-screen__items second-screen__items--position">
+            <div class="second-screen__item">
+              <div class="second-screen__left-column">
+                <img src="img/responsive.svg" alt="responsive">
+              </div>
+              <div class="second-screen__right-column second-screen__right-column--position">
+                <div class="second-screen__item-header">
+                  RESPONSIVE LAYOUT
+                </div>
+                <div class="second-screen__item-text second-screen__item-text--position">
+                  The past few years have seen a dramatic change in the public perception of cosmetic surgery.
+                </div>
+              </div>
+            </div>
+            <div class="second-screen__item">
+              <div class="second-screen__left-column">
+                <img src="img/diamond.svg" alt="diamond">
+              </div>
+              <div class="second-screen__right-column second-screen__right-column--position">
+                <div class="second-screen__item-header">
+                  PIXEL PERFECT
+                </div>
+                <div class="second-screen__item-text second-screen__item-text--position">
+                  About 64% of all on-line teens say that do things online that they wouldn’t want their parents to know
+                  about.
+                </div>
+              </div>
+            </div>
+            <div class="second-screen__item">
+              <div class="second-screen__left-column">
+                <img src="img/layers.svg" alt="layers">
+              </div>
+              <div class="second-screen__right-column second-screen__right-column--position">
+                <div class="second-screen__item-header">
+                  ORGANIZED LAYERS
+                </div>
+                <div class="second-screen__item-text second-screen__item-text--position">
+                  Are you one of the thousands of Iphone owners who has no idea that they can get free games for their
+                  Iphone?
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="second-screen__tablet"><img class="second-screen__pc" src="img/mac.png" alt="pc"></div>
+        </div>
+      </div>
+    </div>
+    <div class="full-width-screen">
+      <div class="third-screen">
+        <div class="third-screen__text third-screen__text--position">
+          <h1 class="title title--h2 title--h1-white">Get Your Free Version</h1>
+          <div class="text-area text-area--subtitle-white third-screen__text-area">
+            Having used discount toner cartridges for twenty years, there have been a lot of changes in the toner
+            cartridge market. The market today is approximately a twenty billion dollar business.
+          </div>
+          <div class="button button-download third-screen__button-download--position">
+            <a href="#" class="button__link button__link-download">DOWNLOAD</a>
+          </div>
+        </div>
+
+      </div>
+    </div>
+
+    <div class="container">
+      <div class="four-screen four-screen--position">
+        <div class="four-screen__header">
+          <a class="anchor-link__title" name="testimonials">
+            <h1 class="title title--h1">Testimonials</h1>
+          </a>
+        </div>
+        <div class="four-screen__content">
+          <div class="feedback four-screen__feedback row">
+            <div class="feedback-item row__tab-col-6">
+              <div class="feedback__left-part">
+                <img class="feedback__photo" src="img/person1.png">
+              </div>
+              <div class="feedback__right-part">
+                <div class="feedback__client-name">LULU HOFFMAN</div>
+                <div class="feedback__client-position feedback__client-position--positions">Marketing Consultant at
+                  <span class="feedback__client-company">okodesign.net</span></div>
+                <div class="feedback__client-revies feedback__client-revies--positions">
+                  <div class="text-area text-area--subtitle"> If you are an entrepreneur, you know that your success
+                    cannot depend on the opinions of others. Like the wind, opinions change…like the weather, opinions
+                    change frequently.</div>
+                </div>
+                <div class="social feedback__social">
+                  <ul class="social__list feedback__social-list">
+                    <li class="social__list-item social__list-item--gold"> <a class="social__link feedback__social-link"
+                        href="#">
+                        <svg class="symbol feedback__social-item">
+                          <use xlink:href="#linkin">
+                          </use>
+                        </svg>
+                      </a></li>
+                    <li class="social__list-item social__list-item--gold"> <a class="social__link feedback__social-link"
+                        href="#">
+                        <svg class="symbol feedback__social-item">
+                          <use xlink:href="#twitter">
+                          </use>
+                        </svg>
+                      </a></li>
+                    <li class="social__list-item social__list-item--gold"> <a class="social__link feedback__social-link"
+                        href="#">
+                        <svg class="symbol feedback__social-item">
+                          <use xlink:href="#google">
+                          </use>
+                        </svg>
+                      </a></li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+            <div class="feedback-item row__tab-col-6">
+              <div class="feedback__left-part">
+                <img class="feedback__photo" src="img/person2.png">
+              </div>
+              <div class="feedback__right-part">
+                <div class="feedback__client-name">ELSIE DUNKAN</div>
+                <div class="feedback__client-position feedback__client-position--positions">Project manager at
+                  <span class="feedback__client-company">okodesign.net</span></div>
+                <div class="feedback__client-revies feedback__client-revies--positions">
+                  <div class="text-area text-area--subtitle"> Ever heard of the Fuller Brush Man? You know, those
+                    legendary guys who came knocking on the front doors of America, selling brushes, mops and cleaners?
+                  </div>
+                </div>
+                <div class="social feedback__social">
+                  <ul class="social__list feedback__social-list">
+                    <li class="social__list-item social__list-item--gold"> <a class="social__link feedback__social-link"
+                        href="#">
+                        <svg class="symbol feedback__social-item">
+                          <use xlink:href="#fb">
+                          </use>
+                        </svg>
+                      </a></li>
+                    <li class="social__list-item social__list-item--gold"> <a class="social__link feedback__social-link"
+                        href="#">
+                        <svg class="symbol feedback__social-item">
+                          <use xlink:href="#twitter">
+                          </use>
+                        </svg>
+                      </a></li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+            <div class="feedback-item row__tab-col-6">
+              <div class="feedback__left-part">
+                <img class="feedback__photo" src="img/person3.png">
+              </div>
+              <div class="feedback__right-part">
+                <div class="feedback__client-name">DUSTIN GONZALES</div>
+                <div class="feedback__client-position feedback__client-position--positions">CEO at
+                  <span class="feedback__client-company">hofmannui.net</span></div>
+                <div class="feedback__client-revies feedback__client-revies--positions">
+                  <div class="text-area text-area--subtitle"> Do you remember the story of “The Wizard of Oz”? In this
+                    story we saw the characters of Dorothy, who had wanted to run away from home because she thought
+                    there was a better place somewhere.</div>
+                </div>
+                <div class="social feedback__social">
+                  <ul class="social__list feedback__social-list">
+                    <li class="social__list-item social__list-item--gold"> <a class="social__link feedback__social-link"
+                        href="#">
+                        <svg class="symbol feedback__social-item">
+                          <use xlink:href="#fb">
+                          </use>
+                        </svg>
+                      </a></li>
+                    <li class="social__list-item social__list-item--gold"> <a class="social__link feedback__social-link"
+                        href="#">
+                        <svg class="symbol feedback__social-item">
+                          <use xlink:href="#linkin">
+                          </use>
+                        </svg>
+                      </a></li>
+                    <li class="social__list-item social__list-item--gold"> <a class="social__link feedback__social-link"
+                        href="#">
+                        <svg class="symbol feedback__social-item">
+                          <use xlink:href="#google">
+                          </use>
+                        </svg>
+                      </a></li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+            <div class="feedback-item row__tab-col-6">
+              <div class="feedback__left-part">
+                <img class="feedback__photo" src="img/person4.png">
+              </div>
+              <div class="feedback__right-part">
+                <div class="feedback__client-name">LAURA PARKS</div>
+                <div class="feedback__client-position feedback__client-position--positions">UX Lead at
+                  <span class="feedback__client-company">hofmannui.net</span></div>
+                <div class="feedback__client-revies feedback__client-revies--positions">
+                  <div class="text-area text-area--subtitle">They are big, bold and beautiful. Billboards have been
+                    around for quite a while. In almost all places nowadays you can find billboards of just about every
+                    product there is in the market. No matter how you see it, billboard advertising is on the rise.
+                  </div>
+                </div>
+                <div class="social feedback__social">
+                  <ul class="social__list feedback__social-list">
+                    <li class="social__list-item social__list-item--gold"> <a class="social__link feedback__social-link"
+                        href="#">
+                        <svg class="symbol feedback__social-item">
+                          <use xlink:href="#fb">
+                          </use>
+                        </svg>
+                      </a></li>
+                    <li class="social__list-item social__list-item--gold"> <a class="social__link feedback__social-link"
+                        href="#">
+                        <svg class="symbol feedback__social-item">
+                          <use xlink:href="#linkin">
+                          </use>
+                        </svg>
+                      </a></li>
+                    <li class="social__list-item social__list-item--gold"> <a class="social__link feedback__social-link"
+                        href="#">
+                        <svg class="symbol feedback__social-item">
+                          <use xlink:href="#twitter">
+                          </use>
+                        </svg>
+                      </a></li>
+                    <li class="social__list-item social__list-item--gold"> <a class="social__link feedback__social-link"
+                        href="#">
+                        <svg class="symbol feedback__social-item">
+                          <use xlink:href="#google">
+                          </use>
+                        </svg>
+                      </a></li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="five-screen full-width-screen">
+      <div class="container">
+        <div class="five-screen__header five-screen__header--position">
+          <a class="anchor-link__title" name="plans">
+            <h1 class="title title--h1">Choose Your Plan</h1>
+          </a>
+        </div>
+        <div class="five-screen__content">
+          <div class="tabs row">
+            <div class="tabs__container row__col-8 ">
+              <div class="tabs__tab tabs__tab--gold tabs__tab--position1 row__col-8 row__tab-col-3">
+                <div class="tabs__tab-header tabs__tab-header--title-margin">GOLD</div>
+                <div class="tabs__tab-price">
+                  <div class="tabs__tab-currency">$</div>
+                  <div class="tabs__tab-amount">99</div>
+                </div>
+                <div class="tabs__period tabs__tab-header tabs__period--position">year</div>
+                <div class="tabs__tab-list ">
+                  <ul class="tabs__list">
+                    <li class="tabs__list-item">Personal Account</li>
+                    <li class="tabs__list-item">50 GB Discspace</li>
+                    <li class="tabs__list-item">500 Uploads per day</li>
+                  </ul>
+                </div>
+                <div class="button tabs__button--black"><a href="#"
+                    class="button__link tabs__button--link-white">PURCHASE</a></div>
+              </div>
+              <div class="tabs__tab tabs__tab--position2 tabs__tab--silver row__col-8 row__tab-col-3">
+                <div class="tabs__tab-header tabs__tab-header--title-margin tabs__tab-header--yellow">SILVER</div>
+                <div class="tabs__tab-price">
+                  <div class="tabs__tab-currency">$</div>
+                  <div class="tabs__tab-amount">49</div>
+                </div>
+                <div class="tabs__period tabs__tab-header tabs__period--position">year</div>
+                <div class="tabs__tab-list ">
+                  <ul class="tabs__list">
+                    <li class="tabs__list-item">Personal Account</li>
+                    <li class="tabs__list-item">25 GB Discspace</li>
+                    <li class="tabs__list-item">50 Uploads per day</li>
+                  </ul>
+                </div>
+                <div class="button tabs__button--yellow"><a href="#"
+                    class="button__link tabs__button--link">PURCHASE</a></div>
+              </div>
+              <div class="tabs__tab tabs__tab--position3 tabs__tab--platinum row__col-8 row__tab-col-3">
+                <div class="tabs__tab-header tabs__tab-header--title-margin tabs__tab-header--yellow">SILVER</div>
+                <div class="tabs__tab-price">
+                  <div class="tabs__tab-currency">$</div>
+                  <div class="tabs__tab-amount">49</div>
+                </div>
+                <div class="tabs__period tabs__tab-header tabs__period--position">year</div>
+                <div class="tabs__tab-list ">
+                  <ul class="tabs__list">
+                    <li class="tabs__list-item">Personal Account</li>
+                    <li class="tabs__list-item">25 GB Discspace</li>
+                    <li class="tabs__list-item">50 Uploads per day</li>
+                  </ul>
+                </div>
+                <div class="button tabs__button--yellow"><a href="#"
+                    class="button__link tabs__button--link">PURCHASE</a></div>
+              </div>
+
+            </div>
+            <ul class="menu__list tabs__navigation row__col-10">
+              <li class="menu__list-item tabs__navigation-item js-tabs__nav-silver">Silver</li>
+              <li class="menu__list-item tabs__navigation-item js-tabs__nav-gold _active">Gold</li>
+              <li class="menu__list-item tabs__navigation-item js-tabs__nav-platinum">Platinum</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="container">
+      <div class="six-screen ">
+        <div class="six-screen__header six-screen--header-position">
+          <a class="anchor-link__title" name="portfolio">
+            <h1 class="title title--h1">Portfolio</h1>
+          </a>
+        </div>
+        <div class="slider">
+          <div class="slider__slide-container">
+            <div class="slider__slide">
+              <div class="slider__grid row">
+                <div class="slider__item slider__item--1 row__col-6">
+                  <img class="slider__img" src="img/portfolio/project-1-1.jpg">
+                </div>
+                <div class="slider__item slider__item--1 row__col-6">
+                  <img class="slider__img" src="img/portfolio/project-1-4.jpg">
+                </div>
+                <div class="slider__item slider__item--3 row__col-12">
+                  <img class="slider__img slider__img-text" src="img/portfolio/project-1-2.jpg">
+
+                  <div class="slider__text-item">
+                    <div class="slider__text-slide">
+                      <div class="slider__text-header">Blue Mountains
+                        <svg class="symbol slider__view">
+                          <use xlink:href="#view">
+                          </use>
+                        </svg>
+                      </div>
+                      <div class="slider__text-subheader"> 17 Apr 2016</div>
+                      <div class="slider__text-area">
+                        Planning a vacation to Europe? No doubt you have certain expectations about your upcoming
+                        journey.
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="slider__item slider__item--4 row__col-6"> <img class="slider__img"
+                    src="img/portfolio/project-2-2.jpg"></div>
+                <div class="slider__item slider__item--5 row__col-6">
+                  <img class="slider__img" src="img/portfolio/project-2-1.jpg">
+                </div>
+                <div class="slider__item slider__item--6 row__col-12">
+                  <img class="slider__img" src="img/portfolio/project-1-3.jpg">
+                </div>
+                <div class="slider__item slider__item--7 row__col-12">
+                  <div class="slider__slides-text">
+
+
+
+
+                    <div class="slider__text-item">
+                      <div class="slider__text-slide">
+                        <div class="slider__text-header slider__text-slide--black">Scenery Photos</div>
+
+                        <div class="slider__text-subheader slider__text-subheader--black"> BY EVGENY METILAN</div>
+                        <div class="slider__slides-description slider__text-slide--black">
+                          Wild Nature</div>
+                      </div>
+                    </div>
+                  </div>
+
+                </div>
+                </img>
+              </div>
+            </div>
+          </div>
+          <div class="slider__navigation slider__navigation--position">
+
+            <div class="slider__arrow">
+              <img class="slider__arrow-left" src="img/slider__arrow.webp">
+            </div>
+            <div class="slider__pagination">
+              <div class="slider__pagination-item">1</div>
+              <div class="slider__pagination-item">2</div>
+              <div class="slider__pagination-item _active">3</div>
+              <div class="slider__pagination-item">4</div>
+            </div>
+            <div class="slider__arrow">
+              <img class="slider__arrow-right" src="img/slider__arrow.webp">
+            </div>
+
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="seven-screen full-width-screen  js-seven-screen__slider">
+
+      <div class="container seven-screen__slider-container">
+
+        <div class="seven-screen__content">
+
+          <div class="seven-screen__header seven-screen__header--position">Gregory Francis</div>
+          <div class="seven-screen__subheader seven-screen__subheader--position">CHIEF ENGINEER</div>
+          <div class="text-area text-area--subtitle-white seven-screen__text-area--position">
+            I’ve started to work in company at 2009. Photographs are a way of preserving a moment in our lives for the
+            rest of our lives. Many of us have at least been tempted at the flashy array of photo printers which
+            seemingly leap off the shelves at even the least tech-savvy. It surely seems old fashioned to talk about
+            35mm film and non-digital cameras in today’s day and age.
+
+          </div>
+
+
+        </div>
+      </div>
+      <div class="seven-screen__pagination seven-screen__pagination--position">
+        <div class="seven-screen__pagination-container">
+          <div class="seven-screen__pagination-item"></div>
+        </div>
+        <div class="seven-screen__pagination-container">
+          <div class="seven-screen__pagination-item _active"></div>
+        </div>
+        <div class="seven-screen__pagination-container">
+          <div class="seven-screen__pagination-item"></div>
+        </div>
+        <div class="seven-screen__pagination-container">
+          <div class="seven-screen__pagination-item"></div>
+        </div>
+      </div>
+
+
+    </div>
+    <div class="eight-screen">
+      <div class="container">
+        <div class="eight-screen__header eight-screen__header--position">
+          <a class="anchor-link__title" name="plans">
+            <h1 class="title title--h1">Stay In Touch</h1>
+          </a>
+        </div>
+        <form action="#" class="form-material form-material--margin row">
+          <div class="form-material__text-field row__col-5 row__col--form">
+            <input id="text" type="text" class="form-material__input form-material__label-text-input" placeholder=' '>
+            <label for="text" class="form-material__label form-material__label-text-input ">Name*</label>
+            <div class="form-material__line"></div>
+          </div>
+          <div class="form-material__text-field row__col-5 row__col--form">
+            <input id="email" type="email" class="form-material__input form-material__label-text-input" placeholder=' '>
+            <label for="email" class="form-material__label form-material__label-text-input ">Email*</label>
+            <div class="form-material__line"></div>
+          </div>
+          <div class="form-material__text-area row__col-10 row__col--form"">
+            <textarea id="message" rows="1"
+              class="form-material__input form-material__label-text-input form-material__label-text-input--text-area"
+              placeholder=' '></textarea>
+            </text-area>
+            <label for="message" class="form-material__label form-material__label-text-input ">Message*</label>
+            <div class="form-material__line"></div>
+          </div>
+          <div class="form-material__button  form-material__button--position row__col-12">
+            <div class="button button-download">
+              <input type="submit" id="submit" class="form-material__submit">
+              <label for="submit" class="button__link button__link-download form-material__submit-label">SUBMIT</label>
+            </div>
+          </div>
+
+        </form>
+
+        <div class="contact eight-screen__contact--margin">
+          <ul class="contact__list row">
+            <li class="contact__list-item contact__list-item--margin row__before-col-1">
+              <div class="contact__list-content">
+                <svg class="symbol contact__icon contact__list-item--gray">
+                  <use xlink:href="#location">
+                  </use>
+                </svg>
+                <div class="contact__text contact__text--margin">2300 W Arbutus Dr Citrus Springs, FL 34434, USA</div>
+              </div>
+            </li>
+            <li class="contact__list-item contact__list-item--margin row__before-col-1">
+              <div class="contact__list-content">
+                <img src="img/mail.svg" class="
+                eight-screen__social-icon--mail">
+                <div class="contact__text contact__text--margin">contact@hofmannui.net</div>
+              </div>
+            </li>
+            <li class="contact__list-item contact__list-item--margin row__before-col-1">
+              <div class="contact__list-content">
+                <svg class="symbol contact__icon contact__list-item--gray">
+                  <use xlink:href="#phone">
+                  </use>
+                </svg>
+                <div class="contact__text contact__text--margin">793-891-7938, 952-775-6021</div>
+              </div>
+            </li>
+          </ul>
+        </div>
+
+        <div class="social eight-screen__social--margin">
+          <ul class="social__list">
+            <li class="social__list-item"> <a class="social__link" href="#">
+                <svg class="symbol eight-screen__social-icon social__list-item--gray">
+                  <use xlink:href="#pinterest">
+                  </use>
+                </svg>
+              </a></li>
+            <li class="social__list-item"> <a class="social__link" href="#">
+                <svg class="symbol eight-screen__social-icon social__list-item--gray">
+                  <use xlink:href="#linkin">
+                  </use>
+                </svg>
+              </a></li>
+            <li class="social__list-item"> <a class="social__link" href="#">
+                <svg class="symbol eight-screen__social-icon social__list-item--gray">
+                  <use xlink:href="#google">
+                  </use>
+                </svg>
+              </a></li>
+            <li class="social__list-item"> <a class="social__link" href="#">
+                <svg class="symbol eight-screen__social-icon social__list-item--gray">
+                  <use xlink:href="#twitter">
+                  </use>
+                </svg>
+              </a></li>
+            <li class="social__list-item"> <a class="social__link" href="#">
+                <svg class="symbol eight-screen__social-icon social__list-item--gray">
+                  <use xlink:href="#fb">
+                  </use>
+                </svg>
+              </a></li>
+
+
+          </ul>
+        </div>
+      </div>
+      <div id="map" class="map full-width-screen">
+      </div>
+  </main>
+
+  <footer class="footer--background">
+    <div class="container">
+      <div class="footer__header footer__header--position">HOFMANN</div>
+      <div class="footer__subheader footer__subheader--thin footer__subheader--position-7px">Hoffman UI Kit was made to
+        help you quickly create beautiful layouts of responsive websites.</div>
+      <div class="form footer__form-position">
+        <div class="form__header footer__subheader footer__subheader--uppercase">SUBSCRIBE TO OUR NEWS
+        </div>
+
+        <form action="#" class="email-lettering email-lettering--position-center">
+          <div class="email-lettering__form-item">
+            <input class="email-lettering__input" type="email" placeholder="Your Email">
+            <div class="email-lettering__button-bg"> </div>
+            <button class="email-lettering_button">
+              <img class="email-lettering__arrow-right" src="img/subscribe.webp">
+            </button>
+          </div>
+
+        </form>
+      </div>
+      <div class="footer__menu footer__menu--position ">
+        <ul class="footer__menu-list row row--footer-menu">
+          <div class="footer__menu-item row__col-4 row__col--footer-menu"><a href="#" class="footer__menu-link">About
+              Us</a></div>
+          <div class="footer__menu-item row__col-4 row__col--footer-menu"><a href="#"
+              class="footer__menu-link">Explore</a></div>
+          <div class="footer__menu-item  row__col-4 row__col--footer-menu"><a href="#"
+              class="footer__menu-link">Documentation</a></div>
+          <div class="footer__menu-item  row__col-4 row__col--footer-menu"><a href="#"
+              class="footer__menu-link">Testimonials</a></div>
+          <div class="footer__menu-item  row__col-4 row__col--footer-menu"><a href="#"
+              class="footer__menu-link">Blog</a></div>
+          <div class="footer__menu-item  row__col-4 row__col--footer-menu"><a href="#"
+              class="footer__menu-link">News</a></div>
+          <div class="footer__menu-item  row__col-4 row__col--footer-menu"><a href="#"
+              class="footer__menu-link">Documentation</a></div>
+          <div class="footer__menu-item  row__col-4 row__col--footer-menu"><a href="#"
+              class="footer__menu-link">Help</a></div>
+          <div class="footer__menu-item  row__col-4 row__col--footer-menu"><a href="#"
+              class="footer__menu-link">Privacy</a></div>
+        </ul>
+      </div>
+
+      <div class="footer__subheader footer__social--position footer__subheader--uppercase">FOLLOW US</div>
+      <div class="social">
+        <ul class="social__list">
+
+          <li class="social__list-item"> <a class="social__link" href="#">
+              <svg class="symbol footer__social-icon social__list-item--gold">
+                <use xlink:href="#pinterest">
+                </use>
+              </svg>
+            </a></li>
+          <li class="social__list-item"> <a class="social__link" href="#">
+              <svg class="symbol footer__social-icon social__list-item--gold">
+                <use xlink:href="#linkin">
+                </use>
+              </svg>
+            </a></li>
+          <li class="social__list-item"> <a class="social__link" href="#">
+              <svg class="symbol footer__social-icon social__list-item--gold">
+                <use xlink:href="#google">
+                </use>
+              </svg>
+            </a></li>
+          <li class="social__list-item"> <a class="social__link" href="#">
+              <svg class="symbol footer__social-icon social__list-item--gold">
+                <use xlink:href="#twitter">
+                </use>
+              </svg>
+            </a></li>
+          <li class="social__list-item"> <a class="social__link" href="#">
+              <svg class="symbol footer__social-icon social__list-item--gold">
+                <use xlink:href="#fb">
+                </use>
+              </svg>
+            </a></li>
+          <li class="social__list-item"> <a class="social__link" href="#">
+              <svg class="symbol footer__social-icon social__list-item--gold">
+                <use xlink:href="#insta">
+                </use>
+              </svg>
+            </a></li>
+
+
+        </ul>
+      </div>
+
+      <div class="footer__copy footer__copy--position footer__copy--white">&copy; 2016 Created by Goldenfox</div>
+
+
+
+    </div>
+  </footer>
+
+
+
+
+  <!-- карта -->
+  <script src='https://api.mapbox.com/mapbox-gl-js/v1.10.0/mapbox-gl.js'></script>
+
+  <script>
+    mapboxgl.accessToken = 'pk.eyJ1Ijoic2VhbWV3IiwiYSI6ImNrOW5hemRkOTAwZGszaG8xMjd4dDMzMXQifQ.1yu2kil5iH_LAkwIP-Trbw';
+    var map = new mapboxgl.Map({
+      container: 'map',
+      style: 'mapbox://styles/seamew/ck9nbnzew2l4s1is8foi6ofa4',
+      attributionControl: false,
+
+    });
+
+
+
+    var geojson = {
+      type: 'FeatureCollection',
+      features: [{
+        type: 'Feature',
+        geometry: {
+          type: 'Point',
+          coordinates: [-82.473460, 29.016122]
+        }
+      },
+      ]
+    };
+
+    geojson.features.forEach(function (marker) {
+
+
+      var el = document.createElement('div');
+      el.className = 'map__marker';
+
+      new mapboxgl.Marker(el)
+        .setLngLat(marker.geometry.coordinates)
+        .addTo(map);
+    });
+  </script>
+
+  <!-- Проигрыватель-->
+  <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
+    integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n"
+    crossorigin="anonymous"></script>
+
+  <script>
+    $(document).ready(function () {
+      $(".player__button-play").click(function () {
+        $("#player").get(0).play()
+
+        $(".player__button-play").addClass('_not-active');
+        $(".player__button-play").parent().addClass('_active');
+      });
+      $(".player__video-box").click(function () {
+        $("#player").get(0).pause()
+        $(".player__button-play").removeClass('_not-active');
+        $(".player__button-play").parent().removeClass('_active');
+      });
+    });
+  </script>
+  <script>
+    $(document).ready(function () {
+      $(".menu__burger--active").click(function () {
+        $(".menu__list--main").removeClass('_active');
+      });
+      $(".menu__burger").click(function () {
+        $(".menu__list--main").addClass('_active');
+      });
+    });
+  </script>
+  <script src="app/js/tab.js"></script>
+
+  <!--Слайдер-->
+
+
+  <script src="https://unpkg.com/swiper/js/swiper.min.js"></script>
+
+  <script>
+    var mySwiper = new Swiper('.slider', {
+      wrapperClass: 'slider__slide-container',
+      slideClass: 'slider__slide',
+      loop: true,
+
+    });
+    var mySwiper2 = new Swiper('.js-seven-screen__slider', {
+      wrapperClass: 'seven-screen__slider-container',
+      slideClass: 'seven-screen__content',
+      loop: true,
+    });
+
+
+
+  </script>
+</body>
+
+</html>
