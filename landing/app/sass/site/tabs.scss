@@ -52,6 +52,19 @@
 }
 
 
+
+.tabs__button--yellow {
+  width: 140px;
+  height: 32px;
+  border-radius: 50px;
+  background-color: #ebcb80;
+  line-height: 32px;
+  text-align: center;
+  margin-bottom: 28px;
+  margin-top: 20px;
+}
+
+
 .tabs__button--link-white {
   color: #ffffff;
   font-family: Montserrat;
@@ -167,7 +180,8 @@
   justify-content: center;
   margin: 39px auto 0 auto;
   z-index: 0;
-  min-height: 245px;;
+  min-height: 245px;
+  ;
 }
 
 .tabs__tab {
@@ -197,35 +211,52 @@
   padding: 4px 20px;
   text-transform: uppercase;
   letter-spacing: 0.8px;
- 
+
 }
 
-@include tablet{
-  .tabs__navigation{
+@include tablet {
+  .tabs__navigation {
     display: none;
   }
-  .tabs__tab{
+
+  .tabs__tab {
     transform: scale(1);
     position: relative;
     margin-top: 0;
     max-width: 170px;
   }
-  .tabs__tab:not(:last-child){
+
+  .tabs__tab:not(:last-child) {
     margin-right: 68px;
   }
-  .tabs__tab--gold{
+
+  .tabs__tab--gold {
     order: 2;
   }
-  .tabs__tab--silver{
+
+  .tabs__tab--silver {
     order: 1;
   }
-  .tabs__tab--platinum{
+
+  .tabs__tab--platinum {
     order: 3;
   }
-  .tabs__container{
+
+  .tabs__container {
     justify-content: center;
   }
-  .tabs__container{
+
+  .tabs__container {
     margin: 32px 0;
+  }
+
+
+  .tabs__button--black,
+  .tabs__button--yellow {
+    width: 120px;
+    height: 40px;
+    line-height: 40px;
+    margin-bottom: 32px;
+    margin-top: 16px;
   }
 }
