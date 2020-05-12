@@ -1,6 +1,11 @@
 .seven-screen {
   margin-top: 70px;
   min-height: 315px;
+
+}
+
+.seven-screen__slide--1 {
+  min-height: 315px;
   background-image: url(bg/bg-6_mob.jpg);
   background-position: left center;
   background-repeat: no-repeat;
@@ -17,7 +22,7 @@
 }
 
 .seven-screen__header--position {
-  margin-top: 34px;
+  padding-top: 34px;
 }
 
 .seven-screen__subheader {
@@ -37,14 +42,16 @@
 }
 
 
-.js-seven-screen__slider{
+.js-seven-screen__slider {
   width: 100%;
   height: 100%;
 }
 
 
 .seven-screen__content {
-  max-width: 242px;
+  max-width: 100%;
+  padding-left: 25px;
+  padding-right: 25px;
 }
 
 .seven-screen__pagination-container {
@@ -86,44 +93,43 @@
 }
 
 .seven-screen__pagination--position {
-  margin-top: 36px;
-  margin-bottom: 32px;
+  left: 50%;
+  position: absolute;
+  bottom: 32px;
+  transform: translateX(-50%);
 }
 
-
-
-.map {
-  height: 268px;
+.seven-screen__slides-group{
+  position: relative;
+}
+.seven-screen__text-area--size{
+  max-width: 360px;
 }
 
-.map__marker {
-  background-image: url('bg/tooltip.png');
-  background-size: cover;
-  width: 207px;
-  height: 93px;
-  cursor: pointer;
-  display: flex;
-  flex-direction: column;
+@include tablet{
+  .seven-screen__content{
+    margin-left: 50%;
+  }
+  .seven-screen__pagination{
+    flex-direction: column;
+    right: 30px;
+    left: auto;
+    top: 50%;
+    bottom: auto;
+    transform: translate(0,-50%);
+  }
+  .seven-screen__text-area--position {
+    margin-top: 16px;
+  }
+  .seven-screen__text-area--size{
+    max-width: 282px;
+  }
+  .seven-screen__header--position{
+    padding-top: 100px;
+  }
 }
 
-.map__marker::before {
-  margin-top: 30px;
-  margin-left: 22px;
-  content: "2300 W Arbutus Dr";
-  font-size: 12px;
-  line-height: 16px;
-  font-weight: 700;
-}
-
-.map__marker::after {
-  margin-left: 22px;
-  content: "Citrus Springs, FL 34434, USA";
-  font-size: 12px;
-  line-height: 16px;
-  font-weight: 400;
-}
-
-.js-seven-screen__slider{
+.js-seven-screen__slider {
   width: 100%;
   height: 100%;
 }

@@ -7,7 +7,6 @@
 .button-download{
   width: 140px;
   height: 32px;
-
 }
 
 .button__link{
@@ -21,4 +20,12 @@
   line-height: 33px;
 }
 
+@include tablet{
+  .button-download{
+  width: 140px;
+  height: 40px;
+  }
+  .button__link-download{
+    line-height: 40px;}
+}
 

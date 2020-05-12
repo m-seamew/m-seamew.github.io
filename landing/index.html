@@ -71,6 +71,20 @@
         d="M2 0C0.895431 0 0 0.89543 0 2V7C0 8.10457 0.89543 9 2 9H3V12L7 9H12C13.1046 9 14 8.10457 14 7V2C14 0.895431 13.1046 0 12 0H2Z"
         fill="white" />
     </symbol>
+    <symbol id="play-video" viewBox="0 0 16 16">
+      <path
+        d="M12.14 8.753l-5.482 4.796c-.646.566-1.658.106-1.658-.753V3.204a1 1 0 011.659-.753l5.48 4.796a1 1 0 010 1.506z" />
+    </symbol>
+    <symbol id="close-menu" viewBox="0 0 16 16">
+      <path fill-rule="evenodd"
+        d="M16 8A8 8 0 110 8a8 8 0 0116 0zm-4.146-3.146a.5.5 0 00-.708-.708L8 7.293 4.854 4.146a.5.5 0 10-.708.708L7.293 8l-3.147 3.146a.5.5 0 00.708.708L8 8.707l3.146 3.147a.5.5 0 00.708-.708L8.707 8l3.147-3.146z"
+        clip-rule="evenodd" />
+    </symbol>
+    <symbol id="submit-arrow" viewBox="0 0 7 11">
+      <path d="M1.21533 1.85852L5.15379 5.78777L1.21533 9.71701" stroke="#4B4B4B" stroke-width="2.13333"
+        stroke-linecap="round" />
+    </symbol>
+
   </svg>
 </head>
 
@@ -83,7 +97,7 @@
           <div class="logo menu__logo--position row__col-2">
             <a href="#" class="logo__link"><img class="logo__img menu__logo" src="img/logo.svg" alt="logo"></a>
           </div>
-          <div class="social menu__social row__col-8 row__tab-col-2">
+          <div class="social menu__social row__col-8 row__tab-col-3">
             <ul class="social__list menu__social-list">
               <li class="social__list-item social__list-item--white "> <a class="social__link menu__social__link"
                   href="#">
@@ -108,12 +122,18 @@
                 </a></li>
             </ul>
           </div>
-          <div class="menu__positions row__col-2 row__tab-col-8">
+          <div class="menu__positions row__col-2 row__tab-col-7">
             <div class="menu__burger">
               <img class="menu__burger-img" src="img/Hamburger.svg" alt="menu">
             </div>
             <ul class="menu__list menu__list--main">
-              <li class="menu__burger--active">X</li>
+              <li class="menu__burger--active">
+                <svg class="symbol menu__close-img">
+                  <use xlink:href="#close-menu">
+                  </use>
+                </svg>
+
+              </li>
               <li class="menu__list-item"><a href="#" class="menu__link">HOTELS</a></li>
               <li class="menu__list-item"><a href="#" class="menu__link">airlines</a></li>
               <li class="menu__list-item"><a href="#" class="menu__link">vacations</a></li>
@@ -125,7 +145,7 @@
           Great Lakes
         </h1>
         <div class="fs-content fs-content--position-center row">
-          <div class="fs-content__video-content row__col-10">
+          <div class="fs-content__video-content row__col-10 row__tab-col-6">
             <div class="fs-content__video-box">
 
               <div class="player">
@@ -136,7 +156,7 @@
                 </video>
                 <div class="player__button player__button-play player__button--possition">
                   <svg class="symbol player__icon-play">
-                    <use xlink:href="#play">
+                    <use xlink:href="#play-video">
                     </use>
                   </svg>
                 </div>
@@ -154,7 +174,7 @@
 
   </header>
   <main>
-    <div class="container">
+    <div class="container container--second-screen">
       <div class="second-screen second-screen--position">
         <div class="second-screen__header">
           <a class="anchor-link__title" name="features">
@@ -410,8 +430,8 @@
         </div>
         <div class="five-screen__content">
           <div class="tabs row">
-            <div class="tabs__container row__col-8 ">
-              <div class="tabs__tab tabs__tab--gold tabs__tab--position1 row__col-8 row__tab-col-3">
+            <div class="tabs__container row__col-8 row__tab-col-12 row__tab-col-12--double-padding row">
+              <div class="tabs__tab tabs__tab--gold tabs__tab--position1 row__fl-col-8 row__fl-tab-col-3">
                 <div class="tabs__tab-header tabs__tab-header--title-margin">GOLD</div>
                 <div class="tabs__tab-price">
                   <div class="tabs__tab-currency">$</div>
@@ -428,7 +448,7 @@
                 <div class="button tabs__button--black"><a href="#"
                     class="button__link tabs__button--link-white">PURCHASE</a></div>
               </div>
-              <div class="tabs__tab tabs__tab--position2 tabs__tab--silver row__col-8 row__tab-col-3">
+              <div class="tabs__tab tabs__tab--position2 tabs__tab--silver row__fl-col-8 row__fl-tab-col-3">
                 <div class="tabs__tab-header tabs__tab-header--title-margin tabs__tab-header--yellow">SILVER</div>
                 <div class="tabs__tab-price">
                   <div class="tabs__tab-currency">$</div>
@@ -445,7 +465,7 @@
                 <div class="button tabs__button--yellow"><a href="#"
                     class="button__link tabs__button--link">PURCHASE</a></div>
               </div>
-              <div class="tabs__tab tabs__tab--position3 tabs__tab--platinum row__col-8 row__tab-col-3">
+              <div class="tabs__tab tabs__tab--position3 tabs__tab--platinum row__fl-col-8 row__fl-tab-col-3">
                 <div class="tabs__tab-header tabs__tab-header--title-margin tabs__tab-header--yellow">SILVER</div>
                 <div class="tabs__tab-price">
                   <div class="tabs__tab-currency">$</div>
@@ -484,41 +504,71 @@
         <div class="slider">
           <div class="slider__slide-container">
             <div class="slider__slide">
-              <div class="slider__grid row">
-                <div class="slider__item slider__item--1 row__col-6">
+              <div class="slider__grid">
+                <div class="slider__item slider__item--1 slider__value-1">
                   <img class="slider__img" src="img/portfolio/project-1-1.jpg">
                 </div>
-                <div class="slider__item slider__item--1 row__col-6">
+                <div class="slider__item slider__item--2 slider__value-1">
                   <img class="slider__img" src="img/portfolio/project-1-4.jpg">
                 </div>
-                <div class="slider__item slider__item--3 row__col-12">
+                <div class="slider__item slider__item--3 slider__value-2">
                   <img class="slider__img slider__img-text" src="img/portfolio/project-1-2.jpg">
 
-                  <div class="slider__text-item">
+                  <div class="slider__text-item slider__text-item--value2-text-block">
                     <div class="slider__text-slide">
-                      <div class="slider__text-header">Blue Mountains
+                      <div class="slider__text-header slider__text-header--position-block2">Blue Mountains
                         <svg class="symbol slider__view">
                           <use xlink:href="#view">
                           </use>
                         </svg>
                       </div>
-                      <div class="slider__text-subheader"> 17 Apr 2016</div>
+                      <div class="slider__text-subheader slider__text-line"> 17 Apr 2016</div>
                       <div class="slider__text-area">
                         Planning a vacation to Europe? No doubt you have certain expectations about your upcoming
                         journey.
                       </div>
+                      <div class="slider__text-stat slider__text-stat--position">
+                        <div class="slider__stat-item">
+                          <div class="slider__stat">
+                            <svg class="symbol slider__symbol-stat">
+                              <use xlink:href="#view">
+                              </use>
+                            </svg>
+                          </div>
+                          <div class="slider__stat-amount">92922</div>
+                        </div>
+                        <div class="slider__stat-item">
+                          <div class="slider__stat">
+                            <svg class="symbol slider__symbol-stat">
+                              <use xlink:href="#like">
+                              </use>
+                            </svg>
+                          </div>
+                          <div class="slider__stat-amount">92922</div>
+                        </div>
+                        <div class="slider__stat-item">
+                          <div class="slider__stat">
+                            <svg class="symbol slider__symbol-stat">
+                              <use xlink:href="#comment">
+                              </use>
+                            </svg>
+                          </div>
+                          <div class="slider__stat-amount">92922</div>
+                        </div>
+
+                      </div>
                     </div>
                   </div>
                 </div>
-                <div class="slider__item slider__item--4 row__col-6"> <img class="slider__img"
+                <div class="slider__item slider__item--4 slider__value-1"> <img class="slider__img"
                     src="img/portfolio/project-2-2.jpg"></div>
-                <div class="slider__item slider__item--5 row__col-6">
+                <div class="slider__item slider__item--5 slider__value-1">
                   <img class="slider__img" src="img/portfolio/project-2-1.jpg">
                 </div>
-                <div class="slider__item slider__item--6 row__col-12">
+                <div class="slider__item slider__item--6 slider__value-2">
                   <img class="slider__img" src="img/portfolio/project-1-3.jpg">
                 </div>
-                <div class="slider__item slider__item--7 row__col-12">
+                <div class="slider__item slider__item--7 slider__value-2">
                   <div class="slider__slides-text">
 
 
@@ -562,38 +612,49 @@
 
     <div class="seven-screen full-width-screen  js-seven-screen__slider">
 
-      <div class="container seven-screen__slider-container">
 
-        <div class="seven-screen__content">
+      <div class="seven-screen__slider">
+        <div class="seven-screen__slides-group">
+          <div class="seven-screen__slide seven-screen__slide--1">
+            <div class="container">
+              <div class="seven-screen__content">
 
-          <div class="seven-screen__header seven-screen__header--position">Gregory Francis</div>
-          <div class="seven-screen__subheader seven-screen__subheader--position">CHIEF ENGINEER</div>
-          <div class="text-area text-area--subtitle-white seven-screen__text-area--position">
-            I’ve started to work in company at 2009. Photographs are a way of preserving a moment in our lives for the
-            rest of our lives. Many of us have at least been tempted at the flashy array of photo printers which
-            seemingly leap off the shelves at even the least tech-savvy. It surely seems old fashioned to talk about
-            35mm film and non-digital cameras in today’s day and age.
+                <div class="seven-screen__header seven-screen__header--position">Gregory Francis</div>
+                <div class="seven-screen__subheader seven-screen__subheader--position">CHIEF ENGINEER</div>
+                <div
+                  class="text-area text-area--subtitle-white seven-screen__text-area--position seven-screen__text-area--size">
+                  I’ve started to work in company at 2009. Photographs are a way of preserving a moment in our lives for
+                  the
+                  rest of our lives. Many of us have at least been tempted at the flashy array of photo printers which
+                  seemingly leap off the shelves at even the least tech-savvy. It surely seems old fashioned to talk
+                  about
+                  35mm film and non-digital cameras in today’s day and age.
 
+                </div>
+
+
+              </div>
+            </div>
           </div>
-
-
+          <div class="seven-screen__pagination seven-screen__pagination--position">
+            <div class="seven-screen__pagination-container">
+              <div class="seven-screen__pagination-item"></div>
+            </div>
+            <div class="seven-screen__pagination-container">
+              <div class="seven-screen__pagination-item _active"></div>
+            </div>
+            <div class="seven-screen__pagination-container">
+              <div class="seven-screen__pagination-item"></div>
+            </div>
+            <div class="seven-screen__pagination-container">
+              <div class="seven-screen__pagination-item"></div>
+            </div>
+          </div>
         </div>
+
+
       </div>
-      <div class="seven-screen__pagination seven-screen__pagination--position">
-        <div class="seven-screen__pagination-container">
-          <div class="seven-screen__pagination-item"></div>
-        </div>
-        <div class="seven-screen__pagination-container">
-          <div class="seven-screen__pagination-item _active"></div>
-        </div>
-        <div class="seven-screen__pagination-container">
-          <div class="seven-screen__pagination-item"></div>
-        </div>
-        <div class="seven-screen__pagination-container">
-          <div class="seven-screen__pagination-item"></div>
-        </div>
-      </div>
-
+    </div>
 
     </div>
     <div class="eight-screen">
@@ -603,198 +664,219 @@
             <h1 class="title title--h1">Stay In Touch</h1>
           </a>
         </div>
-        <form action="#" class="form-material form-material--margin row">
-          <div class="form-material__text-field row__col-5 row__col--form">
-            <input id="text" type="text" class="form-material__input form-material__label-text-input" placeholder=' '>
-            <label for="text" class="form-material__label form-material__label-text-input ">Name*</label>
-            <div class="form-material__line"></div>
-          </div>
-          <div class="form-material__text-field row__col-5 row__col--form">
-            <input id="email" type="email" class="form-material__input form-material__label-text-input" placeholder=' '>
-            <label for="email" class="form-material__label form-material__label-text-input ">Email*</label>
-            <div class="form-material__line"></div>
-          </div>
-          <div class="form-material__text-area row__col-10 row__col--form"">
-            <textarea id="message" rows="1"
+        <div class="eight-screen__content">
+          <form action="#" class="form-material form-material--margin row">
+            <div class="form-material__text-field row__col-5 row__col--form">
+              <input id="text" type="text" class="form-material__input form-material__label-text-input" placeholder=' '>
+              <label for="text" class="form-material__label form-material__label-text-input ">Name*</label>
+              <div class="form-material__line"></div>
+            </div>
+            <div class="form-material__text-field row__col-5 row__col--form">
+              <input id="email" type="email" class="form-material__input form-material__label-text-input"
+                placeholder=' '>
+              <label for="email" class="form-material__label form-material__label-text-input ">Email*</label>
+              <div class="form-material__line"></div>
+            </div>
+            <div class="form-material__text-area row__col-10 row__col--form"">
+            <textarea id=" message" rows="1"
               class="form-material__input form-material__label-text-input form-material__label-text-input--text-area"
               placeholder=' '></textarea>
-            </text-area>
-            <label for="message" class="form-material__label form-material__label-text-input ">Message*</label>
-            <div class="form-material__line"></div>
-          </div>
-          <div class="form-material__button  form-material__button--position row__col-12">
-            <div class="button button-download">
-              <input type="submit" id="submit" class="form-material__submit">
-              <label for="submit" class="button__link button__link-download form-material__submit-label">SUBMIT</label>
+              </text-area>
+              <label for="message" class="form-material__label form-material__label-text-input ">Message*</label>
+              <div class="form-material__line"></div>
+            </div>
+            <div class="form-material__button  form-material__button--position row__col-12">
+              <div class="button button-download">
+                <input type="submit" id="submit" class="form-material__submit">
+                <label for="submit"
+                  class="button__link button__link-download form-material__submit-label">SUBMIT</label>
+              </div>
+            </div>
+
+          </form>
+          <div class="eight-screen__contacts">
+            <div class="contact eight-screen__contact--margin">
+              <ul class="contact__list">
+                <li class="contact__list-item contact__list-item--margin ">
+                  <div class="contact__list-content">
+                    <svg class="symbol contact__icon contact__list-item--gray">
+                      <use xlink:href="#location">
+                      </use>
+                    </svg>
+                    <div class="contact__text contact__text--margin">2300 W Arbutus Dr Citrus Springs, FL 34434, USA
+                    </div>
+                  </div>
+                </li>
+                <li class="contact__list-item contact__list-item--margin ">
+                  <div class="contact__list-content">
+                    <img src="img/mail.svg" class="
+                eight-screen__social-icon--mail">
+                    <div class="contact__text contact__text--margin">contact@hofmannui.net</div>
+                  </div>
+                </li>
+                <li class="contact__list-item contact__list-item--margin ">
+                  <div class="contact__list-content">
+                    <svg class="symbol contact__icon contact__list-item--gray">
+                      <use xlink:href="#phone">
+                      </use>
+                    </svg>
+                    <div class="contact__text contact__text--margin">793-891-7938, 952-775-6021</div>
+                  </div>
+                </li>
+              </ul>
+            </div>
+
+            <div class="social eight-screen__social--margin">
+              <ul class="social__list eight-screen__social-list">
+                <li class="social__list-item eight-screen__social-item"> <a class="social__link" href="#">
+                    <svg class="symbol eight-screen__social-icon social__list-item--gray">
+                      <use xlink:href="#pinterest">
+                      </use>
+                    </svg>
+                  </a></li>
+                <li class="social__list-item eight-screen__social-item"> <a class="social__link" href="#">
+                    <svg class="symbol eight-screen__social-icon social__list-item--gray">
+                      <use xlink:href="#linkin">
+                      </use>
+                    </svg>
+                  </a></li>
+                <li class="social__list-item eight-screen__social-item"> <a class="social__link" href="#">
+                    <svg class="symbol eight-screen__social-icon social__list-item--gray">
+                      <use xlink:href="#google">
+                      </use>
+                    </svg>
+                  </a></li>
+                <li class="social__list-item eight-screen__social-item"> <a class="social__link" href="#">
+                    <svg class="symbol eight-screen__social-icon social__list-item--gray">
+                      <use xlink:href="#twitter">
+                      </use>
+                    </svg>
+                  </a></li>
+                <li class="social__list-item eight-screen__social-item"> <a class="social__link" href="#">
+                    <svg class="symbol eight-screen__social-icon social__list-item--gray">
+                      <use xlink:href="#fb">
+                      </use>
+                    </svg>
+                  </a></li>
+
+
+              </ul>
             </div>
           </div>
-
-        </form>
-
-        <div class="contact eight-screen__contact--margin">
-          <ul class="contact__list row">
-            <li class="contact__list-item contact__list-item--margin row__before-col-1">
-              <div class="contact__list-content">
-                <svg class="symbol contact__icon contact__list-item--gray">
-                  <use xlink:href="#location">
-                  </use>
-                </svg>
-                <div class="contact__text contact__text--margin">2300 W Arbutus Dr Citrus Springs, FL 34434, USA</div>
-              </div>
-            </li>
-            <li class="contact__list-item contact__list-item--margin row__before-col-1">
-              <div class="contact__list-content">
-                <img src="img/mail.svg" class="
-                eight-screen__social-icon--mail">
-                <div class="contact__text contact__text--margin">contact@hofmannui.net</div>
-              </div>
-            </li>
-            <li class="contact__list-item contact__list-item--margin row__before-col-1">
-              <div class="contact__list-content">
-                <svg class="symbol contact__icon contact__list-item--gray">
-                  <use xlink:href="#phone">
-                  </use>
-                </svg>
-                <div class="contact__text contact__text--margin">793-891-7938, 952-775-6021</div>
-              </div>
-            </li>
-          </ul>
-        </div>
-
-        <div class="social eight-screen__social--margin">
-          <ul class="social__list">
-            <li class="social__list-item"> <a class="social__link" href="#">
-                <svg class="symbol eight-screen__social-icon social__list-item--gray">
-                  <use xlink:href="#pinterest">
-                  </use>
-                </svg>
-              </a></li>
-            <li class="social__list-item"> <a class="social__link" href="#">
-                <svg class="symbol eight-screen__social-icon social__list-item--gray">
-                  <use xlink:href="#linkin">
-                  </use>
-                </svg>
-              </a></li>
-            <li class="social__list-item"> <a class="social__link" href="#">
-                <svg class="symbol eight-screen__social-icon social__list-item--gray">
-                  <use xlink:href="#google">
-                  </use>
-                </svg>
-              </a></li>
-            <li class="social__list-item"> <a class="social__link" href="#">
-                <svg class="symbol eight-screen__social-icon social__list-item--gray">
-                  <use xlink:href="#twitter">
-                  </use>
-                </svg>
-              </a></li>
-            <li class="social__list-item"> <a class="social__link" href="#">
-                <svg class="symbol eight-screen__social-icon social__list-item--gray">
-                  <use xlink:href="#fb">
-                  </use>
-                </svg>
-              </a></li>
-
-
-          </ul>
         </div>
       </div>
       <div id="map" class="map full-width-screen">
       </div>
   </main>
 
-  <footer class="footer--background">
+  <footer class="footer footer--background">
     <div class="container">
-      <div class="footer__header footer__header--position">HOFMANN</div>
-      <div class="footer__subheader footer__subheader--thin footer__subheader--position-7px">Hoffman UI Kit was made to
-        help you quickly create beautiful layouts of responsive websites.</div>
-      <div class="form footer__form-position">
-        <div class="form__header footer__subheader footer__subheader--uppercase">SUBSCRIBE TO OUR NEWS
+      <div class="footer__content">
+        <div class="footer__header footer__header--position">HOFMANN</div>
+        <div
+          class="footer__subheader footer__subheader--thin footer__subheader--position-7px footer__subheader--tablet-left">
+          <div class="footer__subheader-text">
+            Hoffman UI Kit was made to
+            help you quickly create beautiful layouts of responsive websites.</div>
         </div>
-
-        <form action="#" class="email-lettering email-lettering--position-center">
-          <div class="email-lettering__form-item">
-            <input class="email-lettering__input" type="email" placeholder="Your Email">
-            <div class="email-lettering__button-bg"> </div>
-            <button class="email-lettering_button">
-              <img class="email-lettering__arrow-right" src="img/subscribe.webp">
-            </button>
+        <div class="form footer__form-position">
+          <div class="form__header footer__subheader footer__subheader--uppercase footer__subheader--tablet-left">
+            SUBSCRIBE TO OUR NEWS
           </div>
 
-        </form>
+          <form action="#" class="email-lettering email-lettering--position-center">
+            <div class="email-lettering__form-item">
+              <input class="email-lettering__input" type="email" placeholder="Your Email">
+              <div class="email-lettering__submit">
+                <input type="submit" value="" class="email-lettering__button">
+                <div class="email-lettering__arrow-right">
+                  <svg class="symbol email-lettering__arrow-icon">
+                    <use xlink:href="#submit-arrow">
+                    </use>
+                  </svg></div>
+
+              </div>
+            </div>
+
+          </form>
+        </div>
+
+        <div class="footer__menu footer__menu--position ">
+          <ul class="footer__menu-list row row--footer-menu">
+            <div class="footer__menu-item row__col-4 row__col--footer-menu"><a href="#" class="footer__menu-link">About
+                Us</a></div>
+            <div class="footer__menu-item row__col-4 row__col--footer-menu"><a href="#"
+                class="footer__menu-link">Explore</a></div>
+            <div class="footer__menu-item  row__col-4 row__col--footer-menu"><a href="#"
+                class="footer__menu-link">Documentation</a></div>
+            <div class="footer__menu-item  row__col-4 row__col--footer-menu"><a href="#"
+                class="footer__menu-link">Testimonials</a></div>
+            <div class="footer__menu-item  row__col-4 row__col--footer-menu"><a href="#"
+                class="footer__menu-link">Blog</a></div>
+            <div class="footer__menu-item  row__col-4 row__col--footer-menu"><a href="#"
+                class="footer__menu-link">News</a></div>
+            <div class="footer__menu-item  row__col-4 row__col--footer-menu"><a href="#"
+                class="footer__menu-link">Documentation</a></div>
+            <div class="footer__menu-item  row__col-4 row__col--footer-menu"><a href="#"
+                class="footer__menu-link">Help</a></div>
+            <div class="footer__menu-item  row__col-4 row__col--footer-menu"><a href="#"
+                class="footer__menu-link">Privacy</a></div>
+          </ul>
+        </div>
+        <div class="footer__social">
+          <div class="footer__subheader footer__social--position footer__subheader--uppercase">FOLLOW US</div>
+          <div class="social">
+            <ul class="social__list">
+
+              <li class="social__list-item"> <a class="social__link" href="#">
+                  <svg class="symbol footer__social-icon social__list-item--gold">
+                    <use xlink:href="#pinterest">
+                    </use>
+                  </svg>
+                </a></li>
+              <li class="social__list-item"> <a class="social__link" href="#">
+                  <svg class="symbol footer__social-icon social__list-item--gold">
+                    <use xlink:href="#linkin">
+                    </use>
+                  </svg>
+                </a></li>
+              <li class="social__list-item"> <a class="social__link" href="#">
+                  <svg class="symbol footer__social-icon social__list-item--gold">
+                    <use xlink:href="#google">
+                    </use>
+                  </svg>
+                </a></li>
+              <li class="social__list-item"> <a class="social__link" href="#">
+                  <svg class="symbol footer__social-icon social__list-item--gold">
+                    <use xlink:href="#twitter">
+                    </use>
+                  </svg>
+                </a></li>
+              <li class="social__list-item"> <a class="social__link" href="#">
+                  <svg class="symbol footer__social-icon social__list-item--gold">
+                    <use xlink:href="#fb">
+                    </use>
+                  </svg>
+                </a></li>
+              <li class="social__list-item"> <a class="social__link" href="#">
+                  <svg class="symbol footer__social-icon social__list-item--gold">
+                    <use xlink:href="#insta">
+                    </use>
+                  </svg>
+                </a></li>
+
+
+            </ul>
+          </div>
+        </div>
+        <div class="footer__copy footer__copy--position footer__copy--white">&copy; 2016 Created by Goldenfox</div>
       </div>
-      <div class="footer__menu footer__menu--position ">
-        <ul class="footer__menu-list row row--footer-menu">
-          <div class="footer__menu-item row__col-4 row__col--footer-menu"><a href="#" class="footer__menu-link">About
-              Us</a></div>
-          <div class="footer__menu-item row__col-4 row__col--footer-menu"><a href="#"
-              class="footer__menu-link">Explore</a></div>
-          <div class="footer__menu-item  row__col-4 row__col--footer-menu"><a href="#"
-              class="footer__menu-link">Documentation</a></div>
-          <div class="footer__menu-item  row__col-4 row__col--footer-menu"><a href="#"
-              class="footer__menu-link">Testimonials</a></div>
-          <div class="footer__menu-item  row__col-4 row__col--footer-menu"><a href="#"
-              class="footer__menu-link">Blog</a></div>
-          <div class="footer__menu-item  row__col-4 row__col--footer-menu"><a href="#"
-              class="footer__menu-link">News</a></div>
-          <div class="footer__menu-item  row__col-4 row__col--footer-menu"><a href="#"
-              class="footer__menu-link">Documentation</a></div>
-          <div class="footer__menu-item  row__col-4 row__col--footer-menu"><a href="#"
-              class="footer__menu-link">Help</a></div>
-          <div class="footer__menu-item  row__col-4 row__col--footer-menu"><a href="#"
-              class="footer__menu-link">Privacy</a></div>
-        </ul>
-      </div>
-
-      <div class="footer__subheader footer__social--position footer__subheader--uppercase">FOLLOW US</div>
-      <div class="social">
-        <ul class="social__list">
-
-          <li class="social__list-item"> <a class="social__link" href="#">
-              <svg class="symbol footer__social-icon social__list-item--gold">
-                <use xlink:href="#pinterest">
-                </use>
-              </svg>
-            </a></li>
-          <li class="social__list-item"> <a class="social__link" href="#">
-              <svg class="symbol footer__social-icon social__list-item--gold">
-                <use xlink:href="#linkin">
-                </use>
-              </svg>
-            </a></li>
-          <li class="social__list-item"> <a class="social__link" href="#">
-              <svg class="symbol footer__social-icon social__list-item--gold">
-                <use xlink:href="#google">
-                </use>
-              </svg>
-            </a></li>
-          <li class="social__list-item"> <a class="social__link" href="#">
-              <svg class="symbol footer__social-icon social__list-item--gold">
-                <use xlink:href="#twitter">
-                </use>
-              </svg>
-            </a></li>
-          <li class="social__list-item"> <a class="social__link" href="#">
-              <svg class="symbol footer__social-icon social__list-item--gold">
-                <use xlink:href="#fb">
-                </use>
-              </svg>
-            </a></li>
-          <li class="social__list-item"> <a class="social__link" href="#">
-              <svg class="symbol footer__social-icon social__list-item--gold">
-                <use xlink:href="#insta">
-                </use>
-              </svg>
-            </a></li>
-
-
-        </ul>
-      </div>
-
-      <div class="footer__copy footer__copy--position footer__copy--white">&copy; 2016 Created by Goldenfox</div>
-
-
-
     </div>
+
+
+
+
+
   </footer>
 
 
@@ -812,30 +894,14 @@
 
     });
 
-
-
-    var geojson = {
-      type: 'FeatureCollection',
-      features: [{
-        type: 'Feature',
-        geometry: {
-          type: 'Point',
-          coordinates: [-82.473460, 29.016122]
-        }
-      },
-      ]
-    };
-
-    geojson.features.forEach(function (marker) {
-
-
-      var el = document.createElement('div');
-      el.className = 'map__marker';
-
-      new mapboxgl.Marker(el)
-        .setLngLat(marker.geometry.coordinates)
-        .addTo(map);
-    });
+    var popup = new mapboxgl.Popup({
+      closeOnClick: false,
+      closeButton: false,
+      className: 'map__popup'
+    })
+      .setLngLat([-82.473460, 29.016122])
+      .setHTML('<div class="map__marker-header">2300 W Arbutus Dr</div> <div class="map__marker-subheader">Citrus Springs, FL 34434, USA</div>')
+      .addTo(map);
   </script>
 
   <!-- Проигрыватель-->
@@ -858,13 +924,18 @@
       });
     });
   </script>
+
+  <!--Меню-->
   <script>
     $(document).ready(function () {
       $(".menu__burger--active").click(function () {
         $(".menu__list--main").removeClass('_active');
+        $("body").removeClass('_menu-active');
+
       });
       $(".menu__burger").click(function () {
         $(".menu__list--main").addClass('_active');
+        $("body").addClass('_menu-active');
       });
     });
   </script>
@@ -876,13 +947,13 @@
   <script src="https://unpkg.com/swiper/js/swiper.min.js"></script>
 
   <script>
-    var mySwiper = new Swiper('.slider', {
+    var mySwiper = new Swiper('', {
       wrapperClass: 'slider__slide-container',
       slideClass: 'slider__slide',
       loop: true,
 
     });
-    var mySwiper2 = new Swiper('.js-seven-screen__slider', {
+    var mySwiper2 = new Swiper('', {
       wrapperClass: 'seven-screen__slider-container',
       slideClass: 'seven-screen__content',
       loop: true,

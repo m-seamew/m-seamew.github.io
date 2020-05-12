@@ -1,4 +1,10 @@
 .six-screen--header-position{
   margin-top: 29px;
+  margin-bottom: 5px;
 }
 
+@include tablet{
+  .six-screen--header-position{
+    margin-bottom: 24px;
+  }
+}

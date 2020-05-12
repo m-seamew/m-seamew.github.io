@@ -2,6 +2,22 @@
   margin-top: 28px;
  }
 
- .four-screen__feedback{
-   margin-left: 9px;
- }
+@include tablet{
+  .four-screen--position{
+    margin-top: 28px;
+   }
+   .four-screen--position{
+    margin-top: 42px;
+   }
+   .feedback-item:nth-child(n+3){
+    margin-top: 0px;
+    margin-bottom: 0px;
+   }
+   .feedback-item:nth-child(-n+2){
+     margin-top: 55px;
+     margin-bottom: 32px;
+   }
+   .feedback-item:nth-last-child(n+2){
+margin-bottom: 44px;
+   }
+}

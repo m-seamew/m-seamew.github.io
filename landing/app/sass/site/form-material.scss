@@ -16,6 +16,12 @@
   flex-direction: column;
   margin-bottom: 10px;
 }
+.form-material__text-area{
+  margin-top: 18px;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+}
 
 .form-material__line {
   margin-top: 4px;
@@ -107,16 +113,11 @@ background-color: green;
   background-color: darkred;
 }
 
-.form-material__text-area{
-  margin-top: 18px;
-}
 
-.form-material__text-area{
-  position: relative;
-}
+
 
 .form-material__label-text-input--text-area{
-width: 100%; /* Ширина поля в процентах */
+width: 100%; 
 min-height: auto;
 max-height: 300px;
 resize: none;
@@ -140,3 +141,27 @@ overflow: hidden;
 .form-material__button--position{
   margin-top: 19px;
 }
+
+@include tablet{
+  .form-material__text-area{
+    margin-top: -30px;
+    height: 30px;
+  }
+  .form-material__text-field{
+    margin-bottom: 0px;
+    height: 30px;
+  }
+  .form-material--margin{
+    margin-top: 0px;
+  }
+  .form-material__button--position{
+margin-top: 0px;
+  }
+  .form-material__button--position{
+    margin-top: -40px;
+  }
+  .form-material{
+    width: 50%;
+  }
+}
+

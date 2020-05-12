@@ -142,6 +142,7 @@
 .tabs__tab--position1 {
   position: relative;
   z-index: 3;
+  max-width: 190px;
 }
 
 .tabs__tab--position2 {
@@ -199,3 +200,32 @@
  
 }
 
+@include tablet{
+  .tabs__navigation{
+    display: none;
+  }
+  .tabs__tab{
+    transform: scale(1);
+    position: relative;
+    margin-top: 0;
+    max-width: 170px;
+  }
+  .tabs__tab:not(:last-child){
+    margin-right: 68px;
+  }
+  .tabs__tab--gold{
+    order: 2;
+  }
+  .tabs__tab--silver{
+    order: 1;
+  }
+  .tabs__tab--platinum{
+    order: 3;
+  }
+  .tabs__container{
+    justify-content: center;
+  }
+  .tabs__container{
+    margin: 32px 0;
+  }
+}

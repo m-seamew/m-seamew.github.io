@@ -16,10 +16,20 @@
 }
 
 .third-screen__text-area{
-  max-width: 245px;
-  margin: 7px auto 0px auto;
+  margin: 7px auto 0;
+  padding: 0 30px;
+  max-width: 555px;
 }
 
 .third-screen__button-download--position{
  margin: 20px auto 0px auto;
+}
+
+@include tablet { 
+  .third-screen__text-area{
+    margin: 26px auto 0;
+}
+.third-screen__button-download--position{
+  margin: 30px auto 0px auto;
+ }
 }

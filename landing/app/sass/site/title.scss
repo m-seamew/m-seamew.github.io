@@ -8,8 +8,8 @@
   font-weight: 700;
   line-height: 24px;
   letter-spacing: -1px;
-
 }
+
 
 .title--h2{
   font-size: 20px;
@@ -30,6 +30,12 @@
   text-align: center;
 }
 
+@include tablet{
+  .title--first-screen{
+  max-width: 520px;
+}
+}
+
 
 .title--subtitle-h3{
   font-size: 12px;
@@ -45,4 +51,21 @@
 
 .tittle--margin-top3px{
   margin-top: 3px;
+}
+@include tablet{
+  .title--h1{
+    font-size: 32px;
+    line-height: 36px;
+  }
+  .title--first-screen{
+    margin: 10.1vh auto 0;}
+  .tittle--margin-top3px{
+    margin-top: 22px;
+  }
+  .title--h2{
+    font-size: 32px;
+    font-weight: 700;
+    letter-spacing: -1px;
+    line-height: 40px;
+  }
 }

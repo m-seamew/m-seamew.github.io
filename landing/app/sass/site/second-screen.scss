@@ -66,3 +66,25 @@ max-width: 265px;
   width: 100%;
   object-fit: contain;
 }
+
+@include tablet{
+  .second-screen__content{
+    margin-top: 49px;
+    margin-left: 26px;
+    flex-direction: row;
+  }
+  .second-screen__pc{
+    height: 463px;
+    object-fit: cover;
+    object-position: left;
+  }
+  .second-screen__items{
+    flex: 1 0 280px;
+  }
+  .second-screen__item:not(:last-child){
+    margin-bottom: 73px;
+  }
+  .second-screen--position{
+    margin-top: 42px;
+   }
+}

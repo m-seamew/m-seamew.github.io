@@ -5,6 +5,12 @@
   padding: 28.125% 0;
 }
 
+@include tablet{
+  .fs-content__video-box{
+    margin-top: 9.1vh
+  }
+}
+
 .fs-content--position-center{
   display: flex;
   justify-content: center;

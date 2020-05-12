@@ -9,3 +9,11 @@
   transform: translate(-50%);
   bottom: 6.3vh;
   }
+
+  @include tablet{
+
+  .anchor-arrow{
+    display: none;
+  }
+
+}

@@ -18,24 +18,35 @@ body{
   color: #4b4b4b;
 }  
 
+._menu-active{
+  overflow: hidden;
+}
+
+@include tablet{
+  body{
+    
+  }
+}
+
 
 
 @import 'grid';
+@import 'social';
 @import 'menu';
 @import 'fs-content.scss';
 @import 'second-screen';
-@import 'social';
 @import 'symbol';
 @import 'text-area';
 @import 'title';
 @import 'mask';
 @import 'player';
+@import "logo";
 @import 'anchor-arrow';
 @import 'anchor-link';
 @import 'third-screen';
 @import 'button';
-@import 'four-screen';
 @import 'feedback';
+@import 'four-screen';
 @import 'five-screen';
 @import 'tabs';
 @import 'six-screen';
@@ -46,3 +57,4 @@ body{
 @import 'email-lettering';
 @import 'form-material';
 @import 'contact';
+@import 'map';

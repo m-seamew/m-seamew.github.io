@@ -9,3 +9,13 @@
 .five-screen__content{
   padding-bottom: 40px;
 }
+
+@include tablet{
+  .five-screen__header--position{
+    padding-top: 56px;
+  }
+  .five-screen__content{
+    padding-bottom: 48px;
+  }
+  
+}

@@ -3,7 +3,6 @@
 }
 
 .eight-screen__social-icon{
-width: 100%;
   height: 23px;
   object-fit: contain;
 }
@@ -25,4 +24,65 @@ width: 100%;
 .eight-screen__social-icon--mail{
   height: 10px;
   object-fit: contain;
+}
+.eight-screen__social-item{
+  width: 30px;
+  height: 30px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.eight-screen__social-icon{
+  height: 22px;
+  width: 30px;
+}
+.eight-screen__contacts{
+  width: 100%;
+
+}
+.eight-screen__social--margin{
+  justify-content: space-between;
+}
+
+.eight-screen__social-list{
+  width: 100%;
+  justify-content: space-between;
+  align-items: center;
+}
+@include tablet{
+  .eight-screen__content{
+    display: flex;
+    justify-content: space-around;
+    margin: 0 auto;
+    width: calc(100%/12*10);
+  }
+
+  .eight-screen__social-list{
+    padding: 0px;}
+    
+  
+  .eight-screen__contacts{
+    width: 50%;
+    padding-left: 15px;
+  }
+ 
+  .eight-screen__social-item:not(:last-child){
+    margin-right: 30px;
+  }
+  .eight-screen__social--margin{
+    justify-content: flex-start;
+  }
+  .eight-screen__contact--margin{
+    margin-top: 0px;
+  }
+  .eight-screen__social-list{
+     padding: 0px;
+
+  }
+  .eight-screen__content{
+    margin-top: 51px;
+  }
+  .eight-screen__header--position{
+padding-top: 34px;
+  }
 }
