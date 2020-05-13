@@ -1,0 +1,60 @@
+//grid template
+$maxWidthforMobile: 768px;
+$maxWidthforTablet: 992px;
+$maxWidthforLaptop: 1200px;
+
+$gridNumber: 12;
+$gatter: 15px;
+
+$contentMaxwidth: 1200px;
+
+
+.container_full{
+  width: 100%;
+  height: 1024px;
+  display: flex;
+  overflow: hidden;
+  align-items: stretch;
+  justify-content: center;
+}
+.row{
+  display: flex;
+  margin: 0 (-$gatter);
+  flex-wrap: wrap;
+}
+
+
+.container {
+  width: $contentMaxwidth;
+  padding-left: $gatter;
+  padding-right: $gatter;
+}
+
+
+@for $i from 1 to $gridNumber +1 {
+  .row__col-#{$i}{
+  padding: 0 $gatter;
+  width: 100%/$gridNumber*$i;
+  };
+  .row__before-col-#{$i}{
+    margin-left: 100%/$gridNumber*$i;
+  } 
+}
+
+@include mobile{
+  @for $i from 1 to $gridNumber +1 {
+    .row__mob-col-#{$i}{
+    padding: 0 $gatter;
+    width: 100%/$gridNumber*$i;
+    };
+    .row__before-mob-col-#{$i}{
+      margin-left: 100%/$gridNumber*$i;
+    } 
+  }
+  .container-bg{
+  max-width: $contentMaxwidth;
+  padding-left: $gatter;
+  padding-right: $gatter;
+  }
+
+}
