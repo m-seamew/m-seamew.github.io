@@ -30,6 +30,11 @@ $contentMaxwidth: 1200px;
   padding-right: $gatter;
 }
 
+.container--artefact-fix {
+  padding-left: 14px;
+  padding-right: 14px;
+}
+
 
 @for $i from 1 to $gridNumber +1 {
   .row__col-#{$i}{

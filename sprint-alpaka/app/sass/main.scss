@@ -1,0 +1,22 @@
+//@import "bs/variables";
+//@import "site/variables";
+
+@import "site/mixins/mixins";
+@import "alpaka";
+@import "bg";
+
+
+*{
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body{
+  font-family: 'Roboto', sans-serif;
+  font-weight: 400;
+}
+
+body._overflow-hidden{
+  overflow: hidden;
+} 
