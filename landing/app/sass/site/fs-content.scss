@@ -1,17 +1,23 @@
-.fs-content__video-box{
+.fs-content__video-box {
   margin-top: 4.4vh;
   position: relative;
   width: 100%;
   padding: 28.125% 0;
 }
 
-@include tablet{
-  .fs-content__video-box{
+@include tablet {
+  .fs-content__video-box {
     margin-top: 9.1vh
   }
 }
 
-.fs-content--position-center{
+.fs-content--position-center {
   display: flex;
   justify-content: center;
+}
+
+@include desktop {
+  .fs-content__video-box {
+    margin-top: 9.2vh;
+  }
 }

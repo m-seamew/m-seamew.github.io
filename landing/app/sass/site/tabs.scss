@@ -260,3 +260,59 @@
     margin-top: 16px;
   }
 }
+
+
+@include desktop {
+  .tabs__container {
+    margin: 52px 0;
+  }
+
+  .tabs__tab {
+    max-width: 270px;
+  }
+
+  .tabs__tab-header {
+    font-size: 18px;
+    line-height: 27px;
+  }
+
+  .tabs__tab-header--title-margin {
+    margin-top: 40px;
+  }
+
+  .tabs__tab-price {
+    margin-top: 30px;
+    transform: translateX(-9px);
+  }
+
+  .tabs__tab-currency {
+    font-size: 24px;
+  }
+
+  .tabs__tab-amount {
+    font-size: 64px;
+    line-height: 48px;
+    letter-spacing: -3px;
+  }
+
+  .tabs__period--position {
+    margin-top: 15px;
+    margin-bottom: 23px;
+  }
+
+  .tabs__button--link-white {
+    font-size: 16px;
+  }
+
+  .tabs__button--black,
+  .tabs__button--yellow {
+    width: 198px;
+    height: 48px;
+    line-height: 48px;
+    margin-bottom: 36px;
+    margin-top: 30px;
+  }
+  .tabs__button--black:hover, .tabs__button--yellow:hover {
+    opacity: 0.85;
+  } 
+}

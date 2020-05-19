@@ -29,3 +29,16 @@
     line-height: 40px;}
 }
 
+@include desktop{
+  .button-download{
+    width: 210px;
+    height: 48px;
+  }
+  .button-download:hover{
+    opacity: 0.8;
+    cursor: pointer;
+  }
+  .button__link-download {
+    line-height: 48px;}
+
+}

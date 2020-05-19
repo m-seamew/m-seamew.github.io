@@ -43,6 +43,7 @@
   font-weight: 400;
   line-height: 16px;
   text-transform: capitalize;
+
 }
 
 .form-material__label {
@@ -50,6 +51,7 @@
   top: 0;
   left: 3px;
   transition: .5s;
+  pointer-events: none;
 }
 
 .form-material__input:focus ~.form-material__label {
@@ -64,8 +66,11 @@
 
 .form-material__input:not(:focus):not(:placeholder-shown) ~.form-material__label{
 
-  margin-top: -10px;
-opacity: 0;
+  margin-top: -16px;
+  left: 2px;
+  transform: scale(0.85);
+  font-weight: 400;
+  color: lightgray;
 }
 
 
@@ -87,7 +92,7 @@ opacity: 0;
   height: 0px;
   position:absolute;
   left: 50%;
-  transition: left .3s ease, width .3s ease;
+  transition: transform 0.4s ease, width 0.8s ease;
   background-color: #ebcb80;
 }
 
@@ -99,8 +104,8 @@ opacity: 0;
   width: 100%;
   height: 2px;
   position:absolute;
-  left: 0;
-  transition: left .3s ease, width .3s ease;
+  transform: translateX(-50%);
+  transition: transform 0.4s ease, width 0.8s ease;
   background-color: #ebcb80;
 }
 
@@ -163,5 +168,22 @@ margin-top: 0px;
   .form-material{
     width: 50%;
   }
+}
+@include desktop{
+  .form-material--margin{
+    padding-top: 70px;
+  }
+  .form-material{
+    flex: 0 0 35%;
+  }
+  .form__desktop-row{
+    margin-left: 0;
+    margin-right: 0;
+  }
+  .form-material__text-area{
+    margin-top: -50px;
+  }
+  .form-material__button--position {
+    margin-top: -70px;}
 }
 

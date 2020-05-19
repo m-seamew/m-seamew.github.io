@@ -8,3 +8,10 @@
     margin-bottom: 24px;
   }
 }
+
+@include desktop{
+  .six-screen--header-position{
+    margin-top: 66px;
+    margin-bottom: 54px;
+  }
+}

@@ -81,7 +81,7 @@
         clip-rule="evenodd" />
     </symbol>
     <symbol id="submit-arrow" viewBox="0 0 7 11">
-      <path d="M1.21533 1.85852L5.15379 5.78777L1.21533 9.71701" stroke="#4B4B4B" stroke-width="2.13333"
+      <path d="M1.21533 1.85852L5.15379 5.78777L1.21533 9.71701" stroke="#7d7d7d" stroke-width="2.13333"
         stroke-linecap="round" />
     </symbol>
 
@@ -122,7 +122,7 @@
                 </a></li>
             </ul>
           </div>
-          <div class="menu__positions row__col-2 row__tab-col-7">
+          <div class="menu__positions row__col-2 row__tab-col-7 row__pc-col-6 row__pc-before-col-1">
             <div class="menu__burger">
               <img class="menu__burger-img" src="img/Hamburger.svg" alt="menu">
             </div>
@@ -592,8 +592,11 @@
           </div>
           <div class="slider__navigation slider__navigation--position">
 
-            <div class="slider__arrow">
-              <img class="slider__arrow-left" src="img/slider__arrow.webp">
+            <div class="slider__arrow slider__arrow-left">
+                <svg class="symbol slider__arrow-img">
+                  <use xlink:href="#submit-arrow">
+                  </use>
+                </svg>
             </div>
             <div class="slider__pagination">
               <div class="slider__pagination-item">1</div>
@@ -601,9 +604,12 @@
               <div class="slider__pagination-item _active">3</div>
               <div class="slider__pagination-item">4</div>
             </div>
-            <div class="slider__arrow">
-              <img class="slider__arrow-right" src="img/slider__arrow.webp">
-            </div>
+            <div class="slider__arrow slider__arrow">
+              <svg class="symbol slider__arrow-img">
+                <use xlink:href="#submit-arrow">
+                </use>
+              </svg>
+          </div>
 
           </div>
         </div>
@@ -636,6 +642,7 @@
               </div>
             </div>
           </div>
+          <div class="container seven-screen__container">
           <div class="seven-screen__pagination seven-screen__pagination--position">
             <div class="seven-screen__pagination-container">
               <div class="seven-screen__pagination-item"></div>
@@ -651,6 +658,7 @@
             </div>
           </div>
         </div>
+        </div>
 
 
       </div>
@@ -665,7 +673,7 @@
           </a>
         </div>
         <div class="eight-screen__content">
-          <form action="#" class="form-material form-material--margin row">
+          <form action="#" class="form-material form-material--margin row form__desktop-row">
             <div class="form-material__text-field row__col-5 row__col--form">
               <input id="text" type="text" class="form-material__input form-material__label-text-input" placeholder=' '>
               <label for="text" class="form-material__label form-material__label-text-input ">Name*</label>
@@ -696,9 +704,9 @@
           </form>
           <div class="eight-screen__contacts">
             <div class="contact eight-screen__contact--margin">
-              <ul class="contact__list">
+              <ul class="contact__list ">
                 <li class="contact__list-item contact__list-item--margin ">
-                  <div class="contact__list-content">
+                  <div class="contact__list-content contact-list--2str">
                     <svg class="symbol contact__icon contact__list-item--gray">
                       <use xlink:href="#location">
                       </use>
@@ -828,37 +836,37 @@
           <div class="social">
             <ul class="social__list">
 
-              <li class="social__list-item"> <a class="social__link" href="#">
+              <li class="social__list-item"> <a class="social__link footer__social-link" href="#">
                   <svg class="symbol footer__social-icon social__list-item--gold">
                     <use xlink:href="#pinterest">
                     </use>
                   </svg>
                 </a></li>
-              <li class="social__list-item"> <a class="social__link" href="#">
+              <li class="social__list-item"> <a class="social__link footer__social-link" href="#">
                   <svg class="symbol footer__social-icon social__list-item--gold">
                     <use xlink:href="#linkin">
                     </use>
                   </svg>
                 </a></li>
-              <li class="social__list-item"> <a class="social__link" href="#">
+              <li class="social__list-item"> <a class="social__link footer__social-link" href="#">
                   <svg class="symbol footer__social-icon social__list-item--gold">
                     <use xlink:href="#google">
                     </use>
                   </svg>
                 </a></li>
-              <li class="social__list-item"> <a class="social__link" href="#">
+              <li class="social__list-item"> <a class="social__link footer__social-link" href="#">
                   <svg class="symbol footer__social-icon social__list-item--gold">
                     <use xlink:href="#twitter">
                     </use>
                   </svg>
                 </a></li>
-              <li class="social__list-item"> <a class="social__link" href="#">
+              <li class="social__list-item"> <a class="social__link footer__social-link" href="#">
                   <svg class="symbol footer__social-icon social__list-item--gold">
                     <use xlink:href="#fb">
                     </use>
                   </svg>
                 </a></li>
-              <li class="social__list-item"> <a class="social__link" href="#">
+              <li class="social__list-item"> <a class="social__link footer__social-link" href="#">
                   <svg class="symbol footer__social-icon social__list-item--gold">
                     <use xlink:href="#insta">
                     </use>

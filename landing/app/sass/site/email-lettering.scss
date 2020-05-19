@@ -59,8 +59,8 @@ height: 100%;
   position: relative;
   height: 22px;
   width: 26px;
-  border-top-right-radius: inherit;
-  border-bottom-right-radius: inherit;
+  border-top-right-radius: 10%;
+  border-bottom-right-radius: 10%;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -98,4 +98,37 @@ height: 100%;
   .email-lettering--position-center {
     justify-content: flex-start;
   }
+}
+
+@include desktop{
+  .email-lettering__form-item{
+  width: 262px;
+  height: 48px;
+  }
+  .email-lettering__submit {
+    height: 100%; 
+    width: 51px;
+    border-top-right-radius: 3px;
+    border-bottom-right-radius: 3px;
+    cursor: pointer;
+  }
+  .email-lettering__submit:hover{
+    opacity: 0.85;
+  }
+  .email-lettering__input{
+    width: 210px;
+    padding-left: 18px;
+    padding-right: 18px;
+    font-size: 16px;
+  }
+  .email-lettering__input {
+    @include placeholder {
+      font-size: 16px;
+      padding-top: 12px;
+    }
+  }
+  .email-lettering__arrow-icon {
+    width: 10px;
+    height: 16px;
+}
 }

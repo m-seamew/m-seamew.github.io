@@ -3,9 +3,17 @@
   cursor: pointer;
 }
 
-.map__marker {}
+@include tablet {
+  .map {
+    height: 216px;
+  }
+}
 
-.map__marker::after {}
+@include desktop {
+  .map {
+    height: 399px;
+  }
+}
 
 .map__popup .mapboxgl-popup-content {
 

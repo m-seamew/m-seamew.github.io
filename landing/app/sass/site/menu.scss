@@ -24,30 +24,31 @@
 }
 
 .menu__list--main {
+  padding-top: 80px;
+  background-color: white;
   display: flex;
   flex-direction: column;
   align-items: center;
   position: fixed;
   top: 0;
-  left: -100%;
-  width: 0%;
+  left: 0;
+  transform: translateX(-100%);
+  width: 100%;
   height: 100vh;
-  transition: 1s ease;
+  transition: transform 2s ease, opacity 2s ease;
   opacity: 0;
   z-index: 10;
 }
 
   
 .menu__list--main._active {
-  padding-top: 80px;
-  position: fixed;
-  top: 0;
-  left: 0;
+ 
+  transform: translateX(0);
   width: 100%;
   height: 100vh;
-  background-color: white;
+  
   opacity: 0.97;
-  transition: left 1s ease;
+  transition: transform 2s ease, opacity 2s ease;
   overflow-y: auto;
 }
 
@@ -148,7 +149,10 @@
     opacity: 1;
     width: 100%;
     position: relative;
-    left: 0;
+
+    padding-top: 0px; 
+    background-color: transparent;
+    transform: translateX(0);
   }
 
   .menu__link :visited{
@@ -176,4 +180,24 @@ margin-right: 36px;
 
 .menu__list--main._active .menu__list-item:last-child{
   padding-bottom: 100px;
+}
+
+@include desktop {
+  .menu__positions{
+    padding: 15px $gatterDesktop;
+    justify-content: center;
+  }
+  .menu__list--main{
+    justify-content: center;
+  }
+  .menu__link{
+    font-size: 18px;
+  }
+  .menu__logo{
+  @include block(41px, 44px);
+  }
+  .menu__social-item {
+    height: 24px;
+    max-width: 30px;
+}
 }

@@ -158,7 +158,7 @@ $contentMaxwidth: 1200px;
       width: 100%/$gridNumber*$i;
     }
 
-    .row__pc-before-col#{$i} {
+    .row__pc-before-col-#{$i} {
       margin-left: 100%/$gridNumber*$i;
     }
   }
@@ -178,5 +178,12 @@ $contentMaxwidth: 1200px;
 @include tablet {
   .row__tab-col-12--double-padding {
     padding: 0 48px;
+  }
+}
+
+@include desktop {
+  .container--second-screen{
+    padding-left: $gatterDesktop;
+    padding-right: 0px;
   }
 }

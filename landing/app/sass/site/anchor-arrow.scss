@@ -1,19 +1,35 @@
-.anchor-arrow__link{
+.anchor-arrow__link {
   display: block;
   padding: 15px;
 }
 
-.anchor-arrow--fs-position{
+.anchor-arrow--fs-position {
   position: absolute;
   left: 50%;
   transform: translate(-50%);
   bottom: 6.3vh;
+}
+
+@include tablet {
+
+  .anchor-arrow {
+    display: none;
+  }
+}
+
+@include desktop {
+  .anchor-arrow {
+    display: block;
   }
 
-  @include tablet{
+  .anchor-arrow:hover .anchor-arrow__icon{
+    transform: scale(1.2);
+    transform-origin: 50% 50%;
+    transition: transform .3s ease;
+  }
 
-  .anchor-arrow{
-    display: none;
+  .anchor-arrow--fs-position {
+    bottom: 3.74vh;
   }
 
 }

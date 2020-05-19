@@ -1,4 +1,4 @@
-.third-screen{
+.third-screen {
   margin-top: 37px;
   height: 312px;
   background-image: url(bg/thirs-screen-bg.jpg);
@@ -7,29 +7,41 @@
   background-size: cover;
 }
 
-.third-screen__text--position{
+.third-screen__text--position {
   padding-top: 45px;
 }
 
-.third-screen__text{
+.third-screen__text {
   text-align: center;
 }
 
-.third-screen__text-area{
+.third-screen__text-area {
   margin: 7px auto 0;
   padding: 0 30px;
   max-width: 555px;
 }
 
-.third-screen__button-download--position{
- margin: 20px auto 0px auto;
+.third-screen__button-download--position {
+  margin: 20px auto 0px auto;
 }
 
-@include tablet { 
-  .third-screen__text-area{
+@include tablet {
+  .third-screen__text-area {
     margin: 26px auto 0;
+  }
+
+  .third-screen__button-download--position {
+    margin: 30px auto 0px auto;
+  }
 }
-.third-screen__button-download--position{
-  margin: 30px auto 0px auto;
- }
+
+@include desktop {
+  .third-screen {
+    margin-top: 59px;
+    height: 588px;
+    background-position: bottom center;
+  }
+  .third-screen__text--position{
+    padding-top: 163px;
+  }
 }

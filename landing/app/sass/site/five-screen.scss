@@ -1,21 +1,32 @@
-.five-screen{
+.five-screen {
   background-color: #f6f6f6;
 }
 
-.five-screen__header--position{
+.five-screen__header--position {
   padding-top: 51px;
 }
 
-.five-screen__content{
+.five-screen__content {
   padding-bottom: 40px;
 }
 
-@include tablet{
-  .five-screen__header--position{
+@include tablet {
+  .five-screen__header--position {
     padding-top: 56px;
   }
-  .five-screen__content{
+
+  .five-screen__content {
     padding-bottom: 48px;
   }
-  
+
+}
+
+@include desktop {
+  .five-screen__header--position {
+    padding-top: 68px;
+  }
+
+  .five-screen__content {
+    padding-bottom: 64px;
+  }
 }
