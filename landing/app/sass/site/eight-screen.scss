@@ -106,8 +106,8 @@
   .eight-screen__content::before {
     content: "";
     display: flex;
-    flex: 0 0 (100%)/3;
-    background: url(../../../img/iPhoneApp.png);
+    flex: 0 0 30%;
+    background: url(bg/iPhoneApp.png);
     background-repeat: no-repeat;
     max-width: 314px;
     height: 350px;
@@ -123,6 +123,7 @@
   .eight-screen__contacts {
     flex: 0 0 25%;
     padding-top: 70px;
+    padding-left: 0px;
   }
 
 

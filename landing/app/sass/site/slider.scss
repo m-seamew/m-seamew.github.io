@@ -370,10 +370,14 @@
   .slider__pagination-item {
     font-size: 18px;
     line-height: 22px;
+    width: 42px;
+    height: 42px; 
   }
 
   .slider__pagination-item._active {
     color: #ebcb80;
+    width: 42px;
+    height: 42px; 
   }
 
   .slider__navigation--position {
@@ -424,7 +428,7 @@
     transform: scale(1.1);
     position: relative;
     z-index: 10;
-    transition: transform .3s ease;
+    transition: transform .5s ease;
     box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.19);
   }
 }

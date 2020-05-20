@@ -174,7 +174,7 @@ margin-top: 0px;
     padding-top: 70px;
   }
   .form-material{
-    flex: 0 0 35%;
+    flex: 0 0 45%;
   }
   .form__desktop-row{
     margin-left: 0;
@@ -185,5 +185,27 @@ margin-top: 0px;
   }
   .form-material__button--position {
     margin-top: -70px;}
+  .form-material__input{
+    font-size: 18px;
+    line-height: 20px;
+  }  
+  .form-material__label {
+    font-size: 18px;
+    line-height: 20px;
+    color: #7d7d7d;
+
+  }
+  .form-material__input:not(:focus):not(:placeholder-shown)~.form-material__label{
+    margin-top: -24px;
+    left: 2px;
+  }
+  .form-material__input:focus ~.form-material__label {
+    margin-top: -24px;
+    left: 2px;
+  }
+  .form-material__input:invalid:not(:focus):not(:placeholder-shown)~.form-material__line::before{
+    font-size: 14px;
+    line-height: 20px;
+  }
 }
 

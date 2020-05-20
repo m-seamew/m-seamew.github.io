@@ -315,4 +315,10 @@
   .tabs__button--black:hover, .tabs__button--yellow:hover {
     opacity: 0.85;
   } 
+  .tabs__tab:hover{
+    transform: scale(1.1);
+  }
+  .tabs__tab{
+    transition: transform .5s;
+  }
 }

@@ -501,9 +501,9 @@
             <h1 class="title title--h1">Portfolio</h1>
           </a>
         </div>
-        <div class="slider">
-          <div class="slider__slide-container">
-            <div class="slider__slide">
+        <div class="slider js-slider">
+          <div class="slider__slide-container js-slider-container">
+            <div class="slider__slide js-slide">
               <div class="slider__grid">
                 <div class="slider__item slider__item--1 slider__value-1">
                   <img class="slider__img" src="img/portfolio/project-1-1.jpg">
@@ -593,10 +593,10 @@
           <div class="slider__navigation slider__navigation--position">
 
             <div class="slider__arrow slider__arrow-left">
-                <svg class="symbol slider__arrow-img">
-                  <use xlink:href="#submit-arrow">
-                  </use>
-                </svg>
+              <svg class="symbol slider__arrow-img">
+                <use xlink:href="#submit-arrow">
+                </use>
+              </svg>
             </div>
             <div class="slider__pagination">
               <div class="slider__pagination-item">1</div>
@@ -604,12 +604,12 @@
               <div class="slider__pagination-item _active">3</div>
               <div class="slider__pagination-item">4</div>
             </div>
-            <div class="slider__arrow slider__arrow">
+            <div class="slider__arrow slider__arrow-right">
               <svg class="symbol slider__arrow-img">
                 <use xlink:href="#submit-arrow">
                 </use>
               </svg>
-          </div>
+            </div>
 
           </div>
         </div>
@@ -643,21 +643,21 @@
             </div>
           </div>
           <div class="container seven-screen__container">
-          <div class="seven-screen__pagination seven-screen__pagination--position">
-            <div class="seven-screen__pagination-container">
-              <div class="seven-screen__pagination-item"></div>
-            </div>
-            <div class="seven-screen__pagination-container">
-              <div class="seven-screen__pagination-item _active"></div>
-            </div>
-            <div class="seven-screen__pagination-container">
-              <div class="seven-screen__pagination-item"></div>
-            </div>
-            <div class="seven-screen__pagination-container">
-              <div class="seven-screen__pagination-item"></div>
+            <div class="seven-screen__pagination seven-screen__pagination--position">
+              <div class="seven-screen__pagination-container">
+                <div class="seven-screen__pagination-item"></div>
+              </div>
+              <div class="seven-screen__pagination-container">
+                <div class="seven-screen__pagination-item _active"></div>
+              </div>
+              <div class="seven-screen__pagination-container">
+                <div class="seven-screen__pagination-item"></div>
+              </div>
+              <div class="seven-screen__pagination-container">
+                <div class="seven-screen__pagination-item"></div>
+              </div>
             </div>
           </div>
-        </div>
         </div>
 
 
@@ -955,12 +955,22 @@
   <script src="https://unpkg.com/swiper/js/swiper.min.js"></script>
 
   <script>
-    var mySwiper = new Swiper('', {
-      wrapperClass: 'slider__slide-container',
-      slideClass: 'slider__slide',
-      loop: true,
+ 
+    var mySwiper = new Swiper ('js-slider', {
+    wrapperClass: 'js-slider-container',
+    slideClass: 'js-slide',
+    loop: true,
 
-    });
+
+    pagination: {
+      el: '.slider__pagination-item',
+    },
+
+    navigation: {
+      nextEl: '.slider__arrow-left',
+      prevEl: '.slider__arrow-right',
+    },
+  })
     var mySwiper2 = new Swiper('', {
       wrapperClass: 'seven-screen__slider-container',
       slideClass: 'seven-screen__content',
