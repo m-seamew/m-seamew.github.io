@@ -1,7 +1,8 @@
-.form-material{
+.form-material {
   display: flex;
   justify-content: center;
 }
+
 .form-material__input {
   border: none;
   outline: none;
@@ -16,7 +17,8 @@
   flex-direction: column;
   margin-bottom: 10px;
 }
-.form-material__text-area{
+
+.form-material__text-area {
   margin-top: 18px;
   position: relative;
   display: flex;
@@ -34,7 +36,8 @@
 .form-material__text-field {
   position: relative;
 }
-.form-material__label-text-input{
+
+.form-material__label-text-input {
   margin-left: 3px;
   margin-right: 3px;
   color: #4b4b4b;
@@ -54,17 +57,15 @@
   pointer-events: none;
 }
 
-.form-material__input:focus ~.form-material__label {
+.form-material__input:focus~.form-material__label {
   margin-top: -16px;
   left: 2px;
   transform: scale(0.85);
-  
-  
   font-weight: 400;
   color: #ebcb80;
 }
 
-.form-material__input:not(:focus):not(:placeholder-shown) ~.form-material__label{
+.form-material__input:not(:focus):not(:placeholder-shown)~.form-material__label {
 
   margin-top: -16px;
   left: 2px;
@@ -75,7 +76,7 @@
 
 
 
-.form-material__input:invalid:not(:focus):not(:placeholder-shown) ~.form-material__line::before{
+.form-material__input:invalid:not(:focus):not(:placeholder-shown)~.form-material__line::before {
   content: "*incorect input";
   color: darkred;
   display: block;
@@ -86,11 +87,11 @@
   left: 3px;
 }
 
-.form-material__input ~.form-material__line::after {
+.form-material__input~.form-material__line::after {
   content: "";
   width: 0px;
   height: 0px;
-  position:absolute;
+  position: absolute;
   left: 50%;
   transition: transform 0.4s ease, width 0.8s ease;
   background-color: #ebcb80;
@@ -98,114 +99,142 @@
 
 
 
-.form-material__input:focus ~.form-material__line::after {
+.form-material__input:focus~.form-material__line::after {
   display: block;
   content: "";
   width: 100%;
   height: 2px;
-  position:absolute;
+  position: absolute;
   transform: translateX(-50%);
   transition: transform 0.4s ease, width 0.8s ease;
   background-color: #ebcb80;
 }
 
 
-.form-material__input:valid:not(:placeholder-shown) ~.form-material__line {
-background-color: green;
+.form-material__input:valid:not(:placeholder-shown)~.form-material__line {
+  background-color: green;
 }
 
-.form-material__input:invalid:not(:focus):not(:placeholder-shown) ~.form-material__line {
+.form-material__input:invalid:not(:focus):not(:placeholder-shown)~.form-material__line {
   background-color: darkred;
 }
 
 
 
 
-.form-material__label-text-input--text-area{
-width: 100%; 
-min-height: auto;
-max-height: 300px;
-resize: none;
-overflow: hidden;
+.form-material__label-text-input--text-area {
+  width: 100%;
+  min-height: auto;
+  max-height: 300px;
+  resize: none;
+  overflow: hidden;
 
 }
 
-.form-material__submit{
+.form-material__submit {
   display: none;
 }
 
-.form-material__submit-label{
+.form-material__submit-label {
   text-align: center;
 }
 
-.form-material__button{
+.form-material__button {
   display: flex;
   justify-content: center;
 }
 
-.form-material__button--position{
-  margin-top: 19px;
+.form-material__button--position {
+  padding-top: 19px;
 }
 
-@include tablet{
-  .form-material__text-area{
-    margin-top: -30px;
+@include tablet {
+  .form-material__text-area {
     height: 30px;
   }
-  .form-material__text-field{
+
+  .form-material__text-field {
     margin-bottom: 0px;
     height: 30px;
   }
-  .form-material--margin{
+
+  .form-material--margin {
     margin-top: 0px;
   }
-  .form-material__button--position{
-margin-top: 0px;
+
+  .form-material__button--position {
+    //margin-top: 0px;
   }
-  .form-material__button--position{
-    margin-top: -40px;
+
+  .form-material__button--position {
+    //margin-top: -40px;
   }
-  .form-material{
+
+  .form-material {
     width: 50%;
   }
+  .form__button{
+    height: 32px;
+  }
 }
-@include desktop{
-  .form-material--margin{
+
+@include desktop {
+  .form-material--margin {
     padding-top: 70px;
   }
-  .form-material{
+
+  .form-material {
     flex: 0 0 45%;
   }
-  .form__desktop-row{
+
+  .form__desktop-row {
     margin-left: 0;
     margin-right: 0;
   }
-  .form-material__text-area{
-    margin-top: -50px;
-  }
+
   .form-material__button--position {
-    margin-top: -70px;}
-  .form-material__input{
-    font-size: 18px;
-    line-height: 20px;
-  }  
-  .form-material__label {
-    font-size: 18px;
-    line-height: 20px;
-    color: #7d7d7d;
+  
+    // margin-top: -70px;
+  }
+    .form-material__input {
+      font-size: 18px;
+      line-height: 20px;
+    }
 
+    .form-material__label {
+      font-size: 18px;
+      line-height: 20px;
+      color: #7d7d7d;
+
+    }
+
+    .form-material__input:not(:focus):not(:placeholder-shown)~.form-material__label {
+      margin-top: -24px;
+      left: 2px;
+    }
+
+    .form-material__input:focus~.form-material__label {
+      margin-top: -24px;
+      left: 2px;
+    }
+
+    .form-material__input:invalid:not(:focus):not(:placeholder-shown)~.form-material__line::before {
+      font-size: 14px;
+      line-height: 20px;
+    }
+    .form-material__text-area{
+      margin-top: 35px;
+    }
+    .form__button{
+      height: 48px;
+    }
+    .form-material__button--position {
+      padding-top: 36px;
+    }
   }
-  .form-material__input:not(:focus):not(:placeholder-shown)~.form-material__label{
-    margin-top: -24px;
-    left: 2px;
-  }
-  .form-material__input:focus ~.form-material__label {
-    margin-top: -24px;
-    left: 2px;
-  }
-  .form-material__input:invalid:not(:focus):not(:placeholder-shown)~.form-material__line::before{
-    font-size: 14px;
-    line-height: 20px;
-  }
+
+.form__fix-wrapper {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
 }
-
