@@ -189,7 +189,7 @@
   transition: transform 1s;
 }
 
-.input__default-radio:checked .input__label--radio::after {
+.input__default-radio:checked +.input__label--radio::after {
 
   transition: transform 1s;
   transform: translate(-50%, -50%) scale(1);
