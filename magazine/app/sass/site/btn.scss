@@ -1,0 +1,60 @@
+.btn {
+  display: inline-block;
+}
+
+.btn:hover {
+  background-color: #444444;
+  .btn__text--ghost {
+    color: white;
+  }
+}
+
+.btn:active {
+  .btn__text--ghost {
+    opacity: 0.3;
+  }
+}
+
+.btn__text {
+  padding: 20px 100px;
+  border: 2px solid #444444;
+  display: inline-block;
+  text-transform: uppercase;
+  @include font(15px, 24px, 700);
+  color: #444444;
+}
+
+.btn__link {
+  display: block;
+  width: 100%;
+  height: 100%;
+  cursor: pointer;
+}
+
+
+.btn__text--size{
+  padding: 20px 50px;
+  border: 2px solid rgba(68,68,68, 0.1);
+}
+
+.btn__text--work-process{
+  padding: 14px 45px;
+  @include font(17px, 20px, 700);
+}
+
+.btn__text--сontacts{
+  padding: 16px 41px;
+}
+
+.btn--size:hover {
+  background: white;
+  .btn__text {
+    border: 2px solid rgba(68,68,68, 0.3);
+  }
+}
+
+.btn--size:active {
+  .btn__text {
+    border: 2px solid #62d1ba;
+  }
+}

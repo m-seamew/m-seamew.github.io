@@ -1,0 +1,13 @@
+.social{
+  @include flex-center();
+}
+
+.social__icon:not(:last-child){
+  margin-right: 40px;
+}
+
+.social__link{
+  display: block;
+  width: 100%;
+  height: 100%;
+}

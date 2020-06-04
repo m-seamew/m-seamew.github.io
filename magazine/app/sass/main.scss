@@ -1,0 +1,73 @@
+//@import "bs/variables";
+//@import "site/variables";
+@import "normalize";
+@import "site/mixins/mixins";
+*{
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+a:visited{
+  color: #000;
+}
+
+body{
+  @include font (17px,30px, 400);
+  color: #444444;
+  position: relative;
+}
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+}
+input[type='number'] {
+    -moz-appearance: textfield;
+  }
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+}
+input[type='number'] {
+    -moz-appearance: textfield;
+}
+
+
+
+
+@import "site/index.scss";
+
+@import "site/logo";
+@import "site/link";
+@import "site/icon";
+@import "site/iconlink-block";
+@import "site/greenbtn";
+@import "site/btn";
+@import "site/arrow";
+@import "site/social";
+@import "site/card";
+@import "site/title";
+@import "site/input";
+@import "site/grid";
+@import "site/video";
+@import "site/work-process";
+@import "site/menu";
+@import "site/main-screen";
+@import "site/product";
+@import "site/about-us";
+@import "site/feedback";
+@import "site/contacts";
+@import "site/catalog";
+@import "site/form";
+@import "site/popup";
+
+
+
+
+
+
+
+
+

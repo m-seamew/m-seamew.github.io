@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="./build/css/main.css">
+  <link href='https://api.mapbox.com/mapbox-gl-js/v1.10.1/mapbox-gl.css' rel='stylesheet' />
+  <title>Mishka Dom</title>
+</head>
+
+<body>
+  <section>
+    //= ./blocks/menu.html
+  </section>
+  <section>
+    //= ./blocks/main-screen.html
+  </section>
+  <section>
+    //= ./blocks/product.html
+  </section>
+  <section>
+    //= ./blocks/about-us.html
+  </section>
+  <section>
+    //= ./blocks/feedback.html
+  </section>
+  <section>
+    //= ./blocks/contacts.html
+  </section>
+  <section>
+    //= ./blocks/footer.html
+  </section>
+  <script src='https://api.mapbox.com/mapbox-gl-js/v1.10.1/mapbox-gl.js'></script>
+  <script src='https://api.mapbox.com/mapbox-gl-js/plugins/mapbox-gl-language/v0.10.1/mapbox-gl-language.js'></script>
+  <script src="./build/js/main.js"></script>
+  <script>mapboxgl.accessToken = 'pk.eyJ1Ijoic2VhbWV3IiwiYSI6ImNrOW5hemRkOTAwZGszaG8xMjd4dDMzMXQifQ.1yu2kil5iH_LAkwIP-Trbw';
+    var map = new mapboxgl.Map({
+      container: 'map',
+      style: 'mapbox://styles/mapbox/streets-v10',
+      center: [30.32, 59.93],
+      zoom: 14,
+      attributionControl: false,
+    });
+
+    var mapboxLanguage = new MapboxLanguage({
+      defaultLanguage: 'ru'
+    });
+
+
+    var el = document.createElement('div');
+    el.className = 'contacts__marker';
+
+    new mapboxgl.Marker(el)
+      .setLngLat([30.32, 59.93])
+      .addTo(map);</script>
+</body>
+
+</html>

@@ -1,0 +1,253 @@
+.input__container {
+ // max-width: 700px;
+  display: flex;
+  align-items: center;
+}
+
+.input__textarea {
+  cursor: pointer;
+  padding: 17px;
+  width: 100%;
+  height: 140px;
+  resize: none;
+  overflow: auto;
+  border: 2px solid #444444;
+  color: #444444;
+  transition: border .5s;
+  @include font(19px, 18px, 400);
+
+  &::-webkit-scrollbar {
+    width: 10px;
+    cursor: pointer;
+  }
+
+  &::-webkit-scrollbar-track {
+    background-color: rgba(70, 193, 174, 0.1);
+  }
+
+  &::-webkit-scrollbar-thumb {
+    background: #63d1bb;
+  }
+
+  &::-webkit-scrollbar-thumb:hover {
+    background: #56c3b2;
+  }
+
+  @include placeholder {
+    opacity: 0.3;
+    @include font(19px, 18px, 400);
+    color: #444444;
+  }
+}
+
+.input__textarea:hover {
+  border: 2px solid #62d1ba;
+}
+
+.input__textarea:focus {
+  border: 2px solid #62d1ba;
+  outline: none;
+}
+
+.input__label {
+  @include font(19px, 19px, 700);
+}
+
+
+.input__label--position {
+  margin-right: 25px;
+}
+
+.input__text {
+  cursor: pointer;
+  flex: 1 1;
+  outline: none;
+  border: none;
+  box-shadow: inset 0 -2px 0 #000000;
+  @include font(19px, 19px, 400);
+  color: #444444;
+  padding: 18px;
+  transition: box-shadow .5s;
+
+  @include placeholder {
+    @include font(19px, 19px, 400);
+    color: #444444;
+    opacity: 0.3;
+  }
+}
+
+.input__text:hover {
+  box-shadow: inset 0 -2px 0 #62d1ba;
+  transition: box-shadow .5s;
+}
+
+.input__text:focus {
+  box-shadow: inset 0 -2px 0 #62d1ba;
+  transition: box-shadow .5s;
+}
+
+.input__label--phone::after {
+  content: "";
+  display: block;
+  background: url("bg/icon/phone.png");
+  background-position: center center;
+  background-repeat: no-repeat;
+
+  position: absolute;
+  right: 8px;
+  top: 50%;
+  transform: translateY(-50%);
+  @include block(25px, 25px);
+  cursor: pointer;
+}
+
+.input__label--email::after {
+  content: "";
+  display: block;
+  background: url("bg/icon/mail.png");
+  background-position: center center;
+  background-repeat: no-repeat;
+
+  position: absolute;
+  right: 8px;
+  top: 50%;
+  transform: translateY(-50%);
+  @include block(32px, 25px);
+  cursor: pointer;
+}
+
+.input__container--phone {
+  position: relative;
+}
+
+.input__container--email {
+  position: relative;
+}
+
+.input__phone {
+  padding-right: 40px;
+  background-color: transparent;
+}
+
+.input__email{
+  padding-right: 40px;
+  background-color: transparent;
+}
+
+.input__container--phone:hover .input__label--phone::after,
+.input__phone:not(:placeholder-shown)~.input__label--phone::after {
+  background: url("bg/icon/phone--green.png");
+  background-position: center center;
+  background-repeat: no-repeat;
+}
+
+.input__container--email:hover .input__label--email::after,
+.input__email:not(:placeholder-shown)~.input__label--email::after {
+  background: url("bg/icon/mail--green.png");
+  background-position: center center;
+  background-repeat: no-repeat;
+}
+
+.input__default-radio {
+  display: none;
+}
+
+.input__label--radio {
+  position: relative;
+  cursor: pointer;
+  display: flex;
+  align-items: center
+}
+
+
+.input__label--radio::before {
+  content: '';
+  display: block;
+  @include block(52px, 52px);
+  border: 2px solid #1a1515;
+  background-color: #ffffff;
+  border-radius: 50%;
+}
+.input__label--radio:hover::before{
+  border: 2px solid #62d1ba;
+}
+.input__label--radio:active::before{
+  border: 2px solid #1a1515;
+  opacity: 0.3;
+}
+
+.input__label--radio::after {
+  position: absolute;
+  top: 28px;
+  left: 28px;
+  transform: translate(-50%, -50%) scale(0);
+  content: '';
+  display: block;
+  @include block(22px, 22px);
+  background-color: #62d1ba;
+  border-radius: 50%;
+  transition: transform 1s;
+}
+
+.input__default-radio:checked .input__label--radio::after {
+
+  transition: transform 1s;
+  transform: translate(-50%, -50%) scale(1);
+}
+
+
+
+
+.input__default-checkbox{
+ display: none;
+}
+
+.input__label--checkbox {
+  position: relative;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+}
+
+.input__label--checkbox::before {
+  content: '';
+  display: block;
+  @include block(52px, 52px);
+  border: 2px solid #1a1515;
+  background-color: #ffffff;
+}
+.input__label--checkbox:hover::before{
+  border: 2px solid #62d1ba;
+}
+.input__label--checkbox:active::before{
+  border: 2px solid #1a1515;
+  opacity: 0.3;
+}
+
+.input__label--checkbox::after {
+  position: absolute;
+  top: 28px;
+  left: 28px;
+  transform: translate(-50%, -50%) scale(0);
+  content: '';
+  display: block;
+  @include block(33px, 22px);
+  background: url("./bg/icon/approve.png");
+
+  transition: transform 1s;
+}
+
+.input__default-checkbox:checked +.input__label--checkbox::after {
+  transition: transform 1s;
+  transform: translate(-50%, -50%) scale(1);
+}
+
+.input__radio-container--vertical{
+  display: flex;
+  flex-direction: column;
+}
+
+.input__labeltext{
+  @include font (19px,18px,700);
+  margin-left: 30px;
+}

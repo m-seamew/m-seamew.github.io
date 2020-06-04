@@ -1,0 +1,79 @@
+.form--position{
+  margin-top: 120px;
+}
+
+.form__subheader{
+  @include font(17px,30px,400);
+  color: #444;
+}
+
+
+.form__field-header{
+  display: flex;
+  padding-left: 60px;
+  @include font(17px,16px,700);
+  color: #63d1bb;
+  text-transform: uppercase;
+}
+
+.form__field-header--position{
+  margin-top: 20px;
+}
+
+.form__radio-input:not(:last-child){
+  margin-bottom: 24px;
+}
+
+.form__formarea--margintop60px{
+  margin-top: 60px;
+}
+
+.form__field-body--сheckbox{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.form__checkbox{
+  flex: 1 0 33%;
+  margin-bottom: 24px;
+}
+
+.form__container--checkbox{
+  padding: 50px 25px 24px 25px;
+}
+
+.form__container--possition{
+  margin-top: 50px;
+}
+
+.form__lineinput:not(:last-child){
+  margin-bottom: 25px;
+}
+
+.form__container--contacts{
+  padding-top: 45px;
+  padding-bottom: 50px;
+}
+
+.form__field-body--contacts:not(:last-child){
+  margin-bottom: 24px;
+}
+
+.form__submit-bar{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.form__submit-btn{
+  display: none;
+}
+.form__submit-btn--size{ 
+  padding: 12px 32px;
+}
+
+.form__submit-bar--position {
+  padding-top: 50px;
+ margin-bottom: 50px;
+}

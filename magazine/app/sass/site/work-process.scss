@@ -1,0 +1,47 @@
+.work-process{
+ display: flex;
+ flex-wrap: wrap;
+ border: 1px solid #ececec;
+}
+
+.work-process--position{
+  margin-top: 37px;
+}
+
+.work-process:hover{
+  box-shadow: 0 6px 10px rgba(0, 0, 0, 0.1);
+}
+
+.work-process:active{
+  box-shadow:  0 3px 5px rgba(0, 0, 0, 0.1);
+}
+
+.work-process__video{
+  max-width: 100%/6*4;
+  max-height: inherit;
+}
+
+.work-process__discription{
+  flex: 1 0 100%/6*2;
+  padding: 60px 55px;
+  max-width: 355px;
+}
+
+.work-process__headtext{
+  @include font(20px, 24px, 700);
+  max-width: 200px;
+}
+
+.work-process__text{
+  @include font(15px, 30px, 400);
+  color: #444444;
+}
+
+.work-process__headtext--position{
+  margin-top: 18px;
+  margin-bottom: 30px;
+}
+
+.work-process__btn--position{
+  margin-top: 40px;
+}

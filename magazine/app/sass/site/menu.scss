@@ -1,0 +1,76 @@
+.menu{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  position: relative;
+
+}
+
+.menu__part{
+  flex: 1 1;
+  display: flex;
+  align-items: center;
+}
+
+.menu__part--right{
+  display: flex;
+  justify-content: flex-end;
+}
+
+.menu__hr{
+  height: 100%;
+  min-height: 88px;
+  width: 1px;
+  opacity: 0.1;
+  background-color: #000;
+  display: block;
+  margin-left: 35px;
+  margin-right: 35px;
+}
+
+.menu__logo{
+
+}
+
+.menu__item{
+  list-style-type: none;
+}
+
+.menu__item:not(:last-child){
+  margin-right: 60px;
+}
+
+.menu--submenu{
+  display: flex;
+  align-items: center;
+}
+
+.menu__container{
+  padding-top: 25px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.menu__promo{
+  @include font(15px, 24px, 400);
+  color: #444444;
+}
+
+.menu__part--center{
+  display: flex;
+  justify-content: center;
+}
+
+.menu__part--right{
+  display: flex;
+  justify-content: flex-end;
+}
+
+.menu--footer{
+  padding: 50px 0px;
+}
+
+.menu--footer-catalog {
+  margin-top: 105px;
+}

@@ -1,0 +1,43 @@
+.link {
+  @include font(15px, 24px, 700);
+  text-decoration: none;
+  color: #000000;
+  display: block;
+}
+
+.link--size17{
+  @include font(17px, 24px, 700);
+}
+
+.link:hover {
+  opacity: 0.6;
+}
+
+.link:visited{
+  color: #444;
+}
+
+.link:active {
+  opacity: 0.3;
+}
+
+.link--big {
+  font-size: 17px;
+}
+
+.link--mail {
+  @include font(17px, 30px, 400);
+  border-bottom: 1px solid #46c1ae;
+  display: inline-block;
+  color: #444444;
+}
+
+.link--mail:hover{
+  color: #46c1ae;
+}
+
+.link--mail:active{
+  color: #46c1ae;
+  opacity: 0.3;
+  border-bottom: 1px solid rgba(70,193,174,0.33);
+}

@@ -1,0 +1,28 @@
+.arrow{
+  @include flex-center();
+  @include block(60px,40px);
+ 
+}
+
+
+
+.arrow--right{
+transform: rotate(180deg);
+}
+
+.arrow__link{
+  display: block;
+  cursor: pointer;
+}
+
+
+.arrow__img:hover{
+  opacity: 0.7;
+}
+.arrow__img:active{
+  opacity: 0.3;
+}
+
+.arrow--margin-right{
+  margin-right: 30px;
+}

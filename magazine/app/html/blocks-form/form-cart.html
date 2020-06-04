@@ -1,0 +1,157 @@
+<form class="form form--position">
+
+  <div class="container row">
+    <div class="form__subheader col-1-before col-4">Мы будем рады воплотить в жизнь ваши пожелания! Заполните простую
+      форму заказа и мы свяжемся с вами, чтобы уточнить детали.</div>
+
+    <div class="form__formarea form__formarea--margintop60px col-6 row">
+
+      <div class="form__field-header form__field-header--position col-1">Тип</div>
+
+      <div class="form__field-body col-4">
+        <div class="input">
+          <div class="input__radio-container input__radio-container--vertical">
+
+            <input type="radio" name="type" class="input__default-radio" id="type1" checked>
+            <label for="type1" class="input__label--radio form__radio-input">
+              <div class="input__labeltext">Аксессуар для интерьера</div>
+            </label>
+
+            <input type="radio" name="type" class="input__default-radio" id="type2">
+            <label for="type2" class="input__label--radio form__radio-input">
+              <div class="input__labeltext">Детская игрушка</div>
+            </label>
+
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+  <div class="container--full-screen container--gray">
+
+    <div class="container form__container--checkbox form__container--possition row">
+      <div class="form__field-header form__field-header--position col-1">ЦВЕТ</div>
+
+      <div class="form__field-body col-4">
+        <div class="input form__field-body--сheckbox">
+          <input type="checkbox" class="input__default-checkbox" id="check1">
+          <label for="check1" class="input__label--checkbox form__checkbox">
+            <div class="input__labeltext">Белый</div>
+          </label>
+
+          <input type="checkbox" class="input__default-checkbox" id="check2">
+          <label for="check2" class="input__label--checkbox form__checkbox">
+            <div class="input__labeltext">Черный</div>
+          </label>
+
+          <input type="checkbox" class="input__default-checkbox" id="check3">
+          <label for="check3" class="input__label--checkbox form__checkbox">
+            <div class="input__labeltext">Серый</div>
+          </label>
+
+          <input type="checkbox" class="input__default-checkbox" id="check4">
+          <label for="check4" class="input__label--checkbox form__checkbox">
+            <div class="input__labeltext">Розовый</div>
+          </label>
+
+          <input type="checkbox" class="input__default-checkbox" id="check5">
+          <label for="check5" class="input__label--checkbox form__checkbox">
+            <div class="input__labeltext">"Тиффани"</div>
+          </label>
+
+          <input type="checkbox" class="input__default-checkbox" id="check6">
+          <label for="check6" class="input__label--checkbox form__checkbox">
+            <div class="input__labeltext">Оранжевый</div>
+          </label>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+  <div class="container row">
+
+    <div class="form__formarea form__formarea--margintop60px col-6 row">
+      <div class="form__field-header form__field-header--position col-1">ФИО</div>
+      <div class="form__field-body col-4">
+        <div class="input">
+          <div class="input__container form__lineinput">
+            <label class="input__label input__label--position" for="name">Имя:</label>
+            <input class="input__text" type="text" id="name" required placeholder="Введите ваше имя*">
+          </div>
+
+          <div class="input__container form__lineinput">
+            <label class="input__label input__label--position" for="name">Фамилия:</label>
+            <input class="input__text" type="text" id="name" required placeholder="Введите вашу фамилию*">
+          </div>
+
+          <div class="input__container form__lineinput">
+            <label class="input__label input__label--position" for="name">Отчество:</label>
+            <input class="input__text" type="text" id="name" placeholder="Введите ваше отчество">
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+  <div class="container--full-screen container--gray">
+
+    <div class="container form__container--contacts form__container--possition row">
+
+      <div class="form__field-body form__field-body--contacts col-6 row">
+        <div class="form__field-header form__field-header--position col-1">тел</div>
+        <div class="input col-4">
+          <div class="input__container input__container--phone">
+            <input class="input__text input__phone" type="number" id="phone" required placeholder="+7 ХХХ ХХХ ХХ ХХ*">
+            <label for="" class="input__label--phone"></label>
+          </div>
+        </div>
+      </div>
+      <div class="form__field-body form__field-body--contacts col-6 row">
+        <div class="form__field-header form__field-header--position col-1">email</div>
+
+        <div class="input input col-4">
+          <div class="input__container input__container--email">
+            <input class="input__text input__email" type="email" id="email" required placeholder="Ваш Email*">
+            <label for="email" class="input__label--email"></label>
+          </div>
+        </div>
+
+      </div>
+
+
+    </div>
+
+
+  </div>
+
+  <div class="container row">
+
+    <div class="form__formarea form__formarea--margintop60px col-6 row">
+      <div class="form__field-header form__field-header--position col-1">Доп</div>
+      <div class="form__field-body col-4">
+
+        <div class="input">
+          <div class="input__container">
+            <textarea class="input__textarea" placeholder="Опишите все ваши пожелания к заказу"></textarea>
+          </div>
+        </div>
+
+      </div>
+    </div>
+    <div class="form__formarea form__submit-bar form__submit-bar--position col-1-before col-4">
+      <input id="submit-btn" type="submit" class="form__submit-btn">
+      <label for="submit-btn" class="btn">
+
+        <a class="btn__link">
+          <div class="btn__text btn__text--ghost form__submit-btn--size">Заказать</div>
+        </a>
+      </label>
+      <div class="form__submit-text">*Поля обязательны для заполнения</div>
+    </div>
+
+  </div>
+</form>

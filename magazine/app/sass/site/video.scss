@@ -1,0 +1,54 @@
+.video__button-img{
+  cursor: pointer;
+  transition: transform .5s;
+  transform: scale(calc(100/120));
+}
+
+.video__button-img:hover{
+  transform: scale(1);
+  transition: transform .5s;
+}
+
+.video__button-img:active{
+  transform: scale(calc(80/120));
+  opacity: 0.3;
+  transition: transform .5s;
+}
+
+.video__container{
+  position: absolute;
+  top: 0;
+  bottom: 2px;
+  left: 0;
+  right: 0;
+}
+
+.video__button{
+  position: absolute;
+  background: url('./bg/video-desktop.png');
+  background-repeat: none;
+  background-size: cover;
+  background-position: center center;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 25px;
+  z-index: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: opacity 3s;
+}
+.video{
+  position: relative;
+  width: 100%;
+ // padding: 28.125% 0;
+}
+
+.video__work-process{
+ max-height: 460px;
+}
+
+.video__youtube{
+  padding-right: 25px;
+}

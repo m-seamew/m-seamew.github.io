@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>UI Template</title>
+  <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="./build/css/main.css">
+
+</head>
+
+<body style="margin-left: 50px;">
+  <div class="logo logo--header">
+    <a href="#" class="logo__link"><img class="logo__img" src="img/logo.png" alt="">
+    </a>
+  </div>
+  <div class="logo logo--footer">
+    <a href="#" class="logo__link">
+      <div class="logo logo--footer">
+      </div>
+    </a>
+  </div>
+
+  <a href="#" class="link link--big">Каталог товаров</a>
+
+  <a href="#" class="link">Каталог товаров</a>
+
+  <a href="mailto:info@mimimishkashop.ru" class="link link--mail">info@mimimishkashop.ru</a>
+
+  <div class="icon">
+    <div class="icon__item icon__item--search"></div>
+  </div>
+
+  <div class="iconlink-block">
+    <a class="iconlink__link">
+      <div class="icon">
+        <div class="icon__item iconlink__item--cart "></div>
+      </div>
+      <p class="iconlink__text">Каталог товаров</p>
+    </a>
+  </div>
+
+  <div class="iconlink-block">
+    <a class="iconlink__link iconlink__link--icon-after">
+      <p class="iconlink__text">Каталог товаров</p>
+      <div class="icon">
+        <div class="icon__item iconlink__item--cart "></div>
+      </div>
+
+    </a>
+  </div>
+
+
+  <div class="greenbtn">
+    <a href="#" class="greenbtn__link">
+      <div class="greenbtn__container">
+        <div class="greenbtn__text">Предметы
+          интерьера</div>
+        <img src="./img/greenbtn-img.png" alt="inerior item" class="greenbtn__img">
+      </div>
+    </a>
+  </div>
+
+  <div class="greenbtn  greenbtn--dark">
+    <a href="#" class="greenbtn__link">
+      <div class="greenbtn__container">
+        <div class="greenbtn__text">Детские
+          игрушки</div>
+        <img src="./img/toy.png" alt="toy" class="greenbtn__img">
+      </div>
+    </a>
+  </div>
+
+  </div>
+  <div class="btn">
+    <a class="btn__link">
+      <div class="btn__text btn__text--ghost">Заказать</div>
+    </a>
+  </div>
+
+  <div class="btn btn--size">
+    <a class="btn__link">
+      <div class="btn__text btn__text--size">M</div>
+    </a>
+  </div>
+
+  <div class="arrow">
+    <a href="#" class="arrow__link"><img src="./img/arrow.svg" alt="arrow" class="arrow__img arrow--left" /></a>
+  </div>
+
+  <div class="arrow">
+    <a href="" class="arrow__link"><img src="./img/arrow.svg" alt="arrow" class="arrow__img arrow--right" /></a>
+  </div>
+
+  <div class="social">
+    <div class="icon social__icon">
+      <a href="#" class="social__link">
+        <div class="icon__item icon__item--insta"></div>
+      </a>
+    </div>
+    <div class="icon social__icon">
+      <a href="#" class="social__link">
+        <div class="icon__item icon__item--fb"></div>
+      </a>
+    </div>
+    <div class="icon social__icon">
+      <a href="#" class="social__link">
+        <div class="icon__item icon__item--twitter"></div>
+      </a>
+    </div>
+  </div>
+
+
+  <div class="iconlink-block iconlink-block--copy">
+    <a class="iconlink__link">
+      <p class="iconlink__text">Разработано</p>
+      <div class="icon">
+        <div class="icon__item icon__item--copy"></div>
+      </div>
+    </a>
+  </div>
+
+  <div class="card">
+    <div class="card__picture">
+      <a href="#" class="card__link"><img class="card__img" src="/img/cart-img.jpg" alt=""></a>
+    </div>
+    <div class="card__text">
+      <div class="card__header title"><a href="#" class="card__link">Зайчик-попрыгайчик</a></div>
+
+      <div class="card__subheader title--subtitle">Рост 30 см, вес 200 г</div>
+      <div class="card__cart">
+        <div class="card__price">1200 руб.</div>
+        <div class="icon">
+          <div class="icon__item icon__item--cart"></div>
+        </div>
+      </div>
+    </div>
+
+  </div>
+
+  <form class="input">
+    <div class="input__container">
+      <textarea class="input__textarea" placeholder="Опишите все ваши пожелания к заказу"></textarea>
+    </div>
+
+    <div class="input__container">
+      <label class="input__label input__label--position" for="name">Имя:</label>
+      <input class="input__text" type="text" id="name" required placeholder="Введите ваше имя*">
+    </div>
+
+    <div class="input__container input__container--phone">
+      <input class="input__text input__phone" type="text" id="name" required placeholder="+7 ХХХ ХХХ ХХ ХХ*">
+      <label for="name" class="input__label--phone"></label>
+    </div>
+    <div class="input__radio-container">
+      <input type="radio" name="template" class="input__default-radio" id="template1">
+      <label for="template1" class="input__label--radio"></label>
+
+      <input type="radio" name="template" class="input__default-radio" id="template2">
+      <label for="template2" class="input__label--radio"></label>
+
+      <input type="radio" name="template" class="input__default-radio" id="template3">
+      <label for="template3" class="input__label--radio"></label>
+    </div>
+    <div class="input__radio-container">
+      <input type="checkbox" class="input__default-checkbox" id="template4">
+      <label for="template4" class="input__label--checkbox"></label>
+
+
+    </div>
+
+  </form>
+
+  <div class="container">
+    <div class="work-process">
+      <div class="video work-process__video">
+        <div class="video__container">
+          <iframe class="video__youtube" width="100%" height="100%" src="" frameborder="0" allow="autoplay"></iframe>
+          <div class="video__button">
+            <img class="video__button-img" src="./img/play.png" alt="play">
+          </div>
+        </div>
+
+      </div>
+      <div class="work-process__discription">
+        <div class="work-process__header">
+          <img src="./img/videocam.png" alt="video">
+          <div class="work-process__headtext work-process__headtext--position">Процесс
+            производства</div>
+        </div>
+        <div class="work-process__text">По просьбам наших любимых фолловеров мы сняли для вас подробное видео о том,
+          как
+          появляются наши товары.</div>
+        <div class="btn work-process__btn--position">
+          <a class="btn__link">
+            <div class="btn__text btn__text--ghost btn__text--work-process">Сделать заказ</div>
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="popup__main">
+    <div class="popup__main-container">
+      <h3 class="popup__header">Добавить в корзину</h3>
+      <p class="popup__subheader">Выберите размер:</p>
+      <div class="popup__sizes">
+        <input type="radio" name="popup" id="pop1" class="popup__input">
+        <label for="pop1" class="btn btn--size  popup__size-btn">
+          <a class="btn__link">
+            <div class="btn__text btn__text--size popup__text">S</div>
+          </a>
+        </label>
+
+        <input type="radio" name="popup" id="pop2" class="popup__input">
+        <label for="pop2" class="btn btn--size  popup__size-btn">
+          <a class="btn__link">
+            <div class="btn__text btn__text--size popup__text">M</div>
+          </a>
+        </label>
+
+        <input type="radio" name="popup" id="pop3" class="popup__input">
+        <label for="pop3" class="btn btn--size  popup__size-btn">
+          <a class="btn__link">
+            <div class="btn__text btn__text--size popup__text">L</div>
+          </a>
+        </label>
+     
+    </div>
+    <div class="btn popup__btn-body">
+      <a class="btn__link">
+        <div class="popup__btn">Заказать</div>
+      </a>
+    </div>
+  </div>
+  <script src="./build/js/main.js"></script>
+</body>
+
+</html>

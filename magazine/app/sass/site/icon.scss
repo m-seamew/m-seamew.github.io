@@ -1,0 +1,110 @@
+.icon{
+  @include block(36px, 36px);
+  @include flex-center();
+  cursor: pointer;
+}
+
+.icon--big{
+  @include block(82px, 82px);
+}
+
+.icon--size-m{
+  @include block(42px, 42px);
+  @include flex-center();
+}
+
+.icon__item:active{
+  opacity: 0.3;
+}
+
+.icon__item{
+  width: 100%;
+  height: 100%;
+}
+
+.icon__item:hover{
+  width: 100%;
+  height: 100%;
+}
+
+.icon__item--search{
+  background: url(./bg/icon/search.png);
+  background-repeat: no-repeat;
+  background-position: center center;
+}
+
+.icon__item--search:hover{
+  background: url(./bg/icon/search--green.png);
+  background-repeat: no-repeat;
+  background-position: center center;
+}
+
+.icon__item--cart{
+  background: url(./bg/icon/cart.png);
+  background-repeat: no-repeat;
+  background-position: center center;
+}
+
+.icon__item--cart:hover{
+  background: url(./bg/icon/cart--green.png);
+  background-repeat: no-repeat;
+  background-position: center center;
+}
+
+.icon__item--insta{
+  background: url(./bg/icon/insta.png);
+  background-repeat: no-repeat;
+  background-position: center center;
+}
+
+.icon__item--insta:hover{
+  background: url(./bg/icon/insta--green.png);
+  background-repeat: no-repeat;
+  background-position: center center;
+}
+
+.icon__item--fb{
+  background: url(./bg/icon/fb.png);
+  background-repeat: no-repeat;
+  background-position: center center;
+}
+
+.icon__item--fb:hover{
+  background: url(./bg/icon/fb--green.png);
+  background-repeat: no-repeat;
+  background-position: center center;
+
+}
+
+.icon__item--twitter{
+  background: url(./bg/icon/twitter.png);
+  background-repeat: no-repeat;
+  background-position: center center;
+}
+
+.icon__item--twitter:hover{
+  background: url(./bg/icon/twitter--green.png);
+  background-repeat: no-repeat;
+  background-position: center center;
+}
+
+.icon__item--copy{
+  background: url(./bg/icon/copy.png);
+  background-repeat: no-repeat;
+  background-position: center center;
+}
+
+.icon__item--copy:hover{
+  background: url(./bg/icon/copy--hover.png);
+  background-repeat: no-repeat;
+  background-position: center center;
+}
+
+
+.icon__item--about-us{
+  object-fit: contain;
+}
+
+.icon__item--contacts{
+  object-fit: contain;
+}
