@@ -18,7 +18,6 @@
 }
 
 .menu__hr{
-  height: 100%;
   min-height: 88px;
   width: 1px;
   opacity: 0.1;
@@ -65,6 +64,8 @@
 .menu__part--right{
   display: flex;
   justify-content: flex-end;
+  align-items: center;
+  order: 3;
 }
 
 .menu--footer{
@@ -73,4 +74,133 @@
 
 .menu--footer-catalog {
   margin-top: 105px;
+}
+
+.menu__search-text{
+  display: none;
+}
+
+.menu__center{
+  display: flex;
+  align-items: center;
+  order: 2;
+}
+
+.menu__close{
+  display: none;
+}
+
+
+.menu__main--cont{
+  display: flex;
+  align-items: center;
+}
+
+@include mobile{
+  .menu__close{
+    display: flex;
+    position: absolute;
+    right: 20px;
+  }
+  .menu__search-text{
+    display: flex;
+  }
+  .menu--top{
+    flex-direction: column;
+  }
+  .menu__part--left{
+    flex-direction: column;
+    order: 2;
+    width: 100%;
+    
+  }
+  .menu__part--right{
+    flex-direction: column;
+    order: 3;
+    width: 100%;
+    margin-top: 15px;
+  }
+  .menu__center{
+    order: 1;
+    width: 100%;
+    display: block;
+    position: relative;
+  }
+  .menu--footer{
+    flex-direction: column;
+  }
+  .menu__search-container{
+    display: flex;
+    align-items: center;
+  }
+  .menu__hr{
+   min-height: 1px;
+   width: 100%;
+  margin: 15px 0;
+  }
+
+
+  .menu__main{
+    @include flex-center;
+    margin-top: 15px;
+
+  }
+
+  .menu__center::after{
+    content: '';
+    margin-top: 15px;
+    margin-bottom: 15px;
+    opacity: 0.1;
+    background-color: #000;
+    display: block;
+    height: 1px;
+    width: 100%;
+  }
+  .menu__main--cont{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .menu__main--cont::after{
+    content: '';
+    margin-top: 15px;
+    opacity: 0.1;
+    background-color: #000;
+    display: block;
+    height: 1px;
+    width: 100%;
+  }
+
+  .menu__search-container{
+    margin-left: 40px;
+  }
+
+  .iconlink-block{
+    margin-left: 40px;
+  }
+
+  .menu__first-link--position{
+    margin-left: 106px;
+    padding-top: 5px;
+    padding-bottom: 5px;
+  }
+
+
+}
+
+@include tablet{
+  .menu__part--left{
+    display: none;
+  }
+  .menu__part--right::before{
+    content:'';
+    display: block;
+    height: 88px;
+    width: 1px;
+    background-color: #000;
+    opacity: 0.1;
+    margin-right: 35px;
+  }
 }

@@ -64,6 +64,7 @@ $container: 1150px;
   background-color: #f1f1f1;
 }
 
+
 .container--gray {
   background-color: #f1f1f1;
 }
@@ -138,3 +139,9 @@ $container: 1150px;
     margin-left: (100%/6);
   }
 }
+
+@include mobile{
+  .container--menu-burger{
+    padding-left: 0px;
+    padding-right: 0px;
+  }}

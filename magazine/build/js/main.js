@@ -91,7 +91,7 @@ function cart(e) {
       </div>`;
         document.querySelector('body').append(popup);
       }
-      document.querySelector('body').classList.add = "popup__fixed";
+      document.querySelector('body').classList.add("popup__fixed");
      // document.querySelector('.popup__btn').addEventListener('click', addToCart);
   });
   document.querySelector('.popup__btn').addEventListener('click', removed);
@@ -106,7 +106,7 @@ btn.forEach(element => {
 
 function removed() {
   document.querySelector('.popup').parentElement.remove();
-  document.querySelector('body').classList.remove = "popup__fixed";
+  document.querySelector('body').classList.remove("popup__fixed");
 }
 
 
@@ -130,5 +130,6 @@ function addToCart(e) {
 }
 
 
+
 //Mapbox
-document.querySelector('.video__button-img').addEventListener('click', playYoutube);
+//document.querySelector('.video__button-img').addEventListener('click', playYoutube);

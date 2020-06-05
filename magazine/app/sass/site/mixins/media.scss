@@ -1,6 +1,6 @@
 $maxWidthforMobile: 767px;
 $maxWidthforTablet: 1024px;
-$maxWidthforLaptop: 1200px;
+$maxWidthforLaptop: 1025px;
 
 
 @mixin mobile {
@@ -10,13 +10,13 @@ $maxWidthforLaptop: 1200px;
 }
 
 @mixin tablet {
-  @media (min-width: #{$maxWidthforMobile + 1px}) {
+  @media (min-width: #{$maxWidthforMobile}) and (max-width: #{$maxWidthforTablet}){
     @content;
   }
 }
 
 @mixin desktop {
-  @media (min-width: #{$maxWidthforTablet +1px}) {
+  @media (min-width: #{$maxWidthforTablet}) {
     @content;
   }
 }
